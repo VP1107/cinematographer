@@ -72,3 +72,23 @@ From now on, you can simply use:
 - `git commit -m "your message"`
 - `git push`
 
+---
+
+## 🌎 Deployment (GitHub Pages)
+
+This project is configured for easy deployment to GitHub Pages:
+
+1. **Install GH Pages Utility**:
+   ```bash
+   npm install gh-pages --save-dev
+   ```
+
+2. **Deploy**:
+   ```bash
+   npm run deploy
+   ```
+
+3. **Settings**: On GitHub, go to **Settings > Pages** and ensure "Build and deployment" is set to "Deploy from a branch" and the branch is set to `gh-pages`.
+
+> [!NOTE]
+> This project uses `HashRouter` to ensure routes work correctly on static hosting like GitHub Pages without extra configuration.
