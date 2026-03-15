@@ -72,7 +72,7 @@ export function LazyImage({
         height={height}
         loading={eager ? 'eager' : 'lazy'}
         decoding="async"
-        fetchpriority={fetchpriority}
+        fetchPriority={fetchpriority}
         onLoad={() => setLoaded(true)}
         style={{
           position: 'absolute',

@@ -263,27 +263,55 @@ export default function Footer() {
           >
             © {year} Your Name. All rights reserved.
           </p>
-          <p
+          {/* V&M Creations watermark logo */}
+          <a
+            href="#"
+            onClick={(e) => e.preventDefault()}
             style={{
-              fontFamily: 'var(--font-devanagari)',
-              fontSize: 'var(--text-sm)',
-              color: 'var(--saffron)',
+              display: 'inline-flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textDecoration: 'none',
+              lineHeight: 1,
               opacity: 0.4,
-              letterSpacing: '0.3em',
+              transition: 'opacity 300ms ease',
             }}
+            onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.8'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.4'; }}
+            aria-label="V&M Creations"
           >
-            ॐ
-          </p>
-          <p
-            style={{
-              fontSize: 'var(--text-xs)',
-              color: 'var(--white-muted)',
-              letterSpacing: '0.06em',
-              opacity: 0.5,
-            }}
-          >
-            Crafted with light & intention.
-          </p>
+            <span
+              style={{
+                fontFamily: "'Outfit', var(--font-body)",
+                fontSize: '16px',
+                fontWeight: 700,
+                letterSpacing: '4px',
+                color: 'var(--white)',
+                borderBottom: '1px solid var(--teal-light)',
+                paddingBottom: '2px',
+                marginBottom: '3px',
+                display: 'block',
+                transition: 'all 300ms ease',
+              }}
+            >
+              V&amp;M
+            </span>
+            <span
+              style={{
+                fontFamily: "'Outfit', var(--font-body)",
+                fontSize: '6px',
+                textTransform: 'uppercase',
+                letterSpacing: '5px',
+                color: 'var(--teal-light)',
+                marginTop: '2px',
+                display: 'block',
+                textAlign: 'center',
+                transition: 'all 300ms ease',
+              }}
+            >
+              CREATIONS
+            </span>
+          </a>
         </div>
       </div>
     </footer>
