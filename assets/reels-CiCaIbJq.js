@@ -1,0 +1,1 @@
+import{i as e}from"./index-B19v-7_C.js";var t=e.reels,n=t.filter(e=>e.featured),r=[`All`,...Array.from(new Set(t.map(e=>e.category)))];function i(e){return t.find(t=>t.slug===e)??null}function a(e){let n=t.findIndex(t=>t.slug===e);return n===-1?{prev:null,next:null}:{prev:t[(n-1+t.length)%t.length],next:t[(n+1)%t.length]}}export{t as a,r as i,a as n,i as r,n as t};
