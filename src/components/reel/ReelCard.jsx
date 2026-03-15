@@ -87,6 +87,7 @@ export default function ReelCard({ reel, index = 0 }) {
           }}
         >
           <VideoPlaceholder
+            thumbnailUrl={reel.thumbnailUrl}
             title={reel.title}
             titleHindi={reel.titleHindi}
             onPlay={handleNavigate}

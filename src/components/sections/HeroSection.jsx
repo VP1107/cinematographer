@@ -148,6 +148,9 @@ export default function HeroSection({
           position: 'absolute',
           inset: 0,
           background: 'var(--black)',
+          backgroundImage: 'url("https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2670&auto=format&fit=crop&fm=webp")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           zIndex: 0,
         }}
       >

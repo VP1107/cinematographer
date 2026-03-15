@@ -1,0 +1,266 @@
+{
+  "reels": [
+    {
+      "slug": "roshni-brand-film",
+      "title": "Roshni — Brand Film",
+      "category": "Commercial",
+      "year": 2024,
+      "thumbnailUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+      "videoUrl": "https://vimeo.com/123456789",
+      "description": "A meditative brand film for a sustainable Indian textiles label. Shot across the ghats of Varanasi at golden hour, the film celebrates the quiet dignity of handloom weavers and the warmth of natural dyes.",
+      "credits": {
+        "director": "Arjun Mehta",
+        "production": "Amber Frame Studio",
+        "dop": "Your Name Here",
+        "editor": "Priya Nair"
+      },
+      "featured": true
+    },
+    {
+      "slug": "raag-music-video",
+      "title": "Raag — Music Video",
+      "category": "Music Video",
+      "year": 2024,
+      "thumbnailUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80",
+      "videoUrl": "https://vimeo.com/234567890",
+      "description": "Visual accompaniment for an indie fusion artist blending Hindustani classical ragas with electronic production. High-contrast lighting, slow-motion tabla sequences, and peacock-blue chroma work.",
+      "credits": {
+        "director": "Your Name Here",
+        "production": "Indigo Pictures",
+        "dop": "Your Name Here",
+        "editor": "Rohan Das"
+      },
+      "featured": true
+    },
+    {
+      "slug": "kahaani-short-film",
+      "title": "Kahāni — Short Film",
+      "category": "Short Film",
+      "year": 2023,
+      "thumbnailUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80",
+      "videoUrl": "https://vimeo.com/345678901",
+      "description": "Award-winning short following a retired railway conductor on his last journey through Rajasthan. Intimate handheld cinematography, natural window light, and a warm sepia grade that feels like old Kodak.",
+      "credits": {
+        "director": "Sanya Kapoor",
+        "production": "Dhoop Films",
+        "dop": "Your Name Here",
+        "editor": "Vikram Rao"
+      },
+      "featured": true
+    },
+    {
+      "slug": "saarang-fashion-film",
+      "title": "Sārang — Fashion Film",
+      "category": "Commercial",
+      "year": 2023,
+      "thumbnailUrl": "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=800&q=80",
+      "videoUrl": "https://vimeo.com/456789012",
+      "description": "A high-fashion editorial for a couture bridal label. Shot in a crumbling haveli in Jodhpur, the film juxtaposes ancient Rajput architecture with ultra-modern silhouettes.",
+      "credits": {
+        "director": "Your Name Here",
+        "production": "Noor Creative",
+        "dop": "Your Name Here",
+        "editor": "Aisha Bose"
+      },
+      "featured": false
+    },
+    {
+      "slug": "udaan-documentary",
+      "title": "Udān — Documentary",
+      "category": "Documentary",
+      "year": 2023,
+      "thumbnailUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+      "videoUrl": "https://vimeo.com/567890123",
+      "description": "A short documentary portrait of kite-makers in Ahmedabad during Uttarayan. Long lenses, rooftop light, and the chaos of ten thousand kites in an Amdavadi sky.",
+      "credits": {
+        "director": "Your Name Here",
+        "production": "Self-produced",
+        "dop": "Your Name Here",
+        "editor": "Manish Joshi"
+      },
+      "featured": false
+    },
+    {
+      "slug": "aanch-commercial",
+      "title": "Āñch — Brand Spot",
+      "category": "Commercial",
+      "year": 2022,
+      "thumbnailUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
+      "videoUrl": "https://vimeo.com/678901234",
+      "description": "A 60-second brand spot for a premium Indian spice company. Macro cinematography of whole spices, steam, and flame — a sensory film that smells through the screen.",
+      "credits": {
+        "director": "Kabir Singh",
+        "production": "Red Masala Films",
+        "dop": "Your Name Here",
+        "editor": "Tara Menon"
+      },
+      "featured": false
+    },
+    {
+      "slug": "nritya-performance",
+      "title": "Nritya — Performance Film",
+      "category": "Creative Direction",
+      "year": 2022,
+      "thumbnailUrl": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80",
+      "videoUrl": "https://vimeo.com/789012345",
+      "description": "A performance film for a Bharatanatyam dancer — capturing mudras, footwork, and expression with high-speed cameras and dramatic single-source lighting. Premiered at the MAMI Film Festival.",
+      "credits": {
+        "director": "Your Name Here",
+        "production": "Tandav Arts",
+        "dop": "Your Name Here",
+        "editor": "Shreya Pillai"
+      },
+      "featured": false
+    },
+    {
+      "slug": "patang-music-video-2",
+      "title": "Patang — Music Video",
+      "category": "Music Video",
+      "year": 2022,
+      "thumbnailUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+      "videoUrl": "https://vimeo.com/890123456",
+      "description": "Aerial and street-level cinematography for an Ahmedabad-based indie band. The video weaves rooftop life, Old City alleyways, and the Sabarmati riverfront into a love letter to the city.",
+      "credits": {
+        "director": "Your Name Here",
+        "production": "Patan Records",
+        "dop": "Your Name Here",
+        "editor": "Dev Shah"
+      },
+      "featured": false
+    }
+  ],
+  "projects": [
+    {
+      "slug": "roshni-brand-film",
+      "title": "Roshni",
+      "subtitle": "Brand Film — Sustainable Textiles",
+      "year": 2024,
+      "client": "Sundari Handlooms",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
+      "videoUrl": "https://vimeo.com/123456789",
+      "description": "A meditation on light and craft — shot across three days in Varanasi during the winter fog season. The brief was simple: make the world see what handloom weavers already know.",
+      "accentColor": "var(--saffron)"
+    },
+    {
+      "slug": "kahaani-short-film",
+      "title": "Kahāni",
+      "subtitle": "Short Film — MAMI Selection 2023",
+      "year": 2023,
+      "client": "Dhoop Films",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=80",
+      "videoUrl": "https://vimeo.com/345678901",
+      "description": "Selected for Mumbai's MAMI Film Festival. A quiet, devastating portrait of departure — shot entirely on natural light through the windows of a Rajasthan-bound train.",
+      "accentColor": "var(--crimson)"
+    },
+    {
+      "slug": "nritya-performance",
+      "title": "Nritya",
+      "subtitle": "Performance Film — Bharatanatyam",
+      "year": 2022,
+      "client": "Tandav Arts",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=1200&q=80",
+      "videoUrl": "https://vimeo.com/789012345",
+      "description": "High-speed and single-source lighting documentation of Bharatanatyam movement. The film became a reference piece for the intersection of classical Indian performance and cinematic form.",
+      "accentColor": "var(--teal)"
+    },
+    {
+      "slug": "raag-music-video",
+      "title": "Raag",
+      "subtitle": "Music Video — Hindustani Fusion",
+      "year": 2024,
+      "client": "Indigo Pictures",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&q=80",
+      "videoUrl": "https://vimeo.com/234567890",
+      "description": "Chaos and precision in the same frame — a music video that refuses to choose between Hindustani classical tradition and electronic modernity, just like the music itself.",
+      "accentColor": "var(--gold)"
+    }
+  ],
+  "services": [
+    {
+      "id": "cinematography",
+      "name": "Cinematography",
+      "shortDesc": "Narrative-driven visual language for features, OTT, and indie films.",
+      "longDesc": "From intimate indie dramas to large-scale productions, I craft images that serve the story first. Fluent in anamorphic, spherical, and digital acquisition. Experienced with ARRI, RED, and Sony systems across varied Indian locations — from Himalayan exteriors to the dense visual grammar of Indian city streets.",
+      "icon": "camera",
+      "accent": "saffron"
+    },
+    {
+      "id": "commercial",
+      "name": "Commercial Filmmaking",
+      "shortDesc": "Brand films and campaigns that feel cinematic, not corporate.",
+      "longDesc": "Working with agencies and direct-to-brand clients across FMCG, fashion, luxury, and technology. Every commercial brief is treated as a short film brief — concept, lighting, movement, and edit work in harmony to create ads that audiences actually want to watch.",
+      "icon": "film",
+      "accent": "crimson"
+    },
+    {
+      "id": "music-videos",
+      "name": "Music Videos",
+      "shortDesc": "Visuals that amplify the emotion of the track — not just illustrate it.",
+      "longDesc": "Extensive work across Bollywood, Indie Hindi, Tamil, and fusion genres. Comfortable directing and DPing simultaneously for budget-conscious productions, or leading larger crews for label projects. Strong aesthetic instinct for colour, movement, and the precise moment to cut.",
+      "icon": "music",
+      "accent": "teal"
+    },
+    {
+      "id": "short-films",
+      "name": "Short Films",
+      "shortDesc": "Festival-ready short film cinematography — intimate, precise, resonant.",
+      "longDesc": "Multiple selections at MAMI, IFFK, and international festivals. I work closely with debut directors to find the visual language of their story without over-designing it. Natural light, available locations, and disciplined prep are always the starting point.",
+      "icon": "clapperboard",
+      "accent": "saffron"
+    },
+    {
+      "id": "creative-direction",
+      "name": "Creative Direction",
+      "shortDesc": "End-to-end visual concepting for campaigns, lookbooks, and digital content.",
+      "longDesc": "Beyond the camera — mood boarding, reference curation, location scouting, wardrobe palette direction, and post-grade supervision. I help brands and artists develop a coherent visual identity that travels across formats.",
+      "icon": "compass",
+      "accent": "crimson"
+    },
+    {
+      "id": "color-consultation",
+      "name": "Color Consultation",
+      "shortDesc": "Grade supervision and LUT development rooted in Indian skin-tone precision.",
+      "longDesc": "A strong secondary specialty — developing show LUTs, supervising DI sessions, and consulting on colour pipeline from on-set monitoring through to final delivery. Particular expertise in grading for the rich tonal range of Indian skin across diverse lighting conditions.",
+      "icon": "palette",
+      "accent": "teal"
+    }
+  ],
+  "socialLinks": [
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "url": "https://instagram.com/yourchannel",
+      "icon": "instagram"
+    },
+    {
+      "id": "vimeo",
+      "label": "Vimeo",
+      "url": "https://vimeo.com/yourchannel",
+      "icon": "vimeo"
+    },
+    {
+      "id": "youtube",
+      "label": "YouTube",
+      "url": "https://youtube.com/@yourchannel",
+      "icon": "youtube"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/yourprofile",
+      "icon": "linkedin"
+    },
+    {
+      "id": "imdb",
+      "label": "IMDb",
+      "url": "https://imdb.com/name/yourprofile",
+      "icon": "film"
+    }
+  ],
+  "contactInfo": {
+    "email": "hello@yourname.in",
+    "phone": "+91 98765 43210",
+    "baseCity": "Mumbai / Ahmedabad",
+    "availability": "Available for projects across India & internationally"
+  }
+}

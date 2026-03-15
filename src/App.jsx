@@ -14,6 +14,7 @@ import PageTransition  from './components/layout/PageTransition';
 import LoadingScreen   from './components/layout/LoadingScreen';
 import CustomCursor    from './components/ui/CustomCursor';
 import SmoothScrollProvider from './components/layout/SmoothScrollProvider';
+import ScrollToTop      from './components/layout/ScrollToTop';
 
 import './styles/globals.css';
 
@@ -24,6 +25,7 @@ const ReelPage  = lazy(() => import('./pages/ReelPage'));
 const About     = lazy(() => import('./pages/About'));
 const Services  = lazy(() => import('./pages/Services'));
 const Contact   = lazy(() => import('./pages/Contact'));
+const CMSDashboard = lazy(() => import('./pages/CMSDashboard'));
 
 // ── Page Fallback ────────────────────────────────────────────
 function PageFallback() {
@@ -127,6 +129,16 @@ function AnimatedRoutes() {
             </PageTransition>
           }
         />
+        <Route
+          path="/cms"
+          element={
+            <PageTransition>
+              <Suspense fallback={<PageFallback />}>
+                <CMSDashboard />
+              </Suspense>
+            </PageTransition>
+          }
+        />
         {/* 404 fallback */}
         <Route
           path="*"
@@ -202,6 +214,7 @@ function NotFound() {
 export default function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <SmoothScrollProvider>
         {/* Custom cursor — rendered outside page flow */}
         <CustomCursor />

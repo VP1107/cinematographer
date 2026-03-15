@@ -7,13 +7,17 @@
 //  aspect ratio until the real image loads, then cross-fades.
 //
 //  Props:
-//    src         {string}  — image URL
-//    alt         {string}  — alt text (required for a11y)
-//    aspectRatio {string}  — CSS aspect-ratio e.g. '16/9', '1/1'
-//    className   {string}
-//    style       {object}
-//    imgStyle    {object}  — styles applied to the <img> itself
-//    haldi       {bool}    — apply warm sepia tint (default false)
+//    src           {string}  — image URL
+//    alt           {string}  — alt text (required for a11y)
+//    aspectRatio   {string}  — CSS aspect-ratio e.g. '16/9', '1/1'
+//    width         {number}  — intrinsic width for CLS (default 1920)
+//    height        {number}  — intrinsic height for CLS (default 1080)
+//    fetchpriority {string}  — 'high' for LCP images, 'low' for offscreen
+//    eager         {bool}    — skip lazy loading (for above-fold images)
+//    className     {string}
+//    style         {object}
+//    imgStyle      {object}  — styles applied to the <img> itself
+//    haldi         {bool}    — apply warm sepia tint (default false)
 // ============================================================
 
 import React, { useState } from 'react';
@@ -22,6 +26,10 @@ export function LazyImage({
   src,
   alt,
   aspectRatio = '16/9',
+  width       = 1920,
+  height      = 1080,
+  fetchpriority,
+  eager       = false,
   className   = '',
   style: styleProp = {},
   imgStyle    = {},
@@ -60,8 +68,11 @@ export function LazyImage({
       <img
         src={src}
         alt={alt}
-        loading="lazy"
+        width={width}
+        height={height}
+        loading={eager ? 'eager' : 'lazy'}
         decoding="async"
+        fetchpriority={fetchpriority}
         onLoad={() => setLoaded(true)}
         style={{
           position: 'absolute',

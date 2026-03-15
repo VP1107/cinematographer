@@ -4,6 +4,7 @@
 //  slot. Shows until real media loads or user clicks play.
 //
 //  Props:
+//    thumbnailUrl {string}   — image to show in the background
 //    title        {string}   — optional label at bottom-left
 //    titleHindi   {string}   — optional Hindi subtitle
 //    aspectRatio  {string}   — CSS aspect-ratio, default "16/9"
@@ -16,6 +17,7 @@
 // ============================================================
 
 import React, { useState } from 'react';
+import LazyImage from '../../utils/lazyImage';
 
 // ── Mandala-ring play button ─────────────────────────────────
 function PlayButton({ accent = 'var(--saffron)', hovered }) {
@@ -115,6 +117,7 @@ function PlayButton({ accent = 'var(--saffron)', hovered }) {
 
 // ── Main component ───────────────────────────────────────────
 export default function VideoPlaceholder({
+  thumbnailUrl,
   title,
   titleHindi,
   aspectRatio = '16/9',
@@ -151,16 +154,28 @@ export default function VideoPlaceholder({
         ...styleProp,
       }}
     >
-      {/* ── Shimmer sweep ── */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'linear-gradient(90deg, var(--gray-dark) 0%, var(--gray-mid) 50%, var(--gray-dark) 100%)',
-          backgroundSize: '200% 100%',
-          animation: 'shimmer 2.2s ease-in-out infinite',
-        }}
-      />
+      {/* ── Background Image — native lazy load ── */}
+      {thumbnailUrl && (
+        <LazyImage
+          src={thumbnailUrl}
+          alt={title || 'Video thumbnail'}
+          aspectRatio={aspectRatio}
+          style={{ position: 'absolute', inset: 0 }}
+        />
+      )}
+
+      {/* ── Shimmer sweep (fallback/loading state) ── */}
+      {!thumbnailUrl && (
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(90deg, var(--gray-dark) 0%, var(--gray-mid) 50%, var(--gray-dark) 100%)',
+            backgroundSize: '200% 100%',
+            animation: 'shimmer 2.2s ease-in-out infinite',
+          }}
+        />
+      )}
 
       {/* ── Sepia/haldi warm tint overlay ── */}
       <div

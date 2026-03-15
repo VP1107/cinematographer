@@ -39,8 +39,6 @@ function IntroSection() {
         }}
       >
         <div ref={ref}>
-
-
           <p
             style={{
               fontFamily: 'var(--font-display)',
@@ -118,6 +116,7 @@ function SelectedProjectCard({ project, index }) {
           }}
         >
           <VideoPlaceholder
+            thumbnailUrl={project.thumbnailUrl}
             title={project.title}
             titleHindi={project.titleHindi}
             accentColor={project.accentColor || 'var(--saffron)'}
@@ -335,13 +334,13 @@ export default function Home() {
     <>
       <HeroSection />
       <IntroSection />
-      <FeaturedWork />
       <Suspense fallback={
         <div style={{ height: '100dvh', background: 'var(--black)' }} />
       }>
         <StorytellingSection />
       </Suspense>
       <SelectedProjects />
+      <FeaturedWork />
       <CTASection />
     </>
   );
