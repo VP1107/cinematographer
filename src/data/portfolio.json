@@ -6,7 +6,7 @@
       "category": "Commercial",
       "year": 2024,
       "thumbnailUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-      "videoUrl": "https://vimeo.com/123456789",
+      "videoUrl": "https://vimeo.com/1158427919",
       "description": "A meditative brand film for a sustainable Indian textiles label. Shot across the ghats of Varanasi at golden hour, the film celebrates the quiet dignity of handloom weavers and the warmth of natural dyes.",
       "credits": {
         "director": "Arjun Mehta",
@@ -38,7 +38,7 @@
       "category": "Short Film",
       "year": 2023,
       "thumbnailUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80",
-      "videoUrl": "https://vimeo.com/345678901",
+      "videoUrl": "https://vimeo.com/1158427919",
       "description": "Award-winning short following a retired railway conductor on his last journey through Rajasthan. Intimate handheld cinematography, natural window light, and a warm sepia grade that feels like old Kodak.",
       "credits": {
         "director": "Sanya Kapoor",
@@ -54,7 +54,7 @@
       "category": "Commercial",
       "year": 2023,
       "thumbnailUrl": "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=800&q=80",
-      "videoUrl": "https://vimeo.com/456789012",
+      "videoUrl": "https://vimeo.com/1172958229",
       "description": "A high-fashion editorial for a couture bridal label. Shot in a crumbling haveli in Jodhpur, the film juxtaposes ancient Rajput architecture with ultra-modern silhouettes.",
       "credits": {
         "director": "Your Name Here",
@@ -137,7 +137,7 @@
       "year": 2024,
       "client": "Sundari Handlooms",
       "thumbnailUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
-      "videoUrl": "https://vimeo.com/123456789",
+      "videoUrl": "https://vimeo.com/1158427919",
       "description": "A meditation on light and craft — shot across three days in Varanasi during the winter fog season. The brief was simple: make the world see what handloom weavers already know.",
       "accentColor": "var(--saffron)"
     },
@@ -148,7 +148,7 @@
       "year": 2023,
       "client": "Dhoop Films",
       "thumbnailUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=80",
-      "videoUrl": "https://vimeo.com/345678901",
+      "videoUrl": "https://vimeo.com/1158427919",
       "description": "Selected for Mumbai's MAMI Film Festival. A quiet, devastating portrait of departure — shot entirely on natural light through the windows of a Rajasthan-bound train.",
       "accentColor": "var(--crimson)"
     },
@@ -179,7 +179,7 @@
     {
       "id": "cinematography",
       "name": "Cinematography",
-      "nameHindi": "छायाचित्रण",
+      "nameHindi": "",
       "shortDesc": "Narrative-driven visual language for features, OTT, and indie films.",
       "longDesc": "From intimate indie dramas to large-scale productions, I craft images that serve the story first. Fluent in anamorphic, spherical, and digital acquisition. Experienced with ARRI, RED, and Sony systems across varied Indian locations — from Himalayan exteriors to the dense visual grammar of Indian city streets.",
       "icon": "camera",
@@ -188,7 +188,7 @@
     {
       "id": "commercial",
       "name": "Commercial Filmmaking",
-      "nameHindi": "विज्ञापन फ़िल्म",
+      "nameHindi": "",
       "shortDesc": "Brand films and campaigns that feel cinematic, not corporate.",
       "longDesc": "Working with agencies and direct-to-brand clients across FMCG, fashion, luxury, and technology. Every commercial brief is treated as a short film brief — concept, lighting, movement, and edit work in harmony to create ads that audiences actually want to watch.",
       "icon": "film",
@@ -197,7 +197,7 @@
     {
       "id": "music-videos",
       "name": "Music Videos",
-      "nameHindi": "संगीत वीडियो",
+      "nameHindi": "",
       "shortDesc": "Visuals that amplify the emotion of the track — not just illustrate it.",
       "longDesc": "Extensive work across Bollywood, Indie Hindi, Tamil, and fusion genres. Comfortable directing and DPing simultaneously for budget-conscious productions, or leading larger crews for label projects. Strong aesthetic instinct for colour, movement, and the precise moment to cut.",
       "icon": "music",
@@ -206,7 +206,7 @@
     {
       "id": "short-films",
       "name": "Short Films",
-      "nameHindi": "लघु फ़िल्म",
+      "nameHindi": "",
       "shortDesc": "Festival-ready short film cinematography — intimate, precise, resonant.",
       "longDesc": "Multiple selections at MAMI, IFFK, and international festivals. I work closely with debut directors to find the visual language of their story without over-designing it. Natural light, available locations, and disciplined prep are always the starting point.",
       "icon": "clapperboard",
@@ -215,7 +215,7 @@
     {
       "id": "creative-direction",
       "name": "Creative Direction",
-      "nameHindi": "रचनात्मक निर्देशन",
+      "nameHindi": "",
       "shortDesc": "End-to-end visual concepting for campaigns, lookbooks, and digital content.",
       "longDesc": "Beyond the camera — mood boarding, reference curation, location scouting, wardrobe palette direction, and post-grade supervision. I help brands and artists develop a coherent visual identity that travels across formats.",
       "icon": "compass",
@@ -224,7 +224,7 @@
     {
       "id": "color-consultation",
       "name": "Color Consultation",
-      "nameHindi": "रंग परामर्श",
+      "nameHindi": "",
       "shortDesc": "Grade supervision and LUT development rooted in Indian skin-tone precision.",
       "longDesc": "A strong secondary specialty — developing show LUTs, supervising DI sessions, and consulting on colour pipeline from on-set monitoring through to final delivery. Particular expertise in grading for the rich tonal range of Indian skin across diverse lighting conditions.",
       "icon": "palette",
