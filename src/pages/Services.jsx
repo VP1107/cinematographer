@@ -147,15 +147,15 @@ function ServicePanel({ service, index, accent, totalPanels }) {
 
         {/* Icon + counter */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.9rem', marginBottom: '1.6rem' }}>
-          <span style={{ color: accent.primary, lineHeight: 0, opacity: 0.75 }}><Icon /></span>
+          <span style={{ color: accent.primary, lineHeight: 0, opacity: 0.85 }}><Icon /></span>
           <div style={{
             width: '36px', height: '1px',
-            background: `linear-gradient(90deg, ${accent.primary}, transparent)`, opacity: 0.45,
+            background: `linear-gradient(90deg, ${accent.primary}, transparent)`, opacity: 0.55,
           }} />
           <span style={{
             fontFamily: 'var(--font-body)', fontSize: 'var(--text-xs)',
             letterSpacing: '0.2em', textTransform: 'uppercase',
-            color: accent.primary, opacity: 0.55,
+            color: accent.primary, opacity: 0.75,
           }}>
             {String(index + 1).padStart(2, '0')} / {String(totalPanels).padStart(2, '0')}
           </span>
@@ -194,7 +194,7 @@ function ServicePanel({ service, index, accent, totalPanels }) {
           style={{
             fontFamily: 'var(--font-body)',
             fontSize: 'clamp(0.88rem, 1.3vw, 1rem)', fontWeight: 300,
-            lineHeight: 1.9, color: 'var(--white-dim)'
+            lineHeight: 1.9, color: 'var(--white)', opacity: 0.82,
           }}
         >
           <TypewriterText text={service.longDesc} />
@@ -204,7 +204,7 @@ function ServicePanel({ service, index, accent, totalPanels }) {
         <p style={{
           fontFamily: 'var(--font-body)', fontSize: 'var(--text-xs)',
           letterSpacing: '0.08em', color: accent.primary,
-          opacity: 0.4, marginTop: '1.4rem', fontStyle: 'italic'
+          opacity: 0.65, marginTop: '1.4rem', fontStyle: 'italic'
         }}>
           {service.shortDesc}
         </p>
@@ -533,7 +533,7 @@ export default function Services() {
 
                   <span style={{
                     fontFamily: 'var(--font-devanagari)', fontSize: '0.75rem',
-                    color: accent.primary, opacity: 0.6, letterSpacing: '0.12em',
+                    color: accent.primary, opacity: 0.8, letterSpacing: '0.12em',
                     marginBottom: '0.4rem'
                   }}>
                     {service.nameHindi}
@@ -550,7 +550,7 @@ export default function Services() {
                   <p style={{
                     fontFamily: 'var(--font-body)', fontSize: '0.9rem',
                     fontWeight: 300, lineHeight: 1.6, color: 'var(--white-dim)',
-                    opacity: 0.8, marginTop: 'auto'
+                    marginTop: 'auto'
                   }}>
                     {service.shortDesc}
                   </p>
