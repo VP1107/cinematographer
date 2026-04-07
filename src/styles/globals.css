@@ -97,8 +97,62 @@
   --glow-crimson:    0 0 40px rgba(181, 21, 43, 0.2);
   --glow-teal:       0 0 40px rgba(26, 122, 138, 0.2);
 
+  /* Navbar backgrounds (dark mode defaults) */
+  --nav-bg-top:      rgba(6, 5, 10, 0.6);
+  --nav-bg-scrolled: rgba(6, 5, 10, 0.92);
+  --nav-border:      rgba(200, 169, 110, 0.12);
+
   /* Film grain overlay opacity */
   --grain-opacity: 0.04;
+}
+
+/* ---------- Light Theme Overrides ---------- */
+[data-theme="light"] {
+  /* Page backgrounds — crisp warm white */
+  --black:         #faf6f0;
+  --off-black:     #f0ebe0;
+  --gray-dark:     #ddd4c4;
+  --gray-mid:      #c4b89e;
+  --gray-light:    #a89880;
+
+  /* Text — near pitch-black for maximum contrast */
+  --white:         #0f0c08;
+  --white-dim:     #2a2318;
+  --white-muted:   #534535;
+
+  /* Accents — richer, deeper, fully saturated */
+  --saffron:       #b85c00;
+  --saffron-light: #d97000;
+  --saffron-dim:   #7a3c00;
+  --crimson:       #8b0a1e;
+  --crimson-light: #b01428;
+  --crimson-dim:   #5c0612;
+  --teal:          #0e5a6a;
+  --teal-light:    #177a8e;
+  --teal-dim:      #083848;
+  --gold:          #7c5a20;
+  --gold-light:    #a07830;
+  --gold-dim:      #503a10;
+
+  /* Ornamental borders — clearly visible */
+  --border-ornament: 1px solid rgba(124, 90, 32, 0.35);
+  --border-accent:   1px solid rgba(184, 92, 0, 0.5);
+  --glow-saffron:    0 0 32px rgba(184, 92, 0, 0.2);
+  --glow-crimson:    0 0 32px rgba(139, 10, 30, 0.2);
+  --glow-teal:       0 0 32px rgba(14, 90, 106, 0.2);
+
+  /* Navbar-specific backgrounds (light mode) */
+  --nav-bg-top:      rgba(245, 238, 226, 0.82);
+  --nav-bg-scrolled: rgba(236, 228, 212, 0.97);
+  --nav-border:      rgba(124, 90, 32, 0.3);
+
+  /* Slightly reduced grain */
+  --grain-opacity: 0.02;
+}
+
+/* ---------- Smooth theme transition ---------- */
+html {
+  transition: background-color 350ms ease, color 350ms ease;
 }
 
 /* ---------- Reset ---------- */

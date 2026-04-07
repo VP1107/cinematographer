@@ -380,24 +380,29 @@ export default function Services() {
           transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           style={{
             position: 'fixed', top: '4rem', zIndex: 100,
+            width: '100%',
             padding: '0 clamp(1.5rem, 4vw, 3rem)', height: '4rem',
             display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-            background: 'rgba(6,5,10,0.88)', backdropFilter: 'blur(14px)',
-            borderBottom: '1px solid rgba(200,169,110,0.07)',
+            background: 'var(--nav-bg-scrolled)',
+            backdropFilter: 'blur(14px)',
+            WebkitBackdropFilter: 'blur(14px)',
+            borderBottom: 'var(--border-ornament)',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <div style={{ width: '1px', height: '16px', background: 'rgba(200,169,110,0.2)' }} />
+            <div style={{ width: '1px', height: '16px', background: 'var(--gold)' , opacity: 0.4 }} />
             <p style={{
               fontFamily: 'var(--font-display)', fontSize: 'var(--text-lg)',
               fontWeight: 300, letterSpacing: '0.1em',
               color: 'var(--white)', textTransform: 'uppercase',
             }}>What I Do </p>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', opacity: 0.3 }} aria-hidden="true">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }} aria-hidden="true">
             <span style={{
               fontFamily: 'var(--font-body)', fontSize: 'var(--text-xs)',
-              letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--white-muted)', marginLeft: '10px',
+              letterSpacing: '0.16em', textTransform: 'uppercase',
+              color: 'var(--white-dim)', marginLeft: '10px',
+              opacity: 0.65,
             }}> Scroll to explore</span>
             <svg width="22" height="9" viewBox="0 0 22 9" fill="none">
               <path d="M0 4.5h20M16 1l4 3.5-4 3.5" stroke="var(--saffron)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
@@ -481,8 +486,8 @@ export default function Services() {
                 <div
                   key={service.id}
                   style={{
-                    background: 'linear-gradient(145deg, rgba(20,18,24,0.4) 0%, rgba(6,5,10,0.8) 100%)',
-                    border: '1px solid rgba(200,169,110,0.05)',
+                    background: 'var(--off-black)',
+                    border: 'var(--border-ornament)',
                     padding: '2rem',
                     position: 'relative',
                     overflow: 'hidden',
@@ -492,14 +497,12 @@ export default function Services() {
                     cursor: 'default',
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = `rgba(${accent.rgb}, 0.3)`;
+                    e.currentTarget.style.borderColor = `rgba(${accent.rgb}, 0.35)`;
                     e.currentTarget.style.transform = 'translateY(-4px)';
-                    e.currentTarget.style.background = `linear-gradient(145deg, rgba(${accent.rgb},0.05) 0%, rgba(6,5,10,0.9) 100%)`;
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = 'rgba(200,169,110,0.05)';
+                    e.currentTarget.style.borderColor = '';
                     e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.background = 'linear-gradient(145deg, rgba(20,18,24,0.4) 0%, rgba(6,5,10,0.8) 100%)';
                   }}
                 >
                   {/* Subtle Top Accent Line */}

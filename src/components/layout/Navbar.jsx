@@ -7,7 +7,8 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
+import { useTheme } from '../../hooks/useTheme';
 
 // ── Nav links ────────────────────────────────────────────────
 const NAV_LINKS = [
@@ -59,8 +60,54 @@ function RangoliMark({ size = 20 }) {
   );
 }
 
+// ── Theme Toggle Button ──────────────────────────────────────
+function ThemeToggle({ size = 20, style = {} }) {
+  const { theme, toggleTheme } = useTheme();
+  const isDark = theme === 'dark';
+
+  return (
+    <button
+      onClick={toggleTheme}
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      title={isDark ? 'Light mode' : 'Dark mode'}
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '2.2rem',
+        height: '2.2rem',
+        borderRadius: '50%',
+        border: '1px solid var(--border-ornament)',
+        background: isDark
+          ? 'rgba(232, 132, 26, 0.08)'
+          : 'rgba(201, 107, 0, 0.1)',
+        color: 'var(--saffron)',
+        transition: 'background 300ms ease, border-color 300ms ease, color 300ms ease',
+        flexShrink: 0,
+        ...style,
+      }}
+    >
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.span
+          key={isDark ? 'moon' : 'sun'}
+          initial={{ opacity: 0, rotate: -90, scale: 0.6 }}
+          animate={{ opacity: 1, rotate: 0, scale: 1 }}
+          exit={{ opacity: 0, rotate: 90, scale: 0.6 }}
+          transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+          style={{ display: 'flex', lineHeight: 0 }}
+        >
+          {isDark ? <Sun size={size} strokeWidth={1.5} /> : <Moon size={size} strokeWidth={1.5} />}
+        </motion.span>
+      </AnimatePresence>
+    </button>
+  );
+}
+
 // ── Mobile menu overlay ──────────────────────────────────────
 function MobileMenu({ isOpen, onClose }) {
+  const { theme } = useTheme();
+  const isLight = theme === 'light';
+
   // Lock body scroll when open
   useEffect(() => {
     if (isOpen) {
@@ -102,7 +149,9 @@ function MobileMenu({ isOpen, onClose }) {
             position: 'fixed',
             inset: 0,
             zIndex: 'var(--z-modal)',
-            background: 'rgba(6, 5, 10, 0.97)',
+            background: isLight
+              ? 'rgba(240, 233, 218, 0.97)'
+              : 'rgba(6, 5, 10, 0.97)',
             backdropFilter: 'blur(20px)',
             display: 'flex',
             flexDirection: 'column',
@@ -185,20 +234,30 @@ function MobileMenu({ isOpen, onClose }) {
             ))}
           </motion.nav>
 
-          {/* Bottom ornament */}
+          {/* Bottom ornament + theme toggle in mobile menu */}
           <div
             style={{
               position: 'absolute',
               bottom: '2rem',
               left: '2rem',
-              fontFamily: 'var(--font-devanagari)',
-              fontSize: '1.5rem',
-              color: 'var(--saffron)',
-              opacity: 0.3,
-              letterSpacing: '0.5em',
+              right: '2rem',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
             }}
           >
-            ॐ
+            <span
+              style={{
+                fontFamily: 'var(--font-devanagari)',
+                fontSize: '1.5rem',
+                color: 'var(--saffron)',
+                opacity: 0.3,
+                letterSpacing: '0.5em',
+              }}
+            >
+              ॐ
+            </span>
+            <ThemeToggle size={22} />
           </div>
         </motion.div>
       )}
@@ -211,6 +270,8 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen]   = useState(false);
   const [scrolled, setScrolled]   = useState(false);
   const location                  = useLocation();
+  const { theme }                 = useTheme();
+  const isLight                   = theme === 'light';
 
   // Close menu on route change
   useEffect(() => {
@@ -234,13 +295,17 @@ export default function Navbar() {
           right: 0,
           zIndex: 'var(--z-nav)',
           background: scrolled
-            ? 'rgba(6, 5, 10, 0.92)'
-            : 'rgba(6, 5, 10, 0.6)',
-          backdropFilter: 'blur(12px)',
+            ? 'var(--nav-bg-scrolled)'
+            : 'var(--nav-bg-top)',
+          backdropFilter: 'blur(14px)',
+          WebkitBackdropFilter: 'blur(14px)',
           borderBottom: scrolled
-            ? '1px solid rgba(200, 169, 110, 0.12)'
+            ? `1px solid var(--nav-border)`
             : '1px solid transparent',
-          transition: 'background 400ms ease, border-color 400ms ease',
+          boxShadow: scrolled && isLight
+            ? '0 2px 20px rgba(124, 90, 32, 0.12)'
+            : 'none',
+          transition: 'background 400ms ease, border-color 400ms ease, box-shadow 400ms ease',
         }}
       >
         <div
@@ -313,6 +378,9 @@ export default function Navbar() {
               </NavLink>
             ))}
           </nav>
+
+          {/* ── Theme Toggle (desktop) ── */}
+          <ThemeToggle size={18} style={{ marginLeft: '-2rem' }} />
 
           {/* ── Mobile Hamburger ── */}
           <button

@@ -15,6 +15,7 @@ import LoadingScreen   from './components/layout/LoadingScreen';
 import CustomCursor    from './components/ui/CustomCursor';
 import SmoothScrollProvider from './components/layout/SmoothScrollProvider';
 import ScrollToTop      from './components/layout/ScrollToTop';
+import { ThemeProvider } from './hooks/useTheme';
 
 import './styles/globals.css';
 
@@ -213,24 +214,26 @@ function NotFound() {
 // ── Root App ─────────────────────────────────────────────────
 export default function App() {
   return (
-    <HashRouter>
-      <ScrollToTop />
-      <SmoothScrollProvider>
-        {/* Custom cursor — rendered outside page flow */}
-        <CustomCursor />
+    <ThemeProvider>
+      <HashRouter>
+        <ScrollToTop />
+        <SmoothScrollProvider>
+          {/* Custom cursor — rendered outside page flow */}
+          <CustomCursor />
 
-        {/* Initial loading screen */}
-        <LoadingScreen />
+          {/* Initial loading screen */}
+          <LoadingScreen />
 
-        {/* Site shell */}
-        <Navbar />
+          {/* Site shell */}
+          <Navbar />
 
-        <main id="main-content">
-          <AnimatedRoutes />
-        </main>
+          <main id="main-content">
+            <AnimatedRoutes />
+          </main>
 
-        <Footer />
-      </SmoothScrollProvider>
-    </HashRouter>
+          <Footer />
+        </SmoothScrollProvider>
+      </HashRouter>
+    </ThemeProvider>
   );
 }
