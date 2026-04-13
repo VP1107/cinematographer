@@ -1,6 +1,6 @@
-# Manushree Rao - Cinematographer Portfolio
+# Cinematographer Portfolio
 
-A high-end, cinematic portfolio website designed for Manushree Rao, a cinematographer based in Mumbai / Ahmedabad. This project features a modern editorial aesthetic, smooth animations, and a focus on visual storytelling.
+A high-end, cinematic portfolio website designed for a cinematographer based in Mumbai / Ahmedabad. This project features a modern editorial aesthetic, smooth animations, and a focus on visual storytelling.
 
 ## ✨ Features
 

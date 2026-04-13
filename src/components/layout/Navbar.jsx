@@ -335,7 +335,7 @@ export default function Navbar() {
                 textTransform: 'uppercase',
               }}
             >
-              Your Name
+              Tapan Vyas
             </span>
           </NavLink>
 

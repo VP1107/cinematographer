@@ -574,7 +574,7 @@ export default function Services() {
             fontSize: 'clamp(6rem, 20vw, 14rem)',
             color: 'var(--saffron)', opacity: 0.03,
             pointerEvents: 'none', userSelect: 'none', lineHeight: 1,
-          }}>YOUR NAME</p>
+          }}>TAPAN VYAS</p>
 
           <div className="container" style={{ position: 'relative' }}>
             <h2 style={{

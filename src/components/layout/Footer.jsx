@@ -103,7 +103,7 @@ export default function Footer() {
                 marginBottom: '0.5rem',
               }}
             >
-              Your Name
+              Tapan Vyas
             </p>
             <p
               style={{
@@ -261,7 +261,7 @@ export default function Footer() {
               letterSpacing: '0.06em',
             }}
           >
-            © {year} Your Name. All rights reserved.
+            © {year} Tapan Vyas. All rights reserved.
           </p>
           {/* V&M Creations watermark logo */}
           <a

@@ -41,7 +41,7 @@ function Portrait() {
     >
       {/* Image */}
       <LazyImage
-        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=960&q=80"
+        src="/profile_picture.png"
         alt="Portrait of cinematographer"
         aspectRatio="3/4"
         haldi

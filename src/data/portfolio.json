@@ -1,6 +1,54 @@
 {
   "reels": [
     {
+      "slug": "o-taareee",
+      "title": "O Taareee",
+      "category": "Feature Film",
+      "year": 2017,
+      "thumbnailUrl": "https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=800&q=80",
+      "videoUrl": "https://imdb-video.media-imdb.com/vi3909926425/1434659607842-pgv4ql-1594794617823.mp4?Expires=1776018350&Signature=QDKmZ9eeNCMXfj1HLMSRtFjyKJznjbbXMPyfPKoDtTZja8qc~cytBCjRJcpwsnT9Y5W8ftXbW2nHD8uCpaec4ptlVC~5sn2LWUP6bCeS-25wVVVkZM9NwPy0eGNmNnB2iYeKujiFeYybl~trA-KtGs7-w2nwwC1IdLInlstDLmdY9ZoOy5k56YWMw4Py~lgc9NF~oi5Js8erqVoI44WkhuPDcEWQt6EAwykBL40HyiZmaPnLx6L~xxxecrLxrO~jssRXjunhQRbKkO1Gl97-CDcWEohE9WLeeZeDY3aYDwYK7hsiRh0NLqn30cMlZUjaHjJdDRjdCWouWCxB~SuZaA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+      "description": "Group of friends, who, for love, friendship and wooing the most beautiful girl in the college, tumble into a politically driven plot where a sudden murder brings them face to face with each other and a reality that shakes them to their core.",
+      "credits": {
+        "director": "Tapan Vyas",
+        "production": "Mayur Patel",
+        "dop": "Tapan Vyas",
+        "editor": "Bankim Parmar"
+      },
+      "featured": true
+    },
+    {
+      "slug": "mijaaj",
+      "title": "Mijaaj",
+      "category": "Feature Film",
+      "year": 2018,
+      "thumbnailUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80",
+      "videoUrl": "https://imdb-video.media-imdb.com/vi3814899225/1434659607842-pgv4ql-1596122570029.mp4?Expires=1776017495&Signature=hzInFfIB09y-6hSrkJMb1wDnhxwU1K8XbCAO2ubYE3AMqWC9Dg2ZN6DALV8tuDLiGc-JALjaxax1~AWq~jKK8rzXhwMHFdwZO3UD2AyvwqNhnZ5oUai9ZFXhIAxfWt5ar6jd8rOEE5QRMi5sjvfh2LDeRdaShqzuZuPVh87RI99TmSE~AM~P6egPO-AaaHKJBBTUUB6sM6ER59BpScpSGzUUzP5jRFIo7QbqGGZ16-nGf4tHhKKZaTlFSECocR62JugjGXhYQER2Ya2U~yOMTqzhHjMNryrtQf4zWgTejXShT4MW8FwGH4YHOGM9rL~oXevA1aenwrdFd5LWz3KeuQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+      "description": "Jay, Jhanvi, and Yogesh come to the aid of Sarita Ben, an old lady who owns a heritage property - a lodge, when an MNC wants to buy her property, leaving several people homeless. The three youngsters fight against these powerful people.",
+      "credits": {
+        "director": "Tapan Vyas",
+        "production": "Jitendra Pandya / Bhavik Patel",
+        "dop": "Tapan Vyas",
+        "editor": "Nirav Panchal"
+      },
+      "featured": true
+    },
+    {
+      "slug": "lagan-laagii-re",
+      "title": "Lagan Laagii Re",
+      "category": "Feature Film",
+      "year": 2025,
+      "thumbnailUrl": "https://images.unsplash.com/photo-1518331647614-7a1f04cd34ce?w=800&q=80",
+      "videoUrl": "https://imdb-video.media-imdb.com/mc/vi3051408153/vi3051408153_480p.mp4?Expires=1776018018&Signature=NIyzPj04HwfmfkHT4V7xk6XKkYPcZ0-dXFTSOwMzrFBOMYcYw9IvgePLv0mZSC6bOzcTWDZDN6~Nbr-TFOQ2TGZkYYgp3fEiNWQMqWDvsr2rSEfmyptV1iqvAk1dYqsUpuzrd2oEbGeNSrX4eyPN36Hq3~OAVTEaRHzlI6G2JHNGaXf7tRLL-bfz6XYs879pGRA0~U5vAkPbzhqBUVIWNghALMl25aPH3vBKK5fKhpSsrBPyHjzL2xHODQ8WkTcx6ETG6aG0K-UOnH7ehK9ulK3BUK0PgdDkR9v2ap4iboMJXeSxY82GXE8s9zWG-Yx1rKyvOwGgUKKQtxYsI8D2LQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+      "description": "In a world full of love stories, two friends are on a mission to stop one.",
+      "credits": {
+        "director": "Saandeep Patel",
+        "production": "Rashmin Majithia",
+        "dop": "Tapan Vyas",
+        "editor": "Unknown"
+      },
+      "featured": true
+    },
+    {
       "slug": "roshni-brand-film",
       "title": "Roshni — Brand Film",
       "category": "Commercial",
@@ -11,7 +59,7 @@
       "credits": {
         "director": "Arjun Mehta",
         "production": "Amber Frame Studio",
-        "dop": "Your Name Here",
+        "dop": "Tapan Vyas",
         "editor": "Priya Nair"
       },
       "featured": true
@@ -25,9 +73,9 @@
       "videoUrl": "https://vimeo.com/234567890",
       "description": "Visual accompaniment for an indie fusion artist blending Hindustani classical ragas with electronic production. High-contrast lighting, slow-motion tabla sequences, and peacock-blue chroma work.",
       "credits": {
-        "director": "Your Name Here",
+        "director": "Tapan Vyas",
         "production": "Indigo Pictures",
-        "dop": "Your Name Here",
+        "dop": "Tapan Vyas",
         "editor": "Rohan Das"
       },
       "featured": true
@@ -43,7 +91,7 @@
       "credits": {
         "director": "Sanya Kapoor",
         "production": "Dhoop Films",
-        "dop": "Your Name Here",
+        "dop": "Tapan Vyas",
         "editor": "Vikram Rao"
       },
       "featured": true
@@ -57,9 +105,9 @@
       "videoUrl": "https://vimeo.com/1172958229",
       "description": "A high-fashion editorial for a couture bridal label. Shot in a crumbling haveli in Jodhpur, the film juxtaposes ancient Rajput architecture with ultra-modern silhouettes.",
       "credits": {
-        "director": "Your Name Here",
+        "director": "Tapan Vyas",
         "production": "Noor Creative",
-        "dop": "Your Name Here",
+        "dop": "Tapan Vyas",
         "editor": "Aisha Bose"
       },
       "featured": false
@@ -73,9 +121,9 @@
       "videoUrl": "https://vimeo.com/567890123",
       "description": "A short documentary portrait of kite-makers in Ahmedabad during Uttarayan. Long lenses, rooftop light, and the chaos of ten thousand kites in an Amdavadi sky.",
       "credits": {
-        "director": "Your Name Here",
+        "director": "Tapan Vyas",
         "production": "Self-produced",
-        "dop": "Your Name Here",
+        "dop": "Tapan Vyas",
         "editor": "Manish Joshi"
       },
       "featured": false
@@ -91,7 +139,7 @@
       "credits": {
         "director": "Kabir Singh",
         "production": "Red Masala Films",
-        "dop": "Your Name Here",
+        "dop": "Tapan Vyas",
         "editor": "Tara Menon"
       },
       "featured": false
@@ -105,9 +153,9 @@
       "videoUrl": "https://vimeo.com/789012345",
       "description": "A performance film for a Bharatanatyam dancer — capturing mudras, footwork, and expression with high-speed cameras and dramatic single-source lighting. Premiered at the MAMI Film Festival.",
       "credits": {
-        "director": "Your Name Here",
+        "director": "Tapan Vyas",
         "production": "Tandav Arts",
-        "dop": "Your Name Here",
+        "dop": "Tapan Vyas",
         "editor": "Shreya Pillai"
       },
       "featured": false
@@ -121,15 +169,48 @@
       "videoUrl": "https://vimeo.com/890123456",
       "description": "Aerial and street-level cinematography for an Ahmedabad-based indie band. The video weaves rooftop life, Old City alleyways, and the Sabarmati riverfront into a love letter to the city.",
       "credits": {
-        "director": "Your Name Here",
+        "director": "Tapan Vyas",
         "production": "Patan Records",
-        "dop": "Your Name Here",
+        "dop": "Tapan Vyas",
         "editor": "Dev Shah"
       },
       "featured": false
     }
   ],
   "projects": [
+    {
+      "slug": "o-taareee",
+      "title": "O Taareee",
+      "subtitle": "Gujarati Feature Film",
+      "year": 2017,
+      "client": "Mayur Patel",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=1200&q=80",
+      "videoUrl": "https://imdb-video.media-imdb.com/vi3909926425/1434659607842-pgv4ql-1594794617823.mp4?Expires=1776018350&Signature=QDKmZ9eeNCMXfj1HLMSRtFjyKJznjbbXMPyfPKoDtTZja8qc~cytBCjRJcpwsnT9Y5W8ftXbW2nHD8uCpaec4ptlVC~5sn2LWUP6bCeS-25wVVVkZM9NwPy0eGNmNnB2iYeKujiFeYybl~trA-KtGs7-w2nwwC1IdLInlstDLmdY9ZoOy5k56YWMw4Py~lgc9NF~oi5Js8erqVoI44WkhuPDcEWQt6EAwykBL40HyiZmaPnLx6L~xxxecrLxrO~jssRXjunhQRbKkO1Gl97-CDcWEohE9WLeeZeDY3aYDwYK7hsiRh0NLqn30cMlZUjaHjJdDRjdCWouWCxB~SuZaA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+      "description": "Group of friends, who, for love, friendship and wooing the most beautiful girl in the college, tumble into a politically driven plot where a sudden murder brings them face to face with each other and a reality that shakes them to their core.",
+      "accentColor": "var(--saffron)"
+    },
+    {
+      "slug": "mijaaj",
+      "title": "Mijaaj",
+      "subtitle": "Action / Drama Feature Film",
+      "year": 2018,
+      "client": "Jitendra Pandya",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&q=80",
+      "videoUrl": "https://imdb-video.media-imdb.com/vi3814899225/1434659607842-pgv4ql-1596122570029.mp4?Expires=1776017495&Signature=hzInFfIB09y-6hSrkJMb1wDnhxwU1K8XbCAO2ubYE3AMqWC9Dg2ZN6DALV8tuDLiGc-JALjaxax1~AWq~jKK8rzXhwMHFdwZO3UD2AyvwqNhnZ5oUai9ZFXhIAxfWt5ar6jd8rOEE5QRMi5sjvfh2LDeRdaShqzuZuPVh87RI99TmSE~AM~P6egPO-AaaHKJBBTUUB6sM6ER59BpScpSGzUUzP5jRFIo7QbqGGZ16-nGf4tHhKKZaTlFSECocR62JugjGXhYQER2Ya2U~yOMTqzhHjMNryrtQf4zWgTejXShT4MW8FwGH4YHOGM9rL~oXevA1aenwrdFd5LWz3KeuQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+      "description": "Jay, Jhanvi, and Yogesh come to the aid of Sarita Ben, an old lady who owns a heritage property - a lodge, when an MNC wants to buy her property, leaving several people homeless. The three youngsters fight against these powerful people.",
+      "accentColor": "var(--crimson)"
+    },
+    {
+      "slug": "lagan-laagii-re",
+      "title": "Lagan Laagii Re",
+      "subtitle": "Romantic Comedy Feature",
+      "year": 2025,
+      "client": "Rashmin Majithia",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1518331647614-7a1f04cd34ce?w=1200&q=80",
+      "videoUrl": "https://imdb-video.media-imdb.com/mc/vi3051408153/vi3051408153_480p.mp4?Expires=1776018018&Signature=NIyzPj04HwfmfkHT4V7xk6XKkYPcZ0-dXFTSOwMzrFBOMYcYw9IvgePLv0mZSC6bOzcTWDZDN6~Nbr-TFOQ2TGZkYYgp3fEiNWQMqWDvsr2rSEfmyptV1iqvAk1dYqsUpuzrd2oEbGeNSrX4eyPN36Hq3~OAVTEaRHzlI6G2JHNGaXf7tRLL-bfz6XYs879pGRA0~U5vAkPbzhqBUVIWNghALMl25aPH3vBKK5fKhpSsrBPyHjzL2xHODQ8WkTcx6ETG6aG0K-UOnH7ehK9ulK3BUK0PgdDkR9v2ap4iboMJXeSxY82GXE8s9zWG-Yx1rKyvOwGgUKKQtxYsI8D2LQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+      "description": "In a world full of love stories, two friends are on a mission to stop one.",
+      "accentColor": "var(--teal)"
+    },
     {
       "slug": "roshni-brand-film",
       "title": "Roshni",
@@ -235,36 +316,24 @@
     {
       "id": "instagram",
       "label": "Instagram",
-      "url": "https://instagram.com/yourchannel",
+      "url": "https://www.instagram.com/tapanvyas?igsh=ZTY0bXRjbmVtNmpr&utm_source=qr",
       "icon": "instagram"
     },
     {
-      "id": "vimeo",
-      "label": "Vimeo",
-      "url": "https://vimeo.com/yourchannel",
-      "icon": "vimeo"
-    },
-    {
-      "id": "youtube",
-      "label": "YouTube",
-      "url": "https://youtube.com/@yourchannel",
-      "icon": "youtube"
-    },
-    {
-      "id": "linkedin",
-      "label": "LinkedIn",
-      "url": "https://linkedin.com/in/yourprofile",
-      "icon": "linkedin"
+      "id": "facebook",
+      "label": "Facebook",
+      "url": "https://www.facebook.com/share/1CDixpMBzA/?mibextid=wwXIfr",
+      "icon": "facebook"
     },
     {
       "id": "imdb",
       "label": "IMDb",
-      "url": "https://imdb.com/name/yourprofile",
+      "url": "https://www.imdb.com/name/nm2935808/?ref_=fn_t_1",
       "icon": "film"
     }
   ],
   "contactInfo": {
-    "email": "hello@yourname.in",
+    "email": "tapanvyas@gmail.com",
     "phone": "+91 98765 43210",
     "baseCity": "Mumbai / Ahmedabad",
     "availability": "Available for projects across India & internationally"

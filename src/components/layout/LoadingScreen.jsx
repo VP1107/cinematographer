@@ -6,7 +6,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const NAME     = 'YOUR NAME';
+const NAME     = 'TAPAN VYAS';
 const N_BLADES = 9;
 const T_CLOSE  = 180;
 const T_BLACK  = 250;

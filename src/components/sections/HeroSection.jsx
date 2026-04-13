@@ -121,7 +121,7 @@ function ScrollIndicator() {
 // ── Main HeroSection ──────────────────────────────────────────
 export default function HeroSection({
   videoUrl     = '',   // leave empty until you have a real URL — pass a YouTube/Vimeo link to enable
-  name         = 'Your Name',
+  name         = 'Tapan Vyas',
   tagline      = 'Crafting Stories Through Light and Motion.',
   taglineHindi = '',
 }) {
@@ -148,7 +148,7 @@ export default function HeroSection({
           position: 'absolute',
           inset: 0,
           background: 'var(--black)',
-          backgroundImage: 'url("https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2670&auto=format&fit=crop&fm=webp")',
+          backgroundImage: 'url("/image.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           zIndex: 0,
