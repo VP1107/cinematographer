@@ -234,6 +234,21 @@ export default function StorytellingSection() {
         ))}
       </div>
 
+      {/* ── Scroll indicator ── */}
+      <div style={{
+        position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)',
+        display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', zIndex: 10,
+      }} aria-hidden="true">
+        <span style={{
+          fontFamily: 'var(--font-body)', fontSize: 'var(--text-xs)',
+          letterSpacing: '0.16em', textTransform: 'uppercase',
+          color: 'var(--white-dim)', opacity: 0.65,
+        }}>Scroll down</span>
+        <svg width="9" height="22" viewBox="0 0 9 22" fill="none">
+          <path d="M4.5 0v20M1 16l3.5 4 3.5-4" stroke="var(--saffron)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </div>
+
       {/* Reduced-motion fallback — stacked vertical layout */}
       <style>{`
         @media (prefers-reduced-motion: reduce) {

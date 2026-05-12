@@ -266,8 +266,8 @@ export default function LoadingScreen() {
   useEffect(() => () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); }, []);
 
   const maskStyle = phase === 'reveal' ? {
-    maskImage:       `radial-gradient(circle at 50% 50%, transparent 0%, transparent ${holeR}px, #06050a ${holeR + 2}px)`,
-    WebkitMaskImage: `radial-gradient(circle at 50% 50%, transparent 0%, transparent ${holeR}px, #06050a ${holeR + 2}px)`,
+    maskImage:       `radial-gradient(circle at 50% 50%, transparent 0%, transparent ${holeR}px, var(--black) ${holeR + 2}px)`,
+    WebkitMaskImage: `radial-gradient(circle at 50% 50%, transparent 0%, transparent ${holeR}px, var(--black) ${holeR + 2}px)`,
   } : {};
 
   return (
@@ -279,7 +279,7 @@ export default function LoadingScreen() {
           exit={{ opacity: 0, transition: { duration: 0.35 } }}
           style={{
             position: 'fixed', inset: 0, zIndex: 9999,
-            background: '#06050a',
+            background: 'var(--black)',
             display: 'flex', flexDirection: 'column',
             alignItems: 'center', justifyContent: 'center',
             gap: '2rem', overflow: 'hidden',

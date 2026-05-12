@@ -79,44 +79,46 @@ export default function CustomCursor() {
           zIndex: 'var(--z-cursor)',
           pointerEvents: 'none',
           willChange: 'transform',
-          mixBlendMode: 'difference',
+          mixBlendMode: 'multiply',
         }}
       >
         {/* Outer dashed ring */}
         <circle
           cx="16" cy="16" r="13"
-          stroke={hovered ? 'var(--saffron)' : 'rgba(247,240,230,0.6)'}
+          stroke={hovered ? 'var(--saffron)' : 'var(--gold)'}
           strokeWidth="0.8"
           strokeDasharray="3 2"
-          style={{ transition: 'stroke 200ms ease' }}
+          opacity={hovered ? 1 : 0.5}
+          style={{ transition: 'stroke 200ms ease, opacity 200ms ease' }}
         />
 
         {/* Inner solid ring */}
         <circle
           cx="16" cy="16" r="7"
-          stroke={hovered ? 'var(--crimson)' : 'rgba(247,240,230,0.3)'}
+          stroke={hovered ? 'var(--crimson)' : 'var(--gold-dim)'}
           strokeWidth="0.6"
-          style={{ transition: 'stroke 200ms ease' }}
+          opacity={hovered ? 1 : 0.4}
+          style={{ transition: 'stroke 200ms ease, opacity 200ms ease' }}
         />
 
         {/* Cardinal tick marks — N S W E */}
         <line x1="16" y1="2"  x2="16" y2="6"
-          stroke={hovered ? 'var(--saffron)' : 'rgba(247,240,230,0.7)'}
+          stroke={hovered ? 'var(--saffron)' : 'var(--white-dim)'}
           strokeWidth="1" strokeLinecap="round"
           style={{ transition: 'stroke 200ms ease' }}
         />
         <line x1="16" y1="26" x2="16" y2="30"
-          stroke={hovered ? 'var(--saffron)' : 'rgba(247,240,230,0.7)'}
+          stroke={hovered ? 'var(--saffron)' : 'var(--white-dim)'}
           strokeWidth="1" strokeLinecap="round"
           style={{ transition: 'stroke 200ms ease' }}
         />
         <line x1="2"  y1="16" x2="6"  y2="16"
-          stroke={hovered ? 'var(--saffron)' : 'rgba(247,240,230,0.7)'}
+          stroke={hovered ? 'var(--saffron)' : 'var(--white-dim)'}
           strokeWidth="1" strokeLinecap="round"
           style={{ transition: 'stroke 200ms ease' }}
         />
         <line x1="26" y1="16" x2="30" y2="16"
-          stroke={hovered ? 'var(--saffron)' : 'rgba(247,240,230,0.7)'}
+          stroke={hovered ? 'var(--saffron)' : 'var(--white-dim)'}
           strokeWidth="1" strokeLinecap="round"
           style={{ transition: 'stroke 200ms ease' }}
         />
@@ -125,25 +127,25 @@ export default function CustomCursor() {
         <circle
           cx="16" cy="16"
           r={hovered ? '2.5' : '1.5'}
-          fill={hovered ? 'var(--saffron)' : 'rgba(247,240,230,0.9)'}
+          fill={hovered ? 'var(--saffron)' : 'var(--white)'}
           style={{ transition: 'r 200ms ease, fill 200ms ease' }}
         />
 
         {/* Diagonal rangoli accent dots */}
         <circle cx="22.5" cy="9.5"  r="1"
-          fill={hovered ? 'var(--crimson)'    : 'rgba(247,240,230,0.35)'}
+          fill={hovered ? 'var(--crimson)'    : 'var(--gold)'}
           style={{ transition: 'fill 200ms ease' }}
         />
         <circle cx="9.5"  cy="22.5" r="1"
-          fill={hovered ? 'var(--crimson)'    : 'rgba(247,240,230,0.35)'}
+          fill={hovered ? 'var(--crimson)'    : 'var(--gold)'}
           style={{ transition: 'fill 200ms ease' }}
         />
         <circle cx="22.5" cy="22.5" r="1"
-          fill={hovered ? 'var(--teal-light)' : 'rgba(247,240,230,0.2)'}
+          fill={hovered ? 'var(--teal-light)' : 'var(--gold)'}
           style={{ transition: 'fill 200ms ease' }}
         />
         <circle cx="9.5"  cy="9.5"  r="1"
-          fill={hovered ? 'var(--teal-light)' : 'rgba(247,240,230,0.2)'}
+          fill={hovered ? 'var(--teal-light)' : 'var(--gold)'}
           style={{ transition: 'fill 200ms ease' }}
         />
       </svg>

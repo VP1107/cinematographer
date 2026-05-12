@@ -129,269 +129,321 @@ export default function HeroSection({
   const playerRef                   = useRef(null);
 
   return (
-    <section
-      style={{
-        position: 'relative',
-        width: '100%',
-        height: '100dvh',
-        minHeight: '560px',
-        overflow: 'hidden',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-      aria-label="Hero"
-    >
-      {/* ── Video background ── */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'var(--black)',
-          backgroundImage: 'url("/image.png")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          zIndex: 0,
-        }}
-      >
-        {/* Only mount ReactPlayer when a real URL is provided */}
-        {videoUrl && (
-          <Suspense fallback={null}>
-            <ReactPlayer
-              ref={playerRef}
-              url={videoUrl}
-              playing
-              loop
-              muted
-              controls={false}
-              playsinline
-              width="100%"
-              height="100%"
-              onReady={() => setVideoReady(true)}
-              style={{
-                position: 'absolute',
-                inset: 0,
-                opacity: videoReady ? 1 : 0,
-                transition: 'opacity 1s ease',
-                transform: 'scale(1.05)',
-              }}
-              config={{
-                youtube: { playerVars: { modestbranding: 1, rel: 0 } },
-                vimeo:   { playerOptions: { background: true } },
-              }}
-            />
-          </Suspense>
-        )}
-      </div>
-
-      {/* ── Gradient overlays ── */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'linear-gradient(to bottom, rgba(6,5,10,0.35) 0%, rgba(6,5,10,0.15) 40%, rgba(6,5,10,0.65) 100%)',
-          zIndex: 1,
-        }}
-      />
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'radial-gradient(ellipse at 70% 50%, rgba(200,100,10,0.06) 0%, transparent 65%)',
-          zIndex: 1,
-        }}
-      />
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'linear-gradient(to right, rgba(6,5,10,0.5) 0%, transparent 50%)',
-          zIndex: 1,
-        }}
-      />
-
-      {/* ── Corner rangoli ornaments ── */}
-      <div style={{ position: 'absolute', inset: 0, zIndex: 2, pointerEvents: 'none' }}>
-        <CornerOrnament position="top-left"     />
-        <CornerOrnament position="top-right"    />
-        <CornerOrnament position="bottom-left"  />
-        <CornerOrnament position="bottom-right" />
-      </div>
-
-      {/* ── Hero text ── */}
-      <div
-        className="container"
-        style={{
-          position: 'relative',
-          zIndex: 3,
-          textAlign: 'center',
-        }}
-      >
-        {/* Devanagari eyebrow */}
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          style={{
-            fontFamily: 'var(--font-devanagari)',
-            fontSize: 'var(--text-sm)',
-            letterSpacing: '0.25em',
-            color: 'var(--saffron)',
-            opacity: 0.75,
-            marginBottom: '0.75rem',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-          }}
-        >
-        </motion.p>
-
-        {/* Name */}
-        <div style={{ overflow: 'hidden' }}>
-          <motion.h1
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'var(--text-hero)',
-              fontWeight: 300,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              lineHeight: 1,
-              color: 'var(--white)',
-              textShadow: '0 2px 40px rgba(0,0,0,0.5)',
-              paddingLeft: '0.08em',
-            }}
-          >
-            {name}
-          </motion.h1>
-        </div>
-
-        {/* Saffron → crimson → teal gradient rule */}
-        <motion.div
-          initial={{ scaleX: 0, opacity: 0 }}
-          animate={{ scaleX: 1, opacity: 1 }}
-          transition={{ delay: 1.1, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          style={{
-            width: 'min(320px, 55vw)',
-            height: '1px',
-            background: 'linear-gradient(90deg, transparent, var(--saffron), var(--crimson), var(--teal), transparent)',
-            margin: '1.4rem auto',
-            transformOrigin: 'center',
-          }}
-          aria-hidden="true"
-        />
-
-        {/* Tagline */}
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: 'var(--text-lg)',
-            fontWeight: 300,
-            letterSpacing: '0.06em',
-            color: 'rgba(247,240,230,0.7)',
-            marginBottom: '0.4rem',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            paddingLeft: '0.06em',
-          }}
-        >
-          {tagline}
-        </motion.p>
-
-        {taglineHindi && (
+    <section className="hero-section" aria-label="Hero">
+      {/* ── Left Content (Text & Buttons) ── */}
+      <div className="hero-content">
+        <div className="hero-text-wrapper">
+          {/* Devanagari eyebrow */}
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.6, duration: 0.8 }}
-            style={{
-              fontFamily: 'var(--font-devanagari)',
-              fontSize: 'var(--text-base)',
-              color: 'var(--saffron)',
-              opacity: 0.5,
-              letterSpacing: '0.08em',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-            }}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="hero-eyebrow"
           >
-            {taglineHindi}
           </motion.p>
-        )}
 
-        {/* CTA buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.9, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          style={{
-            marginTop: '2.5rem',
-            display: 'flex',
-            gap: '1rem',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-          }}
-        >
-          <Link
-            to="/portfolio"
+          {/* Name */}
+          <div style={{ overflow: 'hidden' }}>
+            <motion.h1
+              initial={{ opacity: 0, y: 60 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              className="hero-title"
+            >
+              {name}
+            </motion.h1>
+          </div>
+
+          {/* Saffron → crimson → teal gradient rule */}
+          <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ scaleX: 1, opacity: 1 }}
+            transition={{ delay: 1.1, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+            className="hero-divider"
+            aria-hidden="true"
+          />
+
+          {/* Tagline */}
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="hero-tagline"
+          >
+            {tagline}
+          </motion.p>
+
+          {taglineHindi && (
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.6, duration: 0.8 }}
+              className="hero-tagline-hindi"
+            >
+              {taglineHindi}
+            </motion.p>
+          )}
+
+          {/* CTA buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.9, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="hero-buttons"
+          >
+            <Link
+              to="/portfolio"
+              className="btn-primary"
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'var(--saffron-dim)';
+                e.currentTarget.style.color = 'var(--white)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'var(--saffron)';
+                e.currentTarget.style.color = 'var(--black)';
+              }}
+            >
+              View Work
+            </Link>
+            <Link
+              to="/contact"
+              className="btn-secondary"
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'var(--gold)';
+                e.currentTarget.style.color = 'var(--gold-dim)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(200,169,110,0.45)';
+                e.currentTarget.style.color = 'var(--white)';
+              }}
+            >
+              Get in Touch
+            </Link>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* ── Right Media (Video/Image) ── */}
+      <div className="hero-media">
+        <div className="hero-media-inner">
+          <div
             style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: 'var(--text-sm)',
-              letterSpacing: '0.14em',
-              textTransform: 'uppercase',
-              color: 'var(--black)',
-              background: 'var(--saffron)',
-              border: '1px solid var(--saffron)',
-              padding: '0.65rem 1.8rem',
-              textDecoration: 'none',
-              transition: 'background 220ms ease, color 220ms ease',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'var(--saffron-dim)';
-              e.currentTarget.style.color = 'var(--white)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'var(--saffron)';
-              e.currentTarget.style.color = 'var(--black)';
+              position: 'absolute',
+              inset: 0,
+              background: 'var(--black)',
+              backgroundImage: 'url("/image.png")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              zIndex: 0,
             }}
           >
-            View Work
-          </Link>
-          <Link
-            to="/contact"
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: 'var(--text-sm)',
-              letterSpacing: '0.14em',
-              textTransform: 'uppercase',
-              color: 'var(--white)',
-              background: 'transparent',
-              border: '1px solid rgba(200,169,110,0.45)',
-              padding: '0.65rem 1.8rem',
-              textDecoration: 'none',
-              transition: 'border-color 220ms ease, color 220ms ease',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = 'var(--gold)';
-              e.currentTarget.style.color = 'var(--gold-light)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(200,169,110,0.45)';
-              e.currentTarget.style.color = 'var(--white)';
-            }}
-          >
-            Get in Touch
-          </Link>
-        </motion.div>
+            {/* Only mount ReactPlayer when a real URL is provided */}
+            {videoUrl && (
+              <Suspense fallback={null}>
+                <ReactPlayer
+                  ref={playerRef}
+                  url={videoUrl}
+                  playing
+                  loop
+                  muted
+                  controls={false}
+                  playsinline
+                  width="100%"
+                  height="100%"
+                  onReady={() => setVideoReady(true)}
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    opacity: videoReady ? 1 : 0,
+                    transition: 'opacity 1s ease',
+                    transform: 'scale(1.05)',
+                  }}
+                  config={{
+                    youtube: { playerVars: { modestbranding: 1, rel: 0 } },
+                    vimeo:   { playerOptions: { background: true } },
+                  }}
+                />
+              </Suspense>
+            )}
+          </div>
+
+          {/* Gradient overlay to soften edge on desktop */}
+          <div
+            aria-hidden="true"
+            className="hero-media-gradient"
+          />
+
+          {/* Corner rangoli ornaments */}
+          <div style={{ position: 'absolute', inset: 0, zIndex: 2, pointerEvents: 'none' }}>
+            <CornerOrnament position="top-right"    />
+            <CornerOrnament position="bottom-right" />
+          </div>
+        </div>
       </div>
 
       {/* ── Scroll indicator ── */}
       <ScrollIndicator />
+
+      {/* ── CSS Styles ── */}
+      <style>{`
+        .hero-section {
+          position: relative;
+          width: 100%;
+          height: 100dvh;
+          min-height: 560px;
+          display: flex;
+          flex-direction: column-reverse;
+          background: var(--black);
+          overflow: hidden;
+        }
+
+        .hero-content {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: var(--space-8);
+          position: relative;
+          z-index: 3;
+          text-align: center;
+        }
+
+        .hero-text-wrapper {
+          max-width: 600px;
+          margin-top: -4rem; /* Lift text slightly on mobile */
+        }
+
+        .hero-media {
+          flex: 1;
+          position: relative;
+          min-height: 45vh;
+        }
+
+        .hero-media-inner {
+          position: absolute;
+          inset: 0;
+          overflow: hidden;
+        }
+
+        .hero-media-gradient {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to top, var(--black) 0%, transparent 20%);
+          z-index: 1;
+        }
+
+        .hero-eyebrow {
+          font-family: var(--font-devanagari);
+          font-size: var(--text-sm);
+          letter-spacing: 0.25em;
+          color: var(--saffron);
+          opacity: 0.75;
+          margin-bottom: 0.75rem;
+        }
+
+        .hero-title {
+          font-family: var(--font-display);
+          font-size: var(--text-hero);
+          font-weight: 300;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          line-height: 1;
+          color: var(--white);
+          padding-left: 0.08em;
+          text-shadow: 0 2px 40px rgba(0,0,0,0.1);
+        }
+
+        .hero-divider {
+          width: 100%;
+          max-width: 320px;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, var(--saffron), var(--crimson), var(--teal), transparent);
+          margin: 1.4rem auto;
+          transform-origin: center;
+        }
+
+        .hero-tagline {
+          font-family: var(--font-body);
+          font-size: var(--text-lg);
+          font-weight: 300;
+          letter-spacing: 0.06em;
+          color: var(--white-dim);
+          margin-bottom: 0.4rem;
+        }
+
+        .hero-tagline-hindi {
+          font-family: var(--font-devanagari);
+          font-size: var(--text-base);
+          color: var(--saffron);
+          opacity: 0.8;
+          letter-spacing: 0.08em;
+        }
+
+        .hero-buttons {
+          margin-top: 2.5rem;
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .btn-primary {
+          font-family: var(--font-body);
+          font-size: var(--text-sm);
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--black);
+          background: var(--saffron);
+          border: 1px solid var(--saffron);
+          padding: 0.65rem 1.8rem;
+          text-decoration: none;
+          transition: background 220ms ease, color 220ms ease;
+        }
+
+        .btn-secondary {
+          font-family: var(--font-body);
+          font-size: var(--text-sm);
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--white);
+          background: transparent;
+          border: 1px solid rgba(200,169,110,0.45);
+          padding: 0.65rem 1.8rem;
+          text-decoration: none;
+          transition: border-color 220ms ease, color 220ms ease;
+        }
+
+        /* Desktop Layout */
+        @media (min-width: 768px) {
+          .hero-section {
+            flex-direction: row;
+          }
+
+          .hero-content {
+            padding-left: max(var(--space-8), calc((100vw - 1280px) / 2 + var(--space-8)));
+            padding-right: var(--space-12);
+            text-align: left;
+            justify-content: flex-start;
+          }
+
+          .hero-text-wrapper {
+             margin-top: 0;
+          }
+
+          .hero-media-gradient {
+            background: linear-gradient(to right, var(--black) 0%, transparent 20%);
+          }
+
+          .hero-divider {
+            margin: 1.4rem 0;
+            background: linear-gradient(90deg, var(--saffron), var(--crimson), var(--teal), transparent);
+          }
+
+          .hero-buttons {
+            justify-content: flex-start;
+          }
+        }
+      `}</style>
     </section>
   );
 }

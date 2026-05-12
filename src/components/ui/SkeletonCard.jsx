@@ -23,7 +23,7 @@ export default function SkeletonCard({
           width: '100%',
           aspectRatio,
           borderRadius: 'var(--radius-sm)',
-          background: 'linear-gradient(90deg, var(--gray-dark) 0%, var(--gray-mid) 50%, var(--gray-dark) 100%)',
+          background: 'linear-gradient(90deg, var(--off-black) 25%, var(--gray-dark) 50%, var(--off-black) 75%)',
           backgroundSize: '200% 100%',
           animation: 'shimmer 2s ease-in-out infinite',
         }}
@@ -38,7 +38,7 @@ export default function SkeletonCard({
               height: '14px',
               width: '65%',
               borderRadius: '2px',
-              background: 'linear-gradient(90deg, var(--gray-dark) 0%, var(--gray-mid) 50%, var(--gray-dark) 100%)',
+              background: 'linear-gradient(90deg, var(--off-black) 25%, var(--gray-dark) 50%, var(--off-black) 75%)',
               backgroundSize: '200% 100%',
               animation: 'shimmer 2s ease-in-out infinite 0.1s',
             }}
@@ -50,7 +50,7 @@ export default function SkeletonCard({
               height: '10px',
               width: '35%',
               borderRadius: '2px',
-              background: 'linear-gradient(90deg, var(--gray-dark) 0%, var(--gray-mid) 50%, var(--gray-dark) 100%)',
+              background: 'linear-gradient(90deg, var(--off-black) 25%, var(--gray-dark) 50%, var(--off-black) 75%)',
               backgroundSize: '200% 100%',
               animation: 'shimmer 2s ease-in-out infinite 0.2s',
             }}

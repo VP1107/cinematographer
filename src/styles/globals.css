@@ -9,73 +9,77 @@
 /* ---------- CSS Custom Properties ---------- */
 :root {
   /* Core Darks */
-  --black:         #06050a;
-  --off-black:     #0e0c14;
-  --gray-dark:     #1a1726;
-  --gray-mid:      #2e2b3e;
-  --gray-light:    #4a4660;
+  --black: #06050a;
+  --off-black: #0e0c14;
+  --gray-dark: #1a1726;
+  --gray-mid: #2e2b3e;
+  --gray-light: #4a4660;
 
   /* Warm Whites */
-  --white:         #f7f0e6;
-  --white-dim:     #c9bfb0;
-  --white-muted:   #7a7268;
+  --white: #f7f0e6;
+  --white-dim: #c9bfb0;
+  --white-muted: #7a7268;
 
   /* Indian Accent Palette */
-  --saffron:       #e8841a;        /* marigold / Bollywood poster orange */
+  --saffron: #e8841a;
+  /* marigold / Bollywood poster orange */
   --saffron-light: #f5a94e;
-  --saffron-dim:   #b36012;
-  --crimson:       #b5152b;        /* sindoor red */
+  --saffron-dim: #b36012;
+  --crimson: #b5152b;
+  /* sindoor red */
   --crimson-light: #e02740;
-  --crimson-dim:   #7a0d1c;
-  --teal:          #1a7a8a;        /* peacock teal */
-  --teal-light:    #26a8be;
-  --teal-dim:      #0f4f5a;
-  --gold:          #c8a96e;        /* original warm gold — kept as neutral bridge */
-  --gold-light:    #e2c99a;
-  --gold-dim:      #8c6e3f;
+  --crimson-dim: #7a0d1c;
+  --teal: #1a7a8a;
+  /* peacock teal */
+  --teal-light: #26a8be;
+  --teal-dim: #0f4f5a;
+  --gold: #c8a96e;
+  /* original warm gold — kept as neutral bridge */
+  --gold-light: #e2c99a;
+  --gold-dim: #8c6e3f;
 
   /* Semantic / Usage Aliases */
-  --accent-primary:   var(--saffron);
+  --accent-primary: var(--saffron);
   --accent-secondary: var(--crimson);
-  --accent-tertiary:  var(--teal);
-  --accent-warm:      var(--gold);
+  --accent-tertiary: var(--teal);
+  --accent-warm: var(--gold);
 
   /* Typography */
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-devanagari: 'Tiro Devanagari Hindi', serif;
-  --font-body:    'DM Sans', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
 
   /* Font Scales (fluid) */
-  --text-xs:   clamp(0.65rem,  1vw,   0.75rem);
-  --text-sm:   clamp(0.8rem,   1.5vw, 0.875rem);
-  --text-base: clamp(0.9rem,   2vw,   1rem);
-  --text-md:   clamp(1rem,     2.5vw, 1.125rem);
-  --text-lg:   clamp(1.15rem,  3vw,   1.35rem);
-  --text-xl:   clamp(1.4rem,   3.5vw, 1.75rem);
-  --text-2xl:  clamp(1.8rem,   4vw,   2.25rem);
-  --text-3xl:  clamp(2.2rem,   5vw,   3rem);
-  --text-4xl:  clamp(2.8rem,   7vw,   4.5rem);
-  --text-hero: clamp(3.5rem,   10vw,  7.5rem);
+  --text-xs: clamp(0.65rem, 1vw, 0.75rem);
+  --text-sm: clamp(0.8rem, 1.5vw, 0.875rem);
+  --text-base: clamp(0.9rem, 2vw, 1rem);
+  --text-md: clamp(1rem, 2.5vw, 1.125rem);
+  --text-lg: clamp(1.15rem, 3vw, 1.35rem);
+  --text-xl: clamp(1.4rem, 3.5vw, 1.75rem);
+  --text-2xl: clamp(1.8rem, 4vw, 2.25rem);
+  --text-3xl: clamp(2.2rem, 5vw, 3rem);
+  --text-4xl: clamp(2.8rem, 7vw, 4.5rem);
+  --text-hero: clamp(3.5rem, 10vw, 7.5rem);
 
   /* Spacing */
-  --space-1:  0.25rem;
-  --space-2:  0.5rem;
-  --space-3:  0.75rem;
-  --space-4:  1rem;
-  --space-6:  1.5rem;
-  --space-8:  2rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
   --space-12: 3rem;
   --space-16: 4rem;
   --space-24: 6rem;
   --space-32: 8rem;
 
   /* Z-index Scale */
-  --z-base:    0;
-  --z-above:   10;
+  --z-base: 0;
+  --z-above: 10;
   --z-overlay: 50;
-  --z-nav:     100;
-  --z-modal:   200;
-  --z-cursor:  999;
+  --z-nav: 100;
+  --z-modal: 200;
+  --z-cursor: 999;
 
   /* Border Radius */
   --radius-sm: 2px;
@@ -83,24 +87,24 @@
   --radius-lg: 12px;
 
   /* Transitions */
-  --ease-out:  cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-in:   cubic-bezier(0.55, 0, 0.78, 0);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.55, 0, 0.78, 0);
   --ease-circ: cubic-bezier(0.16, 1, 0.3, 1);
-  --dur-fast:  180ms;
-  --dur-base:  320ms;
-  --dur-slow:  600ms;
+  --dur-fast: 180ms;
+  --dur-base: 320ms;
+  --dur-slow: 600ms;
 
   /* Ornamental */
   --border-ornament: 1px solid rgba(200, 169, 110, 0.2);
-  --border-accent:   1px solid rgba(232, 132, 26, 0.4);
-  --glow-saffron:    0 0 40px rgba(232, 132, 26, 0.15);
-  --glow-crimson:    0 0 40px rgba(181, 21, 43, 0.2);
-  --glow-teal:       0 0 40px rgba(26, 122, 138, 0.2);
+  --border-accent: 1px solid rgba(232, 132, 26, 0.4);
+  --glow-saffron: 0 0 40px rgba(232, 132, 26, 0.15);
+  --glow-crimson: 0 0 40px rgba(181, 21, 43, 0.2);
+  --glow-teal: 0 0 40px rgba(26, 122, 138, 0.2);
 
   /* Navbar backgrounds (dark mode defaults) */
-  --nav-bg-top:      rgba(6, 5, 10, 0.6);
+  --nav-bg-top: rgba(6, 5, 10, 0.6);
   --nav-bg-scrolled: rgba(6, 5, 10, 0.92);
-  --nav-border:      rgba(200, 169, 110, 0.12);
+  --nav-border: rgba(200, 169, 110, 0.12);
 
   /* Film grain overlay opacity */
   --grain-opacity: 0.04;
@@ -109,42 +113,42 @@
 /* ---------- Light Theme Overrides ---------- */
 [data-theme="light"] {
   /* Page backgrounds — crisp warm white */
-  --black:         #faf6f0;
-  --off-black:     #f0ebe0;
-  --gray-dark:     #ddd4c4;
-  --gray-mid:      #c4b89e;
-  --gray-light:    #a89880;
+  --black: #faf6f0;
+  --off-black: #f0ebe0;
+  --gray-dark: #ddd4c4;
+  --gray-mid: #c4b89e;
+  --gray-light: #a89880;
 
   /* Text — near pitch-black for maximum contrast */
-  --white:         #0f0c08;
-  --white-dim:     #2a2318;
-  --white-muted:   #534535;
+  --white: #0f0c08;
+  --white-dim: #2a2318;
+  --white-muted: #534535;
 
   /* Accents — richer, deeper, fully saturated */
-  --saffron:       #b85c00;
+  --saffron: #b85c00;
   --saffron-light: #d97000;
-  --saffron-dim:   #7a3c00;
-  --crimson:       #8b0a1e;
+  --saffron-dim: #7a3c00;
+  --crimson: #8b0a1e;
   --crimson-light: #b01428;
-  --crimson-dim:   #5c0612;
-  --teal:          #0e5a6a;
-  --teal-light:    #177a8e;
-  --teal-dim:      #083848;
-  --gold:          #7c5a20;
-  --gold-light:    #a07830;
-  --gold-dim:      #503a10;
+  --crimson-dim: #5c0612;
+  --teal: #0e5a6a;
+  --teal-light: #177a8e;
+  --teal-dim: #083848;
+  --gold: #7c5a20;
+  --gold-light: #a07830;
+  --gold-dim: #503a10;
 
   /* Ornamental borders — clearly visible */
   --border-ornament: 1px solid rgba(124, 90, 32, 0.35);
-  --border-accent:   1px solid rgba(184, 92, 0, 0.5);
-  --glow-saffron:    0 0 32px rgba(184, 92, 0, 0.2);
-  --glow-crimson:    0 0 32px rgba(139, 10, 30, 0.2);
-  --glow-teal:       0 0 32px rgba(14, 90, 106, 0.2);
+  --border-accent: 1px solid rgba(184, 92, 0, 0.5);
+  --glow-saffron: 0 0 32px rgba(184, 92, 0, 0.2);
+  --glow-crimson: 0 0 32px rgba(139, 10, 30, 0.2);
+  --glow-teal: 0 0 32px rgba(14, 90, 106, 0.2);
 
   /* Navbar-specific backgrounds (light mode) */
-  --nav-bg-top:      rgba(245, 238, 226, 0.82);
+  --nav-bg-top: rgba(245, 238, 226, 0.82);
   --nav-bg-scrolled: rgba(236, 228, 212, 0.97);
-  --nav-border:      rgba(124, 90, 32, 0.3);
+  --nav-border: rgba(124, 90, 32, 0.3);
 
   /* Slightly reduced grain */
   --grain-opacity: 0.02;
@@ -156,7 +160,9 @@ html {
 }
 
 /* ---------- Reset ---------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -178,16 +184,28 @@ body {
   font-weight: 300;
   line-height: 1.7;
   overflow-x: hidden;
-  cursor: none; /* custom cursor active */
+  cursor: none;
+  /* custom cursor active */
 }
 
 /* Hide default cursor on interactive elements too */
-a, button, [role="button"], input, textarea, select, label {
+a,
+button,
+[role="button"],
+input,
+textarea,
+select,
+label {
   cursor: none;
 }
 
 /* ---------- Typography Base ---------- */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   font-weight: 400;
   line-height: 1.1;
@@ -205,7 +223,8 @@ a {
   text-decoration: none;
 }
 
-img, video {
+img,
+video {
   display: block;
   max-width: 100%;
 }
@@ -221,13 +240,16 @@ button {
 ::-webkit-scrollbar {
   width: 4px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--off-black);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--gold-dim);
   border-radius: 2px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--saffron);
 }
@@ -310,6 +332,7 @@ body::after {
   gap: var(--space-4);
   width: 100%;
 }
+
 .ornament-rule::before,
 .ornament-rule::after {
   content: '';
@@ -317,6 +340,7 @@ body::after {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
 }
+
 .ornament-rule span {
   color: var(--saffron);
   font-size: var(--text-xl);
@@ -325,17 +349,20 @@ body::after {
 
 /* ---------- Shimmer Keyframe ---------- */
 @keyframes shimmer {
-  0%   { background-position: -200% 0; }
-  100% { background-position:  200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 .shimmer {
-  background: linear-gradient(
-    90deg,
-    var(--gray-dark) 25%,
-    var(--gray-mid)  50%,
-    var(--gray-dark) 75%
-  );
+  background: linear-gradient(90deg,
+      var(--gray-dark) 25%,
+      var(--gray-mid) 50%,
+      var(--gray-dark) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.8s ease-in-out infinite;
 }
@@ -345,8 +372,9 @@ body::after {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity var(--dur-slow) var(--ease-out),
-              transform var(--dur-slow) var(--ease-out);
+    transform var(--dur-slow) var(--ease-out);
 }
+
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
@@ -354,7 +382,10 @@ body::after {
 
 /* ---------- Reduced Motion Overrides ---------- */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

@@ -1,7 +1,6 @@
 // src/hooks/useTheme.jsx
 // ============================================================
-//  Theme Context — Dark / Light mode toggle
-//  Persists to localStorage, respects system preference
+//  Theme Context — Light / Warm Cream Edition (Single Theme)
 // ============================================================
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
@@ -9,26 +8,19 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 const ThemeContext = createContext(null);
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(() => {
-    // 1. Check localStorage first
-    const saved = localStorage.getItem('theme');
-    if (saved === 'light' || saved === 'dark') return saved;
-    // 2. Fall back to OS preference
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    return prefersDark ? 'dark' : 'light';
-  });
+  const [theme] = useState('light');
 
-  // Apply the data-theme attribute to <html> whenever theme changes
+  // Ensure the html element always carries the light theme attribute
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+    const root = document.documentElement;
+    root.setAttribute('data-theme', 'light');
+    root.style.colorScheme = 'light'; // hint to browser chrome (scrollbars, inputs)
+  }, []);
 
-  const toggleTheme = () =>
-    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  const toggleTheme = () => {}; // no-op for compatibility
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, isDark: false }}>
       {children}
     </ThemeContext.Provider>
   );

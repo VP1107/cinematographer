@@ -63,44 +63,7 @@ function RangoliMark({ size = 20 }) {
 // ── Theme Toggle Button ──────────────────────────────────────
 function ThemeToggle({ size = 20, style = {} }) {
   const { theme, toggleTheme } = useTheme();
-  const isDark = theme === 'dark';
-
-  return (
-    <button
-      onClick={toggleTheme}
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      title={isDark ? 'Light mode' : 'Dark mode'}
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '2.2rem',
-        height: '2.2rem',
-        borderRadius: '50%',
-        border: '1px solid var(--border-ornament)',
-        background: isDark
-          ? 'rgba(232, 132, 26, 0.08)'
-          : 'rgba(201, 107, 0, 0.1)',
-        color: 'var(--saffron)',
-        transition: 'background 300ms ease, border-color 300ms ease, color 300ms ease',
-        flexShrink: 0,
-        ...style,
-      }}
-    >
-      <AnimatePresence mode="wait" initial={false}>
-        <motion.span
-          key={isDark ? 'moon' : 'sun'}
-          initial={{ opacity: 0, rotate: -90, scale: 0.6 }}
-          animate={{ opacity: 1, rotate: 0, scale: 1 }}
-          exit={{ opacity: 0, rotate: 90, scale: 0.6 }}
-          transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-          style={{ display: 'flex', lineHeight: 0 }}
-        >
-          {isDark ? <Sun size={size} strokeWidth={1.5} /> : <Moon size={size} strokeWidth={1.5} />}
-        </motion.span>
-      </AnimatePresence>
-    </button>
-  );
+  const isDark = theme === 'light';
 }
 
 // ── Mobile menu overlay ──────────────────────────────────────
@@ -209,7 +172,7 @@ function MobileMenu({ isOpen, onClose }) {
                     fontWeight: 300,
                     letterSpacing: '0.04em',
                     lineHeight: 1.2,
-                    color: isActive ? 'var(--saffron-light)' : 'var(--white)',
+                    color: isActive ? 'var(--saffron)' : 'var(--white)',
                     marginBottom: '0.5rem',
                     transition: 'color 200ms ease',
                     textDecoration: 'none',
@@ -355,7 +318,7 @@ export default function Navbar() {
                   fontWeight: 400,
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  color: isActive ? 'var(--saffron-light)' : 'var(--white-dim)',
+                  color: isActive ? 'var(--saffron)' : 'var(--white-dim)',
                   textDecoration: 'none',
                   paddingBottom: '3px',
                   borderBottom: isActive

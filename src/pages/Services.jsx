@@ -225,7 +225,7 @@ function ProgressBar({ wrapperRef }) {
   const barRef = useRef(null);
   useEffect(() => {
     if (!barRef.current || !wrapperRef.current) return;
-    const scrollDist = (services.length - 1) * window.innerWidth;
+    const scrollDist = (services.length - 1) * window.innerWidth * 0.5;
 
     const ctx = gsap.context(() => {
       gsap.to(barRef.current, {
@@ -276,7 +276,7 @@ export default function Services() {
       const n          = panels.length;
       if (n < 1) return;
 
-      const scrollDist = (n - 1) * window.innerWidth;
+      const scrollDist = (n - 1) * window.innerWidth * 0.5;
 
       // ── 1. Master timeline — drives track.x ──────────────
       // Using a timeline pinned to sectionRef gives GSAP full
@@ -403,7 +403,7 @@ export default function Services() {
               letterSpacing: '0.16em', textTransform: 'uppercase',
               color: 'var(--white-dim)', marginLeft: '10px',
               opacity: 0.65,
-            }}> Scroll to explore</span>
+            }}> Scroll down to explore</span>
             <svg width="22" height="9" viewBox="0 0 22 9" fill="none">
               <path d="M0 4.5h20M16 1l4 3.5-4 3.5" stroke="var(--saffron)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
