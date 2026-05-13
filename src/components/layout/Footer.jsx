@@ -6,7 +6,7 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Instagram, Youtube, Linkedin, Film } from 'lucide-react';
+import { Instagram, Youtube, Linkedin, Film, Facebook } from 'lucide-react';
 import { socialLinks, contactInfo } from '../../data/socialLinks';
 
 // ── Social icon map (Lucide doesn't have Vimeo) ──────────────
@@ -14,6 +14,7 @@ const ICON_MAP = {
   instagram: Instagram,
   youtube:   Youtube,
   linkedin:  Linkedin,
+  facebook:  Facebook,
   film:      Film,
   vimeo:     () => (
     // Inline Vimeo SVG

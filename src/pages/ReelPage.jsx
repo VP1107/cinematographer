@@ -44,6 +44,7 @@ function CreditDivider({ accent = 'var(--gold)' }) {
 function VideoEmbed({ reel }) {
   const [playing,   setPlaying]   = useState(false);
   const [playerReady, setPlayerReady] = useState(false);
+  const [hasError,    setHasError]    = useState(false);
 
   return (
     <div
@@ -56,7 +57,7 @@ function VideoEmbed({ reel }) {
       }}
     >
       {/* ── Placeholder shown until play is clicked ── */}
-      {!playing && (
+      {!playing && !hasError && (
         <div
           style={{
             position: 'absolute',
@@ -185,7 +186,7 @@ function VideoEmbed({ reel }) {
       )}
 
       {/* ── ReactPlayer — only mounts when playing ── */}
-      {playing && (
+      {playing && !hasError && (
         <Suspense fallback={null}>
           <ReactPlayer
             url={reel.videoUrl}
@@ -194,6 +195,7 @@ function VideoEmbed({ reel }) {
             width="100%"
             height="100%"
             onReady={() => setPlayerReady(true)}
+            onError={() => setHasError(true)}
             style={{
               position: 'absolute',
               inset: 0,
@@ -203,6 +205,64 @@ function VideoEmbed({ reel }) {
           />
         </Suspense>
       )}
+
+      {/* ── Error Fallback ── */}
+      {hasError && (
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'var(--off-black)',
+            gap: '1.5rem',
+            zIndex: 3,
+          }}
+        >
+          <p
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 'var(--text-sm)',
+              color: 'var(--white-dim)',
+              letterSpacing: '0.05em',
+            }}
+          >
+            This video has embedding disabled by the owner.
+          </p>
+          <a
+            href={reel.videoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              padding: '0.8rem 2.2rem',
+              background: 'var(--saffron)',
+              color: 'var(--black)',
+              textDecoration: 'none',
+              fontFamily: 'var(--font-body)',
+              fontSize: 'var(--text-sm)',
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+              transition: 'background 220ms ease, color 220ms ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'var(--crimson)';
+              e.currentTarget.style.color = 'var(--white)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'var(--saffron)';
+              e.currentTarget.style.color = 'var(--black)';
+            }}
+          >
+            <Play size={16} />
+            Watch on YouTube
+          </a>
+        </div>
+      )}
     </div>
   );
 }
@@ -211,6 +271,7 @@ function VideoEmbed({ reel }) {
 function CreditsSection({ credits, accentColor }) {
   const LABEL_MAP = {
     director:   { en: 'Director'          },
+    cast:       { en: 'Cast'              },
     production: { en: 'Production'        },
     dop:        { en: 'Director of Photography' },
     editor:     { en: 'Editor'            },

@@ -4,11 +4,11 @@
 // ============================================================
 
 import React, { lazy, Suspense } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import HeroSection        from '../components/sections/HeroSection';
-import FeaturedWork       from '../components/sections/FeaturedWork';
+
 import SectionHeading     from '../components/ui/SectionHeading';
 import VideoPlaceholder   from '../components/ui/VideoPlaceholder';
 import useScrollReveal    from '../hooks/useScrollReveal';
@@ -77,10 +77,11 @@ function IntroSection() {
 
 // ── Selected Projects Section ─────────────────────────────────
 function SelectedProjectCard({ project, index }) {
+  const navigateHook = useNavigate();
   const [hovered, setHovered] = React.useState(false);
   const navigate = React.useCallback(
-    () => window.location.assign(`/portfolio/${project.slug}`),
-    [project.slug]
+    () => navigateHook(`/portfolio/${project.slug}`),
+    [project.slug, navigateHook]
   );
 
   const isEven = index % 2 === 0;
@@ -340,7 +341,7 @@ export default function Home() {
         <StorytellingSection />
       </Suspense>
       <SelectedProjects />
-      <FeaturedWork />
+
       <CTASection />
     </>
   );

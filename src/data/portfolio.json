@@ -1,259 +1,520 @@
 {
   "reels": [
     {
-      "slug": "o-taareee",
-      "title": "O Taareee",
+      "slug": "mauje-dariya",
+      "title": "Mauje Dariya",
       "category": "Feature Film",
-      "year": 2017,
-      "thumbnailUrl": "https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=800&q=80",
-      "videoUrl": "https://imdb-video.media-imdb.com/vi3909926425/1434659607842-pgv4ql-1594794617823.mp4?Expires=1776018350&Signature=QDKmZ9eeNCMXfj1HLMSRtFjyKJznjbbXMPyfPKoDtTZja8qc~cytBCjRJcpwsnT9Y5W8ftXbW2nHD8uCpaec4ptlVC~5sn2LWUP6bCeS-25wVVVkZM9NwPy0eGNmNnB2iYeKujiFeYybl~trA-KtGs7-w2nwwC1IdLInlstDLmdY9ZoOy5k56YWMw4Py~lgc9NF~oi5Js8erqVoI44WkhuPDcEWQt6EAwykBL40HyiZmaPnLx6L~xxxecrLxrO~jssRXjunhQRbKkO1Gl97-CDcWEohE9WLeeZeDY3aYDwYK7hsiRh0NLqn30cMlZUjaHjJdDRjdCWouWCxB~SuZaA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
-      "description": "Group of friends, who, for love, friendship and wooing the most beautiful girl in the college, tumble into a politically driven plot where a sudden murder brings them face to face with each other and a reality that shakes them to their core.",
+      "year": 2024,
+      "thumbnailUrl": "/src/assets/Mauje dariya.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=HAgxfmPB6Ko",
+      "description": "A beautiful journey of friendship and love.",
       "credits": {
-        "director": "Tapan Vyas",
-        "production": "Mayur Patel",
         "dop": "Tapan Vyas",
-        "editor": "Bankim Parmar"
+        "director": "Taksh Shah",
+        "cast": "Manav Gohil, Taksh Shah, Hitul Pujara",
+        "production": "Mauj E Dariya Film"
       },
-      "featured": true
+      "featured": false
     },
     {
-      "slug": "mijaaj",
-      "title": "Mijaaj",
+      "slug": "vahali",
+      "title": "Vahali",
       "category": "Feature Film",
-      "year": 2018,
-      "thumbnailUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80",
-      "videoUrl": "https://imdb-video.media-imdb.com/vi3814899225/1434659607842-pgv4ql-1596122570029.mp4?Expires=1776017495&Signature=hzInFfIB09y-6hSrkJMb1wDnhxwU1K8XbCAO2ubYE3AMqWC9Dg2ZN6DALV8tuDLiGc-JALjaxax1~AWq~jKK8rzXhwMHFdwZO3UD2AyvwqNhnZ5oUai9ZFXhIAxfWt5ar6jd8rOEE5QRMi5sjvfh2LDeRdaShqzuZuPVh87RI99TmSE~AM~P6egPO-AaaHKJBBTUUB6sM6ER59BpScpSGzUUzP5jRFIo7QbqGGZ16-nGf4tHhKKZaTlFSECocR62JugjGXhYQER2Ya2U~yOMTqzhHjMNryrtQf4zWgTejXShT4MW8FwGH4YHOGM9rL~oXevA1aenwrdFd5LWz3KeuQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
-      "description": "Jay, Jhanvi, and Yogesh come to the aid of Sarita Ben, an old lady who owns a heritage property - a lodge, when an MNC wants to buy her property, leaving several people homeless. The three youngsters fight against these powerful people.",
+      "year": 2023,
+      "thumbnailUrl": "/src/assets/vhali.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=5awrU8ejsok",
+      "description": "A heartwarming tale of a father and daughter.",
       "credits": {
-        "director": "Tapan Vyas",
-        "production": "Jitendra Pandya / Bhavik Patel",
         "dop": "Tapan Vyas",
-        "editor": "Nirav Panchal"
+        "director": "Manish Saini",
+        "cast": "Bhavin Bhanushali, Mazel Vyas, Sachin Parikh",
+        "production": "Eventus India Entertainment"
       },
-      "featured": true
+      "featured": false
+    },
+    {
+      "slug": "mara-pappa-superhero",
+      "title": "Mara Pappa Superhero",
+      "category": "Feature Film",
+      "year": 2021,
+      "thumbnailUrl": "/src/assets/mara pappa superhero.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=zsytTRvcjVo",
+      "description": "A young girl's quest to prove her father is a real-life superhero.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Dr. Darshan Ashwin Trivedi",
+        "cast": "Shraddha Dangar, Abhinay Banker",
+        "production": "Motion Mingle Gujarati"
+      },
+      "featured": false
+    },
+    {
+      "slug": "bhagwan-bachave",
+      "title": "Bhagwan Bachave",
+      "category": "Feature Film",
+      "year": 2022,
+      "thumbnailUrl": "/src/assets/bhagvan bachave.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=mW9M5akyfHI",
+      "description": "A hilarious situational comedy film.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Jhinal Belani, Bhaumik Sampat",
+        "cast": "Jhinal Belani, Muni Jha",
+        "production": "Valmiki Pictures"
+      },
+      "featured": false
+    },
+    {
+      "slug": "happily-never-after",
+      "title": "Happily Never After",
+      "category": "Web Series",
+      "year": 2022,
+      "thumbnailUrl": "/src/assets/happily never after web series.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=7u8vcEDhDnc",
+      "description": "A modern take on relationships and marriages.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Saandeep Patel",
+        "cast": "Hitu Kanodia, Mona Kanodia, Netri Trivedi",
+        "production": "Akshar Communications"
+      },
+      "featured": false
+    },
+    {
+      "slug": "poori-paani",
+      "title": "Poori Paani",
+      "category": "Web Series",
+      "year": 2022,
+      "thumbnailUrl": "/src/assets/poori paani web series.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=4wjgqo4ivlk",
+      "description": "A sweet and spicy romantic comedy web series.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Bhaumik Sampat",
+        "cast": "Jhinal Belani, Bhaumik Sampat",
+        "production": "Shemaroo Gujarati"
+      },
+      "featured": false
+    },
+    {
+      "slug": "cutting",
+      "title": "Cutting",
+      "category": "Web Series",
+      "year": 2021,
+      "thumbnailUrl": "/src/assets/cutting web series.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=Vh0JXkismhk",
+      "description": "Stories revolving around a neighborhood salon.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Pratik Gandhi",
+        "cast": "Mayur Chauhan, Hemang Shah",
+        "production": "OHO Gujarati"
+      },
+      "featured": false
+    },
+    {
+      "slug": "tikkhi-mitthi-life",
+      "title": "Tikkhi Mitthi Life",
+      "category": "Web Series",
+      "year": 2022,
+      "thumbnailUrl": "/src/assets/tikhi mithi life web series.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=hqUyufgGKXU",
+      "description": "A fun family drama about bridging generational gaps.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Bhaumik Sampat",
+        "cast": "Muni Jha, Bhaumik Sampat, Jhinal Belani",
+        "production": "Shemaroo Gujarati"
+      },
+      "featured": false
+    },
+    {
+      "slug": "teacher-of-the-year",
+      "title": "Teacher Of The Year",
+      "category": "Feature Film",
+      "year": 2019,
+      "thumbnailUrl": "/src/assets/teacher of the year.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=QtyT2YdWjaw",
+      "description": "An inspiring journey of an unconventional teacher.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Shounak Vyas",
+        "cast": "Shounak Vyas, Alisha Prajapati",
+        "production": "Parth Tank Productions"
+      },
+      "featured": false
+    },
+    {
+      "slug": "chasani",
+      "title": "Chasani",
+      "category": "Feature Film",
+      "year": 2019,
+      "thumbnailUrl": "/src/assets/chasani.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=AtwXbRtG8NI",
+      "description": "A sweet romantic drama spanning different generations.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Abhinn-Kshama",
+        "cast": "Manoj Joshi, Divyang Thakkar, Sejal Shah",
+        "production": "Shukul Showbiz"
+      },
+      "featured": false
+    },
+    {
+      "slug": "baromas",
+      "title": "Baromas",
+      "category": "Feature Film",
+      "year": 2012,
+      "thumbnailUrl": "/src/assets/baromas.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=-ZlF00lyTDs",
+      "description": "A poignant film depicting the struggles of farmers.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Dhiraj Meshram",
+        "cast": "Benjamin Gilani, Seema Biswas",
+        "production": "Palla Films"
+      },
+      "featured": false
+    },
+    {
+      "slug": "heer-and-hero",
+      "title": "Heer And Hero",
+      "category": "Feature Film",
+      "year": 2013,
+      "thumbnailUrl": "/src/assets/heer & hero.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=PS4iF9VbCe8",
+      "description": "A vibrant Punjabi romantic comedy.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Sagar S Sharma",
+        "cast": "Arya Babbar, Minissha Lamba",
+        "production": "The Theatre Army Films"
+      },
+      "featured": false
+    },
+    {
+      "slug": "ocean-of-an-old-man",
+      "title": "Ocean Of An Old Man",
+      "category": "Feature Film",
+      "year": 2008,
+      "thumbnailUrl": "/src/assets/ocean of an old man.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=VCyrXVehZkQ",
+      "description": "An award-winning drama set against the backdrop of the Andaman Islands after the 2004 tsunami.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Rajesh Shera",
+        "cast": "Tom Alter",
+        "production": "Rajesh Shera Productions"
+      },
+      "featured": false
+    },
+    {
+      "slug": "burrraahh",
+      "title": "Burrraahh",
+      "category": "Feature Film",
+      "year": 2012,
+      "thumbnailUrl": "/src/assets/Burrraahh.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=e9zOCvjvPE4",
+      "description": "An energetic Punjabi college drama and sports film.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Sagar S Sharma",
+        "cast": "Yuvraj Hans, Harish Verma",
+        "production": "Diy Entertainment"
+      },
+      "featured": false
+    },
+    {
+      "slug": "vaat-vaat-ma-adla-badli",
+      "title": "Vaat Vaat Ma Adla Badli",
+      "category": "Web Series",
+      "year": 2022,
+      "thumbnailUrl": "/src/assets/Vaat vaat ma adla badli.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=n4VlTvZcGdE",
+      "description": "A comedic web series involving a mix-up of epic proportions.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Kartavya Shah",
+        "cast": "Malhar Thakar, Puja Joshi",
+        "production": "Shemaroo Gujarati"
+      },
+      "featured": false
+    },
+    {
+      "slug": "medal",
+      "title": "Medal",
+      "category": "Feature Film",
+      "year": 2023,
+      "thumbnailUrl": "/src/assets/medal.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=3QPPs2F3y7s",
+      "description": "A gripping sports drama and emotional journey of an athlete.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Dhaval Jinesh Shukal",
+        "cast": "Jayesh More, Kinjal Rajpriya",
+        "production": "Dhaval Jinesh Shukal"
+      },
+      "featured": false
+    },
+    {
+      "slug": "matsyavedh",
+      "title": "Matsyavedh",
+      "category": "Web Series",
+      "year": 2022,
+      "thumbnailUrl": "/src/assets/matsyavedh web series .webp",
+      "videoUrl": "https://www.youtube.com/watch?v=u6UEdSATkEk",
+      "description": "A thrilling Gujarati web series packed with suspense.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Krutarth Bhatt",
+        "cast": "RJ Devki, Manav Gohil",
+        "production": "Shemaroo Gujarati"
+      },
+      "featured": false
+    },
+    {
+      "slug": "love-ni-bhavai",
+      "title": "Love Ni Bhavai",
+      "category": "Feature Film",
+      "year": 2017,
+      "thumbnailUrl": "/src/assets/love ni bhavai.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=OlsM8Nwb6nA",
+      "description": "A landmark romantic film in Gujarati cinema about finding true love.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Saandeep Patel",
+        "cast": "Malhar Thakar, Pratik Gandhi, Aarohi Patel",
+        "production": "Akshar Communications"
+      },
+      "featured": false
+    },
+    {
+      "slug": "aum-mangalam-singlem",
+      "title": "Aum Mangalam Singlem",
+      "category": "Feature Film",
+      "year": 2022,
+      "thumbnailUrl": "/src/assets/aum manglam singlam.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=vtR0Uxxox04",
+      "description": "A modern romantic comedy exploring the complexities of contemporary relationships.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Saandeep Patel",
+        "cast": "Malhar Thakar, Aarohi Patel",
+        "production": "Akshar Communications"
+      },
+      "featured": false
     },
     {
       "slug": "lagan-laagii-re",
       "title": "Lagan Laagii Re",
       "category": "Feature Film",
       "year": 2025,
-      "thumbnailUrl": "https://images.unsplash.com/photo-1518331647614-7a1f04cd34ce?w=800&q=80",
-      "videoUrl": "https://imdb-video.media-imdb.com/mc/vi3051408153/vi3051408153_480p.mp4?Expires=1776018018&Signature=NIyzPj04HwfmfkHT4V7xk6XKkYPcZ0-dXFTSOwMzrFBOMYcYw9IvgePLv0mZSC6bOzcTWDZDN6~Nbr-TFOQ2TGZkYYgp3fEiNWQMqWDvsr2rSEfmyptV1iqvAk1dYqsUpuzrd2oEbGeNSrX4eyPN36Hq3~OAVTEaRHzlI6G2JHNGaXf7tRLL-bfz6XYs879pGRA0~U5vAkPbzhqBUVIWNghALMl25aPH3vBKK5fKhpSsrBPyHjzL2xHODQ8WkTcx6ETG6aG0K-UOnH7ehK9ulK3BUK0PgdDkR9v2ap4iboMJXeSxY82GXE8s9zWG-Yx1rKyvOwGgUKKQtxYsI8D2LQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+      "thumbnailUrl": "/src/assets/lagan laagi re.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=Nmmfm_J2Q98",
       "description": "In a world full of love stories, two friends are on a mission to stop one.",
       "credits": {
+        "dop": "Tapan Vyas",
         "director": "Saandeep Patel",
-        "production": "Rashmin Majithia",
-        "dop": "Tapan Vyas",
-        "editor": "Unknown"
+        "cast": "Malhar Thakar, Aarohi Patel",
+        "production": "Zen Music"
       },
-      "featured": true
+      "featured": false
     },
     {
-      "slug": "roshni-brand-film",
-      "title": "Roshni — Brand Film",
-      "category": "Commercial",
+      "slug": "thai-jashe",
+      "title": "Thai Jashe!",
+      "category": "Feature Film",
+      "year": 2016,
+      "thumbnailUrl": "/src/assets/thai jashe.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=aev_Nu7vqhI",
+      "description": "A middle-class man's struggle to achieve his dreams in the city of Ahmedabad.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Nirav Barot",
+        "cast": "Malhar Thakar, Monal Gajjar, Manoj Joshi",
+        "production": "A V Productions"
+      },
+      "featured": false
+    },
+    {
+      "slug": "vitthal-teedi",
+      "title": "Vitthal Teedi",
+      "category": "Web Series",
+      "year": 2021,
+      "thumbnailUrl": "/src/assets/vitthal teedi web series.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=3m-fYrJIjqg",
+      "description": "A brilliant card player's journey in the early 80s of rural Gujarat.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Abhishek Jain",
+        "cast": "Pratik Gandhi",
+        "production": "OHO Gujarati"
+      },
+      "featured": false
+    },
+    {
+      "slug": "lakiro",
+      "title": "Lakiro",
+      "category": "Feature Film",
+      "year": 2023,
+      "thumbnailUrl": "/src/assets/Lakiro.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=y3qYDPDN5M8",
+      "description": "A relationship drama centered around jazz music and shifting dynamics of marriage.",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Dr. Darshan Ashwin Trivedi",
+        "cast": "Raunaq Kamdar, Deeksha Joshi",
+        "production": "Warner Music India"
+      },
+      "featured": false
+    },
+    {
+      "slug": "ittaa-kittaa",
+      "title": "Ittaa Kittaa",
+      "category": "Feature Film",
       "year": 2024,
-      "thumbnailUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-      "videoUrl": "https://vimeo.com/1158427919",
-      "description": "A meditative brand film for a sustainable Indian textiles label. Shot across the ghats of Varanasi at golden hour, the film celebrates the quiet dignity of handloom weavers and the warmth of natural dyes.",
+      "thumbnailUrl": "/src/assets/itta kitta 1.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=SndmYECnuys",
+      "description": "A heartwarming and chaotic family drama.",
       "credits": {
-        "director": "Arjun Mehta",
-        "production": "Amber Frame Studio",
         "dop": "Tapan Vyas",
-        "editor": "Priya Nair"
+        "director": "Abhinn-Kshama",
+        "cast": "Raunaq Kamdar, Manasi Parekh",
+        "production": "Abhinn-Kshama Films"
       },
-      "featured": true
+      "featured": false
     },
     {
-      "slug": "raag-music-video",
-      "title": "Raag — Music Video",
-      "category": "Music Video",
-      "year": 2024,
-      "thumbnailUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80",
-      "videoUrl": "https://vimeo.com/234567890",
-      "description": "Visual accompaniment for an indie fusion artist blending Hindustani classical ragas with electronic production. High-contrast lighting, slow-motion tabla sequences, and peacock-blue chroma work.",
+      "slug": "mijaaj",
+      "title": "Mijaaj",
+      "category": "Feature Film",
+      "year": 2018,
+      "thumbnailUrl": "/src/assets/Mijaaj.webp",
+      "videoUrl": "https://youtu.be/EFO3bKyqL98",
+      "description": "An action-drama about three youngsters fighting against powerful people to save a heritage lodge.",
       "credits": {
         "director": "Tapan Vyas",
-        "production": "Indigo Pictures",
         "dop": "Tapan Vyas",
-        "editor": "Rohan Das"
+        "cast": "Malhar Thakar, Esha Kansara",
+        "production": "Mijaaj Films"
       },
-      "featured": true
+      "featured": false
     },
     {
-      "slug": "kahaani-short-film",
-      "title": "Kahāni — Short Film",
-      "category": "Short Film",
+      "slug": "o-taareee",
+      "title": "O Taareee",
+      "category": "Feature Film",
+      "year": 2017,
+      "thumbnailUrl": "/src/assets/o taareee.webp",
+      "videoUrl": "https://youtu.be/Va6HJYgvuJY",
+      "description": "A group of friends tumble into a politically driven plot where a sudden murder brings them face to face with a reality that shakes them to their core.",
+      "credits": {
+        "director": "Tapan Vyas",
+        "dop": "Tapan Vyas",
+        "cast": "Janki Bodiwala, Revanta Sarabhai, Jayesh More",
+        "production": "O Taareee Productions"
+      },
+      "featured": false
+    },
+    {
+      "slug": "paaghadi",
+      "title": "Paaghadi",
+      "category": "Feature Film",
+      "year": 2018,
+      "thumbnailUrl": "/src/assets/Paaghadi .webp",
+      "videoUrl": "https://youtu.be/wuHSD8YVw1A",
+      "description": "A profound cinematic exploration anchored in strong Gujarati cultural roots.",
+      "credits": {
+        "director": "Tapan Vyas",
+        "dop": "Tapan Vyas",
+        "cast": "Revanta Sarabhai, Tillana Desai",
+        "production": "Paaghadi Films"
+      },
+      "featured": false
+    },
+    {
+      "slug": "vaat-vaat-ma-3",
+      "title": "Vaat Vaat Ma 3",
+      "category": "Web Series",
       "year": 2023,
-      "thumbnailUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80",
-      "videoUrl": "https://vimeo.com/1158427919",
-      "description": "Award-winning short following a retired railway conductor on his last journey through Rajasthan. Intimate handheld cinematography, natural window light, and a warm sepia grade that feels like old Kodak.",
+      "thumbnailUrl": "/src/assets/vaat vaat ma 3.webp",
+      "videoUrl": "https://youtu.be/n4VlTvZcGdE",
+      "description": "The highly anticipated third installment of the beloved web series franchise.",
       "credits": {
-        "director": "Sanya Kapoor",
-        "production": "Dhoop Films",
         "dop": "Tapan Vyas",
-        "editor": "Vikram Rao"
-      },
-      "featured": true
-    },
-    {
-      "slug": "saarang-fashion-film",
-      "title": "Sārang — Fashion Film",
-      "category": "Commercial",
-      "year": 2023,
-      "thumbnailUrl": "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=800&q=80",
-      "videoUrl": "https://vimeo.com/1172958229",
-      "description": "A high-fashion editorial for a couture bridal label. Shot in a crumbling haveli in Jodhpur, the film juxtaposes ancient Rajput architecture with ultra-modern silhouettes.",
-      "credits": {
-        "director": "Tapan Vyas",
-        "production": "Noor Creative",
-        "dop": "Tapan Vyas",
-        "editor": "Aisha Bose"
-      },
-      "featured": false
-    },
-    {
-      "slug": "udaan-documentary",
-      "title": "Udān — Documentary",
-      "category": "Documentary",
-      "year": 2023,
-      "thumbnailUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
-      "videoUrl": "https://vimeo.com/567890123",
-      "description": "A short documentary portrait of kite-makers in Ahmedabad during Uttarayan. Long lenses, rooftop light, and the chaos of ten thousand kites in an Amdavadi sky.",
-      "credits": {
-        "director": "Tapan Vyas",
-        "production": "Self-produced",
-        "dop": "Tapan Vyas",
-        "editor": "Manish Joshi"
-      },
-      "featured": false
-    },
-    {
-      "slug": "aanch-commercial",
-      "title": "Āñch — Brand Spot",
-      "category": "Commercial",
-      "year": 2022,
-      "thumbnailUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
-      "videoUrl": "https://vimeo.com/678901234",
-      "description": "A 60-second brand spot for a premium Indian spice company. Macro cinematography of whole spices, steam, and flame — a sensory film that smells through the screen.",
-      "credits": {
-        "director": "Kabir Singh",
-        "production": "Red Masala Films",
-        "dop": "Tapan Vyas",
-        "editor": "Tara Menon"
-      },
-      "featured": false
-    },
-    {
-      "slug": "nritya-performance",
-      "title": "Nritya — Performance Film",
-      "category": "Creative Direction",
-      "year": 2022,
-      "thumbnailUrl": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80",
-      "videoUrl": "https://vimeo.com/789012345",
-      "description": "A performance film for a Bharatanatyam dancer — capturing mudras, footwork, and expression with high-speed cameras and dramatic single-source lighting. Premiered at the MAMI Film Festival.",
-      "credits": {
-        "director": "Tapan Vyas",
-        "production": "Tandav Arts",
-        "dop": "Tapan Vyas",
-        "editor": "Shreya Pillai"
-      },
-      "featured": false
-    },
-    {
-      "slug": "patang-music-video-2",
-      "title": "Patang — Music Video",
-      "category": "Music Video",
-      "year": 2022,
-      "thumbnailUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-      "videoUrl": "https://vimeo.com/890123456",
-      "description": "Aerial and street-level cinematography for an Ahmedabad-based indie band. The video weaves rooftop life, Old City alleyways, and the Sabarmati riverfront into a love letter to the city.",
-      "credits": {
-        "director": "Tapan Vyas",
-        "production": "Patan Records",
-        "dop": "Tapan Vyas",
-        "editor": "Dev Shah"
+        "director": "Kartavya Shah",
+        "cast": "Malhar Thakar, Puja Joshi",
+        "production": "Shemaroo Gujarati"
       },
       "featured": false
     }
   ],
   "projects": [
     {
-      "slug": "o-taareee",
-      "title": "O Taareee",
-      "subtitle": "Gujarati Feature Film",
+      "slug": "love-ni-bhavai",
+      "title": "Love Ni Bhavai",
+      "subtitle": "Feature Film",
       "year": 2017,
-      "client": "Mayur Patel",
-      "thumbnailUrl": "https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=1200&q=80",
-      "videoUrl": "https://imdb-video.media-imdb.com/vi3909926425/1434659607842-pgv4ql-1594794617823.mp4?Expires=1776018350&Signature=QDKmZ9eeNCMXfj1HLMSRtFjyKJznjbbXMPyfPKoDtTZja8qc~cytBCjRJcpwsnT9Y5W8ftXbW2nHD8uCpaec4ptlVC~5sn2LWUP6bCeS-25wVVVkZM9NwPy0eGNmNnB2iYeKujiFeYybl~trA-KtGs7-w2nwwC1IdLInlstDLmdY9ZoOy5k56YWMw4Py~lgc9NF~oi5Js8erqVoI44WkhuPDcEWQt6EAwykBL40HyiZmaPnLx6L~xxxecrLxrO~jssRXjunhQRbKkO1Gl97-CDcWEohE9WLeeZeDY3aYDwYK7hsiRh0NLqn30cMlZUjaHjJdDRjdCWouWCxB~SuZaA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
-      "description": "Group of friends, who, for love, friendship and wooing the most beautiful girl in the college, tumble into a politically driven plot where a sudden murder brings them face to face with each other and a reality that shakes them to their core.",
+      "client": "Cinematographer",
+      "thumbnailUrl": "/src/assets/love ni bhavai.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=OlsM8Nwb6nA",
+      "description": "A landmark romantic film in Gujarati cinema about finding true love.",
       "accentColor": "var(--saffron)"
-    },
-    {
-      "slug": "mijaaj",
-      "title": "Mijaaj",
-      "subtitle": "Action / Drama Feature Film",
-      "year": 2018,
-      "client": "Jitendra Pandya",
-      "thumbnailUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&q=80",
-      "videoUrl": "https://imdb-video.media-imdb.com/vi3814899225/1434659607842-pgv4ql-1596122570029.mp4?Expires=1776017495&Signature=hzInFfIB09y-6hSrkJMb1wDnhxwU1K8XbCAO2ubYE3AMqWC9Dg2ZN6DALV8tuDLiGc-JALjaxax1~AWq~jKK8rzXhwMHFdwZO3UD2AyvwqNhnZ5oUai9ZFXhIAxfWt5ar6jd8rOEE5QRMi5sjvfh2LDeRdaShqzuZuPVh87RI99TmSE~AM~P6egPO-AaaHKJBBTUUB6sM6ER59BpScpSGzUUzP5jRFIo7QbqGGZ16-nGf4tHhKKZaTlFSECocR62JugjGXhYQER2Ya2U~yOMTqzhHjMNryrtQf4zWgTejXShT4MW8FwGH4YHOGM9rL~oXevA1aenwrdFd5LWz3KeuQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
-      "description": "Jay, Jhanvi, and Yogesh come to the aid of Sarita Ben, an old lady who owns a heritage property - a lodge, when an MNC wants to buy her property, leaving several people homeless. The three youngsters fight against these powerful people.",
-      "accentColor": "var(--crimson)"
     },
     {
       "slug": "lagan-laagii-re",
       "title": "Lagan Laagii Re",
-      "subtitle": "Romantic Comedy Feature",
+      "subtitle": "Feature Film",
       "year": 2025,
-      "client": "Rashmin Majithia",
-      "thumbnailUrl": "https://images.unsplash.com/photo-1518331647614-7a1f04cd34ce?w=1200&q=80",
-      "videoUrl": "https://imdb-video.media-imdb.com/mc/vi3051408153/vi3051408153_480p.mp4?Expires=1776018018&Signature=NIyzPj04HwfmfkHT4V7xk6XKkYPcZ0-dXFTSOwMzrFBOMYcYw9IvgePLv0mZSC6bOzcTWDZDN6~Nbr-TFOQ2TGZkYYgp3fEiNWQMqWDvsr2rSEfmyptV1iqvAk1dYqsUpuzrd2oEbGeNSrX4eyPN36Hq3~OAVTEaRHzlI6G2JHNGaXf7tRLL-bfz6XYs879pGRA0~U5vAkPbzhqBUVIWNghALMl25aPH3vBKK5fKhpSsrBPyHjzL2xHODQ8WkTcx6ETG6aG0K-UOnH7ehK9ulK3BUK0PgdDkR9v2ap4iboMJXeSxY82GXE8s9zWG-Yx1rKyvOwGgUKKQtxYsI8D2LQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+      "client": "Cinematographer",
+      "thumbnailUrl": "/src/assets/lagan laagi re.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=Nmmfm_J2Q98",
       "description": "In a world full of love stories, two friends are on a mission to stop one.",
-      "accentColor": "var(--teal)"
-    },
-    {
-      "slug": "roshni-brand-film",
-      "title": "Roshni",
-      "subtitle": "Brand Film — Sustainable Textiles",
-      "year": 2024,
-      "client": "Sundari Handlooms",
-      "thumbnailUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
-      "videoUrl": "https://vimeo.com/1158427919",
-      "description": "A meditation on light and craft — shot across three days in Varanasi during the winter fog season. The brief was simple: make the world see what handloom weavers already know.",
-      "accentColor": "var(--saffron)"
-    },
-    {
-      "slug": "kahaani-short-film",
-      "title": "Kahāni",
-      "subtitle": "Short Film — MAMI Selection 2023",
-      "year": 2023,
-      "client": "Dhoop Films",
-      "thumbnailUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=80",
-      "videoUrl": "https://vimeo.com/1158427919",
-      "description": "Selected for Mumbai's MAMI Film Festival. A quiet, devastating portrait of departure — shot entirely on natural light through the windows of a Rajasthan-bound train.",
       "accentColor": "var(--crimson)"
     },
     {
-      "slug": "nritya-performance",
-      "title": "Nritya",
-      "subtitle": "Performance Film — Bharatanatyam",
-      "year": 2022,
-      "client": "Tandav Arts",
-      "thumbnailUrl": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=1200&q=80",
-      "videoUrl": "https://vimeo.com/789012345",
-      "description": "High-speed and single-source lighting documentation of Bharatanatyam movement. The film became a reference piece for the intersection of classical Indian performance and cinematic form.",
-      "accentColor": "var(--teal)"
+      "slug": "thai-jashe",
+      "title": "Thai Jashe!",
+      "subtitle": "Feature Film",
+      "year": 2016,
+      "client": "Cinematographer",
+      "thumbnailUrl": "/src/assets/thai jashe.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=aev_Nu7vqhI",
+      "description": "A middle-class man's struggle to achieve his dreams in the city of Ahmedabad.",
+      "accentColor": "var(--teal-light)"
     },
     {
-      "slug": "raag-music-video",
-      "title": "Raag",
-      "subtitle": "Music Video — Hindustani Fusion",
-      "year": 2024,
-      "client": "Indigo Pictures",
-      "thumbnailUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&q=80",
-      "videoUrl": "https://vimeo.com/234567890",
-      "description": "Chaos and precision in the same frame — a music video that refuses to choose between Hindustani classical tradition and electronic modernity, just like the music itself.",
+      "slug": "vitthal-teedi",
+      "title": "Vitthal Teedi",
+      "subtitle": "Web Series",
+      "year": 2021,
+      "client": "Cinematographer",
+      "thumbnailUrl": "/src/assets/vitthal teedi web series.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=3m-fYrJIjqg",
+      "description": "A brilliant card player's journey in the early 80s of rural Gujarat.",
       "accentColor": "var(--gold)"
+    },
+    {
+      "slug": "mijaaj",
+      "title": "Mijaaj",
+      "subtitle": "Feature Film",
+      "year": 2018,
+      "client": "Director & Cinematographer",
+      "thumbnailUrl": "/src/assets/Mijaaj.webp",
+      "videoUrl": "https://youtu.be/EFO3bKyqL98",
+      "description": "An action-drama about three youngsters fighting against powerful people to save a heritage lodge.",
+      "accentColor": "var(--saffron)"
+    },
+    {
+      "slug": "o-taareee",
+      "title": "O Taareee",
+      "subtitle": "Feature Film",
+      "year": 2017,
+      "client": "Director & Cinematographer",
+      "thumbnailUrl": "/src/assets/o taareee.webp",
+      "videoUrl": "https://youtu.be/Va6HJYgvuJY",
+      "description": "A group of friends tumble into a politically driven plot where a sudden murder brings them face to face with a reality that shakes them to their core.",
+      "accentColor": "var(--crimson)"
     }
   ],
   "services": [
@@ -303,12 +564,12 @@
       "accent": "crimson"
     },
     {
-      "id": "color-consultation",
-      "name": "Color Consultation",
+      "id": "advertisement",
+      "name": "Advertisement",
       "nameHindi": "",
-      "shortDesc": "Grade supervision and LUT development rooted in Indian skin-tone precision.",
-      "longDesc": "A strong secondary specialty — developing show LUTs, supervising DI sessions, and consulting on colour pipeline from on-set monitoring through to final delivery. Particular expertise in grading for the rich tonal range of Indian skin across diverse lighting conditions.",
-      "icon": "palette",
+      "shortDesc": "High-impact visual narratives crafted specifically for brands, products, and advertising campaigns.",
+      "longDesc": "Delivering visually striking advertisement campaigns that capture the core essence of a brand. I specialize in fast-paced production environments, utilizing dynamic lighting and bold camera movements to create engaging spots for both digital and broadcast platforms.",
+      "icon": "megaphone",
       "accent": "teal"
     }
   ],
@@ -322,7 +583,7 @@
     {
       "id": "facebook",
       "label": "Facebook",
-      "url": "https://www.facebook.com/share/1CDixpMBzA/?mibextid=wwXIfr",
+      "url": "https://www.facebook.com/tapan.vyas.3?mibextid=wwXIfr&rdid=osT7ed6WWPUZiRIu&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CDixpMBzA%2F%3Fmibextid%3DwwXIfr#",
       "icon": "facebook"
     },
     {

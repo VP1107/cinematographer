@@ -33,6 +33,7 @@ const ICONS = {
   clapperboard: () => <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1-.3 2.1.3 2.4 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 3.9"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>,
   compass:      () => <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>,
   palette:      () => <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>,
+  megaphone:    () => <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="m3 11 18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>,
 };
 
 // ── Sprocket dots ─────────────────────────────────────────────
@@ -121,16 +122,7 @@ function ServicePanel({ service, index, accent, totalPanels }) {
       }}>
       </div>
 
-      {/* Faded index */}
-      <div aria-hidden="true" style={{
-        position: 'absolute', bottom: '3rem', right: '3.5rem',
-        fontFamily: 'var(--font-display)',
-        fontSize: 'clamp(5rem, 10vw, 9rem)', fontWeight: 300,
-        color: `rgba(${accent.rgb}, 0.05)`,
-        lineHeight: 1, userSelect: 'none',
-      }}>
-        {String(index + 1).padStart(2, '0')}
-      </div>
+
 
       {/* Sprockets */}
       <SprocketDots color={accent.primary} />
@@ -145,20 +137,9 @@ function ServicePanel({ service, index, accent, totalPanels }) {
         padding: '0 0', boxSizing: 'border-box',
       }}>
 
-        {/* Icon + counter */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.9rem', marginBottom: '1.6rem' }}>
+        {/* Icon */}
+        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.6rem' }}>
           <span style={{ color: accent.primary, lineHeight: 0, opacity: 0.85 }}><Icon /></span>
-          <div style={{
-            width: '36px', height: '1px',
-            background: `linear-gradient(90deg, ${accent.primary}, transparent)`, opacity: 0.55,
-          }} />
-          <span style={{
-            fontFamily: 'var(--font-body)', fontSize: 'var(--text-xs)',
-            letterSpacing: '0.2em', textTransform: 'uppercase',
-            color: accent.primary, opacity: 0.75,
-          }}>
-            {String(index + 1).padStart(2, '0')} / {String(totalPanels).padStart(2, '0')}
-          </span>
         </div>
 
         {/* Name */}
@@ -225,7 +206,7 @@ function ProgressBar({ wrapperRef }) {
   const barRef = useRef(null);
   useEffect(() => {
     if (!barRef.current || !wrapperRef.current) return;
-    const scrollDist = (services.length - 1) * window.innerWidth * 0.5;
+    const scrollDist = (services.length - 1) * window.innerWidth * 0.25;
 
     const ctx = gsap.context(() => {
       gsap.to(barRef.current, {
@@ -276,7 +257,7 @@ export default function Services() {
       const n          = panels.length;
       if (n < 1) return;
 
-      const scrollDist = (n - 1) * window.innerWidth * 0.5;
+      const scrollDist = (n - 1) * window.innerWidth * 0.25;
 
       // ── 1. Master timeline — drives track.x ──────────────
       // Using a timeline pinned to sectionRef gives GSAP full
@@ -295,7 +276,7 @@ export default function Services() {
       });
 
       masterTl.to(trackRef.current, {
-        x: -scrollDist,
+        x: -(n - 1) * window.innerWidth,
         ease: 'none',
         duration: n - 1,
       });
@@ -521,14 +502,6 @@ export default function Services() {
                     }}>
                       <Icon />
                     </div>
-                    
-                    <span style={{
-                      fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)',
-                      fontWeight: 300, color: `rgba(${accent.rgb}, 0.15)`,
-                      lineHeight: 1
-                    }}>
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
                   </div>
 
                   <span style={{

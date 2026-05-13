@@ -198,24 +198,7 @@ export default function StorytellingSection() {
                 {panel.sub}
               </p>
 
-              {/* Panel number */}
-              <p
-                style={{
-                  position: 'absolute',
-                  bottom: '2.5rem',
-                  left: 'clamp(1.5rem, 6vw, 5rem)',
-                  fontFamily: 'var(--font-display)',
-                  fontSize: 'clamp(3rem, 6vw, 5rem)',
-                  fontWeight: 300,
-                  color: panel.accent,
-                  opacity: 0.06,
-                  lineHeight: 1,
-                  userSelect: 'none',
-                }}
-                aria-hidden="true"
-              >
-                {String(i + 1).padStart(2, '0')}
-              </p>
+
             </div>
 
             {/* Right: video placeholder */}
