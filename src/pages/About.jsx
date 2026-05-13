@@ -12,8 +12,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SectionHeading  from '../components/ui/SectionHeading';
-import { LazyImage }   from '../utils/lazyImage.jsx';
-import useScrollReveal from '../hooks/useScrollReveal.js';
+import LazyImage from '../utils/lazyImage';
+import useScrollReveal from '../hooks/useScrollReveal';
+import { useTitle } from '../hooks/useTitle';
 
 // ── Placeholder brand logos (swap for real SVG/img) ──────────
 const BRANDS = [
@@ -42,7 +43,7 @@ function Portrait() {
       {/* Image */}
       <LazyImage
         src="/profile_picture.webp"
-        alt="Portrait of cinematographer"
+        alt="Tapan Vyas, Cinematographer"
         aspectRatio="3/4"
         haldi
         style={{ borderRadius: '2px' }}
@@ -366,6 +367,9 @@ function AwardsList() {
 
 // ── Page ─────────────────────────────────────────────────────
 export default function About() {
+  useTitle('About');
+  useScrollReveal();
+
   return (
     <div
       style={{

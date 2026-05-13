@@ -89,7 +89,6 @@ export default function ReelCard({ reel, index = 0 }) {
           <VideoPlaceholder
             thumbnailUrl={reel.thumbnailUrl}
             title={reel.title}
-            titleHindi={reel.titleHindi}
             onPlay={handleNavigate}
             category={reel.category}
             accentColor={accent}
@@ -137,21 +136,7 @@ export default function ReelCard({ reel, index = 0 }) {
           >
             {reel.title}
           </p>
-          {reel.titleHindi && (
-            <p
-              style={{
-                fontFamily: 'var(--font-devanagari)',
-                fontSize: 'var(--text-xs)',
-                color: accent,
-                opacity: hovered ? 0.85 : 0.5,
-                letterSpacing: '0.06em',
-                marginTop: '1px',
-                transition: 'opacity 250ms ease',
-              }}
-            >
-              {reel.titleHindi}
-            </p>
-          )}
+
         </div>
 
         {/* Year badge */}

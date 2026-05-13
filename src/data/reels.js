@@ -7,7 +7,7 @@
 
 import portfolioData from './portfolio.json';
 
-export const reels = portfolioData.reels;
+export const reels = portfolioData.reels || [];
 
 // ── Helpers ──────────────────────────────────────────────────
 

@@ -12,6 +12,7 @@ import HeroSection        from '../components/sections/HeroSection';
 import SectionHeading     from '../components/ui/SectionHeading';
 import VideoPlaceholder   from '../components/ui/VideoPlaceholder';
 import useScrollReveal    from '../hooks/useScrollReveal';
+import { useTitle }       from '../hooks/useTitle';
 import { projects }       from '../data/projects';
 
 // Lazy load heavy scroll section
@@ -129,18 +130,7 @@ function SelectedProjectCard({ project, index }) {
 
       {/* Text */}
       <div style={{ order: isEven ? 1 : 0, padding: '0 1rem' }}>
-        <p
-          style={{
-            fontFamily: 'var(--font-devanagari)',
-            fontSize: 'var(--text-sm)',
-            color: project.accentColor || 'var(--saffron)',
-            opacity: 0.75,
-            letterSpacing: '0.08em',
-            marginBottom: '0.5rem',
-          }}
-        >
-          {project.titleHindi}
-        </p>
+
         <h3
           style={{
             fontFamily: 'var(--font-display)',
@@ -331,6 +321,8 @@ function CTASection() {
 
 // ── Page assembly ─────────────────────────────────────────────
 export default function Home() {
+  useTitle('');
+
   return (
     <>
       <HeroSection />

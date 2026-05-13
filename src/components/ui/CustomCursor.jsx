@@ -151,7 +151,7 @@ export default function CustomCursor() {
       </svg>
 
       {/* Hide default cursor globally */}
-      <style>{`* { cursor: none !important; }`}</style>
+      <style>{`@media (hover: hover) and (pointer: fine) { * { cursor: none !important; } }`}</style>
     </>
   );
 }

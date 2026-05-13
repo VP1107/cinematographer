@@ -16,6 +16,7 @@ import { ArrowLeft, ArrowRight, Play } from 'lucide-react';
 
 import { getReelBySlug, getAdjacentReels } from '../data/reels';
 import useScrollReveal from '../hooks/useScrollReveal';
+import { useTitle } from '../hooks/useTitle';
 
 import YouTubeEmbed from '../components/ui/YouTubeEmbed';
 
@@ -285,18 +286,7 @@ function CreditsSection({ credits, accentColor }) {
         const labels = LABEL_MAP[key] || { en: key, hi: '' };
         return (
           <div key={key}>
-            <p
-              style={{
-                fontFamily: 'var(--font-devanagari)',
-                fontSize: 'var(--text-xs)',
-                color: accentColor,
-                opacity: 0.65,
-                letterSpacing: '0.06em',
-                marginBottom: '0.2rem',
-              }}
-            >
-              {labels.hi}
-            </p>
+
             <p
               style={{
                 fontFamily: 'var(--font-body)',
@@ -376,18 +366,7 @@ function AdjacentCard({ reel: adjReel, direction }) {
           {isNext ? 'Next' : 'Previous'}
         </span>
       </div>
-      {adjReel.titleHindi && (
-        <p
-          style={{
-            fontFamily: 'var(--font-devanagari)',
-            fontSize: 'var(--text-xs)',
-            color: 'var(--saffron)',
-            opacity: 0.6,
-          }}
-        >
-          {adjReel.titleHindi}
-        </p>
-      )}
+
       <p
         style={{
           fontFamily: 'var(--font-display)',
@@ -408,6 +387,9 @@ export default function ReelPage() {
   const { slug }           = useParams();
   const navigate           = useNavigate();
   const reel               = getReelBySlug(slug);
+  
+  useTitle(reel ? reel.title : 'Project Not Found');
+
   const { prev, next }     = reel ? getAdjacentReels(slug) : {};
   const infoRef            = useScrollReveal({ delay: 0 });
 
@@ -426,16 +408,7 @@ export default function ReelPage() {
           background: 'var(--black)',
         }}
       >
-        <p
-          style={{
-            fontFamily: 'var(--font-devanagari)',
-            fontSize: 'var(--text-2xl)',
-            color: 'var(--saffron)',
-            opacity: 0.4,
-          }}
-        >
-          ॐ
-        </p>
+
         <h1
           style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-3xl)', color: 'var(--white)' }}
         >
@@ -529,20 +502,7 @@ export default function ReelPage() {
         >
           {/* Title block */}
           <div>
-            {reel.titleHindi && (
-              <p
-                style={{
-                  fontFamily: 'var(--font-devanagari)',
-                  fontSize: 'var(--text-base)',
-                  color: accent,
-                  opacity: 0.75,
-                  letterSpacing: '0.08em',
-                  marginBottom: '0.4rem',
-                }}
-              >
-                {reel.titleHindi}
-              </p>
-            )}
+
             <h1
               style={{
                 fontFamily: 'var(--font-display)',
@@ -588,20 +548,7 @@ export default function ReelPage() {
           </div>
         </div>
 
-        {/* Description */}
-        <p
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: 'var(--text-md)',
-            fontWeight: 300,
-            color: 'var(--white-dim)',
-            lineHeight: 1.8,
-            maxWidth: '68ch',
-            marginBottom: 'var(--space-8)',
-          }}
-        >
-          {reel.description}
-        </p>
+
 
         {/* Credits */}
         {reel.credits && (

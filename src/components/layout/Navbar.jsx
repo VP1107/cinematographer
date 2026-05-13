@@ -7,16 +7,15 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sun, Moon } from 'lucide-react';
-import { useTheme } from '../../hooks/useTheme';
+import { Menu, X } from 'lucide-react';
 
 // ── Nav links ────────────────────────────────────────────────
 const NAV_LINKS = [
-  { to: '/',          label: 'Home',     labelHindi: 'होम'       },
-  { to: '/portfolio', label: 'Work',     labelHindi: 'काम'       },
-  { to: '/about',     label: 'About',    labelHindi: 'परिचय'    },
-  { to: '/services',  label: 'Services', labelHindi: 'सेवाएँ'  },
-  { to: '/contact',   label: 'Contact',  labelHindi: 'संपर्क'  },
+  { to: '/',          label: 'Home'     },
+  { to: '/portfolio', label: 'Work'     },
+  { to: '/about',     label: 'About'    },
+  { to: '/services',  label: 'Services' },
+  { to: '/contact',   label: 'Contact'  },
 ];
 
 // ── Rangoli SVG logo mark ────────────────────────────────────
@@ -60,16 +59,9 @@ function RangoliMark({ size = 20 }) {
   );
 }
 
-// ── Theme Toggle Button ──────────────────────────────────────
-function ThemeToggle({ size = 20, style = {} }) {
-  const { theme, toggleTheme } = useTheme();
-  const isDark = theme === 'light';
-}
 
 // ── Mobile menu overlay ──────────────────────────────────────
 function MobileMenu({ isOpen, onClose }) {
-  const { theme } = useTheme();
-  const isLight = theme === 'light';
 
   // Lock body scroll when open
   useEffect(() => {
@@ -112,9 +104,7 @@ function MobileMenu({ isOpen, onClose }) {
             position: 'fixed',
             inset: 0,
             zIndex: 'var(--z-modal)',
-            background: isLight
-              ? 'rgba(240, 233, 218, 0.97)'
-              : 'rgba(6, 5, 10, 0.97)',
+            background: 'rgba(6, 5, 10, 0.97)',
             backdropFilter: 'blur(20px)',
             display: 'flex',
             flexDirection: 'column',
@@ -160,7 +150,7 @@ function MobileMenu({ isOpen, onClose }) {
             onClick={(e) => e.stopPropagation()}
             aria-label="Mobile navigation"
           >
-            {NAV_LINKS.map(({ to, label, labelHindi }) => (
+            {NAV_LINKS.map(({ to, label }) => (
               <motion.div key={to} variants={itemVariants}>
                 <NavLink
                   to={to}
@@ -179,19 +169,6 @@ function MobileMenu({ isOpen, onClose }) {
                   })}
                 >
                   {label}
-                  <span
-                    style={{
-                      display: 'block',
-                      fontFamily: 'var(--font-devanagari)',
-                      fontSize: '0.32em',
-                      color: 'var(--saffron)',
-                      letterSpacing: '0.12em',
-                      opacity: 0.7,
-                      marginTop: '-0.2em',
-                    }}
-                  >
-                    {labelHindi}
-                  </span>
                 </NavLink>
               </motion.div>
             ))}
@@ -220,7 +197,6 @@ function MobileMenu({ isOpen, onClose }) {
             >
               ॐ
             </span>
-            <ThemeToggle size={22} />
           </div>
         </motion.div>
       )}
@@ -233,8 +209,6 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen]   = useState(false);
   const [scrolled, setScrolled]   = useState(false);
   const location                  = useLocation();
-  const { theme }                 = useTheme();
-  const isLight                   = theme === 'light';
 
   // Close menu on route change
   useEffect(() => {
@@ -265,9 +239,7 @@ export default function Navbar() {
           borderBottom: scrolled
             ? `1px solid var(--nav-border)`
             : '1px solid transparent',
-          boxShadow: scrolled && isLight
-            ? '0 2px 20px rgba(124, 90, 32, 0.12)'
-            : 'none',
+          boxShadow: 'none',
           transition: 'background 400ms ease, border-color 400ms ease, box-shadow 400ms ease',
         }}
       >
@@ -342,8 +314,7 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* ── Theme Toggle (desktop) ── */}
-          <ThemeToggle size={18} style={{ marginLeft: '-2rem' }} />
+
 
           {/* ── Mobile Hamburger ── */}
           <button

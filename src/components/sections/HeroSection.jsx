@@ -120,10 +120,9 @@ function ScrollIndicator() {
 
 // ── Main HeroSection ──────────────────────────────────────────
 export default function HeroSection({
-  videoUrl     = '',   // leave empty until you have a real URL — pass a YouTube/Vimeo link to enable
+  videoUrl     = '',   // leave empty until you have a real URL — pass a YouTube link to enable
   name         = 'Tapan Vyas',
   tagline      = 'Crafting Stories Through Light and Motion.',
-  taglineHindi = '',
 }) {
   const [videoReady, setVideoReady] = useState(false);
   const playerRef                   = useRef(null);
@@ -133,15 +132,6 @@ export default function HeroSection({
       {/* ── Left Content (Text & Buttons) ── */}
       <div className="hero-content">
         <div className="hero-text-wrapper">
-          {/* Devanagari eyebrow */}
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="hero-eyebrow"
-          >
-          </motion.p>
-
           {/* Name */}
           <div style={{ overflow: 'hidden' }}>
             <motion.h1
@@ -172,17 +162,6 @@ export default function HeroSection({
           >
             {tagline}
           </motion.p>
-
-          {taglineHindi && (
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.6, duration: 0.8 }}
-              className="hero-tagline-hindi"
-            >
-              {taglineHindi}
-            </motion.p>
-          )}
 
           {/* CTA buttons */}
           <motion.div

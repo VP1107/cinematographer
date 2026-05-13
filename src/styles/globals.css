@@ -184,19 +184,20 @@ body {
   font-weight: 300;
   line-height: 1.7;
   overflow-x: hidden;
-  cursor: none;
-  /* custom cursor active */
 }
 
-/* Hide default cursor on interactive elements too */
-a,
-button,
-[role="button"],
-input,
-textarea,
-select,
-label {
-  cursor: none;
+/* Custom cursor — only on devices with a real pointer (not touch) */
+@media (hover: hover) and (pointer: fine) {
+  body,
+  a,
+  button,
+  [role="button"],
+  input,
+  textarea,
+  select,
+  label {
+    cursor: none;
+  }
 }
 
 /* ---------- Typography Base ---------- */

@@ -6,7 +6,6 @@
 //  Props:
 //    thumbnailUrl {string}   — image to show in the background
 //    title        {string}   — optional label at bottom-left
-//    titleHindi   {string}   — optional Hindi subtitle
 //    aspectRatio  {string}   — CSS aspect-ratio, default "16/9"
 //    onPlay       {fn}       — called when user clicks the play btn
 //    showPlay     {bool}     — show play button (default true)
@@ -119,7 +118,6 @@ function PlayButton({ accent = 'var(--saffron)', hovered }) {
 export default function VideoPlaceholder({
   thumbnailUrl,
   title,
-  titleHindi,
   aspectRatio = '16/9',
   onPlay,
   showPlay = true,
@@ -269,7 +267,7 @@ export default function VideoPlaceholder({
       )}
 
       {/* ── Title block ── */}
-      {(title || titleHindi) && (
+      {title && (
         <div
           style={{
             position: 'absolute',
@@ -283,20 +281,6 @@ export default function VideoPlaceholder({
             transition: 'transform 300ms var(--ease-circ), opacity 300ms ease',
           }}
         >
-          {titleHindi && (
-            <p
-              style={{
-                fontFamily: 'var(--font-devanagari)',
-                fontSize: 'var(--text-xs)',
-                color: accentColor,
-                letterSpacing: '0.08em',
-                marginBottom: '0.15rem',
-                opacity: 0.8,
-              }}
-            >
-              {titleHindi}
-            </p>
-          )}
           {title && (
             <p
               style={{

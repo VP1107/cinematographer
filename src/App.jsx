@@ -5,7 +5,7 @@
 // ============================================================
 
 import React, { Suspense, lazy } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 import Navbar          from './components/layout/Navbar';
@@ -206,7 +206,7 @@ function NotFound() {
 export default function App() {
   return (
     <ThemeProvider>
-      <HashRouter>
+      <BrowserRouter>
         <ScrollToTop />
         <SmoothScrollProvider>
           {/* Custom cursor — rendered outside page flow */}
@@ -224,7 +224,7 @@ export default function App() {
 
           <Footer />
         </SmoothScrollProvider>
-      </HashRouter>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

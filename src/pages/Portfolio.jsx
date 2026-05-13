@@ -11,6 +11,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import SectionHeading from '../components/ui/SectionHeading';
 import ReelCard from '../components/reel/ReelCard';
 import { reels, reelCategories } from '../data/reels';
+import { useTitle } from '../hooks/useTitle';
 
 // ── Filter pill ───────────────────────────────────────────────
 function FilterPill({ label, active, onClick }) {
@@ -55,6 +56,7 @@ function FilterPill({ label, active, onClick }) {
 }
 
 export default function Portfolio() {
+    useTitle('Work');
     const [activeCategory, setActiveCategory] = useState('All');
 
     const filtered = useMemo(

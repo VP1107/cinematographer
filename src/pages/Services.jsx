@@ -12,6 +12,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion } from 'framer-motion';
 import { services } from '../data/services';
+import { useTitle } from '../hooks/useTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -109,21 +110,6 @@ function ServicePanel({ service, index, accent, totalPanels }) {
         </span>
       </div>
 
-      {/* Vertical Hindi watermark */}
-      <div aria-hidden="true" style={{
-        position: 'absolute', top: '50%', left: '2.5rem',
-        transform: 'translateY(-50%)',
-        fontFamily: 'var(--font-devanagari)',
-        fontSize: 'clamp(0.65rem, 1.2vw, 0.85rem)',
-        color: accent.primary, opacity: 0.25,
-        letterSpacing: '0.14em',
-        writingMode: 'vertical-rl', textOrientation: 'mixed',
-        userSelect: 'none',
-      }}>
-      </div>
-
-
-
       {/* Sprockets */}
       <SprocketDots color={accent.primary} />
       <div style={{ position: 'absolute', top: 0, bottom: 0, right: 0, width: '28px' }}>
@@ -151,14 +137,6 @@ function ServicePanel({ service, index, accent, totalPanels }) {
         }}>
           {service.name}
         </h2>
-
-        {/* Hindi subtitle */}
-        <p style={{
-          fontFamily: 'var(--font-devanagari)', fontSize: 'var(--text-sm)',
-          color: accent.primary, opacity: 0.55,
-          letterSpacing: '0.06em', marginBottom: '1.6rem',
-        }}>
-        </p>
 
         {/* Ornament */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '1.8rem' }} aria-hidden="true">
@@ -504,13 +482,7 @@ export default function Services() {
                     </div>
                   </div>
 
-                  <span style={{
-                    fontFamily: 'var(--font-devanagari)', fontSize: '0.75rem',
-                    color: accent.primary, opacity: 0.8, letterSpacing: '0.12em',
-                    marginBottom: '0.4rem'
-                  }}>
-                    {service.nameHindi}
-                  </span>
+
 
                   <h3 style={{
                     fontFamily: 'var(--font-display)', fontSize: 'clamp(1.4rem, 2vw, 1.6rem)',
@@ -543,7 +515,7 @@ export default function Services() {
           <p aria-hidden="true" style={{
             position: 'absolute', top: '50%', left: '50%',
             transform: 'translate(-50%,-50%)',
-            fontFamily: 'var(--font-devanagari)',
+            fontFamily: 'var(--font-display)',
             fontSize: 'clamp(6rem, 20vw, 14rem)',
             color: 'var(--saffron)', opacity: 0.03,
             pointerEvents: 'none', userSelect: 'none', lineHeight: 1,
