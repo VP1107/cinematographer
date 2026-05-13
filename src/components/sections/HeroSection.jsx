@@ -8,11 +8,11 @@
 //  - Rangoli SVG corner ornaments
 // ============================================================
 
-import React, { useState, useRef, lazy, Suspense } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const ReactPlayer = lazy(() => import('react-player'));
+import YouTubeEmbed from '../ui/YouTubeEmbed';
 
 // ── Rangoli corner ornament ───────────────────────────────────
 function CornerOrnament({ position }) {
@@ -231,39 +231,27 @@ export default function HeroSection({
               position: 'absolute',
               inset: 0,
               background: 'var(--black)',
-              backgroundImage: 'url("/image.png")',
+              backgroundImage: 'url("/image.webp")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               zIndex: 0,
             }}
           >
-            {/* Only mount ReactPlayer when a real URL is provided */}
+            {/* Only mount YouTube embed when a real URL is provided */}
             {videoUrl && (
-              <Suspense fallback={null}>
-                <ReactPlayer
-                  ref={playerRef}
-                  url={videoUrl}
-                  playing
-                  loop
-                  muted
-                  controls={false}
-                  playsinline
-                  width="100%"
-                  height="100%"
-                  onReady={() => setVideoReady(true)}
-                  style={{
-                    position: 'absolute',
-                    inset: 0,
-                    opacity: videoReady ? 1 : 0,
-                    transition: 'opacity 1s ease',
-                    transform: 'scale(1.05)',
-                  }}
-                  config={{
-                    youtube: { playerVars: { modestbranding: 1, rel: 0 } },
-                    vimeo:   { playerOptions: { background: true } },
-                  }}
-                />
-              </Suspense>
+              <YouTubeEmbed
+                url={videoUrl}
+                playing
+                loop
+                muted
+                controls={false}
+                onReady={() => setVideoReady(true)}
+                style={{
+                  opacity: videoReady ? 1 : 0,
+                  transition: 'opacity 1s ease',
+                  transform: 'scale(1.05)',
+                }}
+              />
             )}
           </div>
 

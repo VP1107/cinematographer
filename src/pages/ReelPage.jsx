@@ -1,14 +1,15 @@
 // src/pages/ReelPage.jsx
 // ============================================================
 //  ReelPage — /portfolio/:slug
-//  - Full-width ReactPlayer embed (YouTube / Vimeo)
+//  - Full-width YouTube embed (lightweight iframe)
+//  - Dark placeholder until user clicks play
 //  - Dark placeholder until user clicks play
 //  - Project title, year, description, credits
 //  - Next / Previous project navigation
 //  - "Back to Portfolio" link
 // ============================================================
 
-import React, { useState, lazy, Suspense } from 'react';
+import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Play } from 'lucide-react';
@@ -16,7 +17,7 @@ import { ArrowLeft, ArrowRight, Play } from 'lucide-react';
 import { getReelBySlug, getAdjacentReels } from '../data/reels';
 import useScrollReveal from '../hooks/useScrollReveal';
 
-const ReactPlayer = lazy(() => import('react-player'));
+import YouTubeEmbed from '../components/ui/YouTubeEmbed';
 
 // ── Mandala credit divider ────────────────────────────────────
 function CreditDivider({ accent = 'var(--gold)' }) {
@@ -185,25 +186,19 @@ function VideoEmbed({ reel }) {
         </div>
       )}
 
-      {/* ── ReactPlayer — only mounts when playing ── */}
+      {/* ── YouTube embed — only mounts when playing ── */}
       {playing && !hasError && (
-        <Suspense fallback={null}>
-          <ReactPlayer
-            url={reel.videoUrl}
-            playing={playing}
-            controls
-            width="100%"
-            height="100%"
-            onReady={() => setPlayerReady(true)}
-            onError={() => setHasError(true)}
-            style={{
-              position: 'absolute',
-              inset: 0,
-              opacity: playerReady ? 1 : 0,
-              transition: 'opacity 0.5s ease',
-            }}
-          />
-        </Suspense>
+        <YouTubeEmbed
+          url={reel.videoUrl}
+          playing
+          controls
+          onReady={() => setPlayerReady(true)}
+          onError={() => setHasError(true)}
+          style={{
+            opacity: playerReady ? 1 : 0,
+            transition: 'opacity 0.5s ease',
+          }}
+        />
       )}
 
       {/* ── Error Fallback ── */}

@@ -24,15 +24,15 @@
     <meta name="twitter:image"       content="/og-image.jpg" />
 
     <!-- ── Favicon ── -->
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon"      href="/favicon.png" />
+    <link rel="icon" type="image/webp" href="/favicon.webp" />
+    <link rel="apple-touch-icon"      href="/favicon.webp" />
 
     <!--
-      ── Google Fonts — preconnect first, then preload display fonts ──
-      Loading order matters for FOUT prevention:
+      ── Google Fonts — preconnect first, then non-blocking load ──
+      Loading order:
         1. Preconnect to establish TCP/TLS to fonts.googleapis.com
-        2. Preload the two display weights we use above the fold
-        3. Full @import handled inside globals.css
+        2. Preload the stylesheet
+        3. Non-blocking stylesheet with media="print" → onload swap
     -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

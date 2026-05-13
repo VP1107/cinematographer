@@ -41,7 +41,7 @@ function Portrait() {
     >
       {/* Image */}
       <LazyImage
-        src="/profile_picture.png"
+        src="/profile_picture.webp"
         alt="Portrait of cinematographer"
         aspectRatio="3/4"
         haldi
