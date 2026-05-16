@@ -5,7 +5,7 @@
       "title": "Mauje Dariya",
       "category": "Feature Film",
       "year": 2024,
-      "thumbnailUrl": "/src/assets/Mauje dariya.webp",
+      "thumbnailUrl": "./assets/Mauje dariya.webp",
       "videoUrl": "https://www.youtube.com/watch?v=HAgxfmPB6Ko",
       "credits": {
         "dop": "Tapan Vyas",
@@ -20,7 +20,7 @@
       "title": "Vahali",
       "category": "Feature Film",
       "year": 2023,
-      "thumbnailUrl": "/src/assets/vhali.webp",
+      "thumbnailUrl": "./assets/vhali.webp",
       "videoUrl": "https://www.youtube.com/watch?v=5awrU8ejsok",
       "credits": {
         "dop": "Tapan Vyas",
@@ -35,7 +35,7 @@
       "title": "Mara Pappa Superhero",
       "category": "Feature Film",
       "year": 2021,
-      "thumbnailUrl": "/src/assets/mara pappa superhero.webp",
+      "thumbnailUrl": "./assets/mara pappa superhero.webp",
       "videoUrl": "https://www.youtube.com/watch?v=zsytTRvcjVo",
       "credits": {
         "dop": "Tapan Vyas",
@@ -50,7 +50,7 @@
       "title": "Bhagwan Bachave",
       "category": "Feature Film",
       "year": 2022,
-      "thumbnailUrl": "/src/assets/bhagvan bachave.webp",
+      "thumbnailUrl": "./assets/bhagvan bachave.webp",
       "videoUrl": "https://www.youtube.com/watch?v=mW9M5akyfHI",
       "credits": {
         "dop": "Tapan Vyas",
@@ -65,7 +65,7 @@
       "title": "Happily Never After",
       "category": "Web Series",
       "year": 2022,
-      "thumbnailUrl": "/src/assets/happily never after web series.webp",
+      "thumbnailUrl": "./assets/happily never after web series.webp",
       "videoUrl": "https://www.youtube.com/watch?v=7u8vcEDhDnc",
       "credits": {
         "dop": "Tapan Vyas",
@@ -80,7 +80,7 @@
       "title": "Poori Paani",
       "category": "Web Series",
       "year": 2022,
-      "thumbnailUrl": "/src/assets/poori paani web series.webp",
+      "thumbnailUrl": "./assets/poori paani web series.webp",
       "videoUrl": "https://www.youtube.com/watch?v=4wjgqo4ivlk",
       "credits": {
         "dop": "Tapan Vyas",
@@ -95,7 +95,7 @@
       "title": "Cutting",
       "category": "Web Series",
       "year": 2021,
-      "thumbnailUrl": "/src/assets/cutting web series.webp",
+      "thumbnailUrl": "./assets/cutting web series.webp",
       "videoUrl": "https://www.youtube.com/watch?v=Vh0JXkismhk",
       "credits": {
         "dop": "Tapan Vyas",
@@ -110,7 +110,7 @@
       "title": "Tikkhi Mitthi Life",
       "category": "Web Series",
       "year": 2022,
-      "thumbnailUrl": "/src/assets/tikhi mithi life web series.webp",
+      "thumbnailUrl": "./assets/tikhi mithi life web series.webp",
       "videoUrl": "https://www.youtube.com/watch?v=hqUyufgGKXU",
       "credits": {
         "dop": "Tapan Vyas",
@@ -125,7 +125,7 @@
       "title": "Teacher Of The Year",
       "category": "Feature Film",
       "year": 2019,
-      "thumbnailUrl": "/src/assets/teacher of the year.webp",
+      "thumbnailUrl": "./assets/teacher of the year.webp",
       "videoUrl": "https://www.youtube.com/watch?v=QtyT2YdWjaw",
       "credits": {
         "dop": "Tapan Vyas",
@@ -140,7 +140,7 @@
       "title": "Chasani",
       "category": "Feature Film",
       "year": 2019,
-      "thumbnailUrl": "/src/assets/chasani.webp",
+      "thumbnailUrl": "./assets/chasani.webp",
       "videoUrl": "https://www.youtube.com/watch?v=AtwXbRtG8NI",
       "credits": {
         "dop": "Tapan Vyas",
@@ -155,7 +155,7 @@
       "title": "Baromas",
       "category": "Feature Film",
       "year": 2012,
-      "thumbnailUrl": "/src/assets/baromas.webp",
+      "thumbnailUrl": "./assets/baromas.webp",
       "videoUrl": "https://www.youtube.com/watch?v=-ZlF00lyTDs",
       "credits": {
         "dop": "Tapan Vyas",
@@ -170,7 +170,7 @@
       "title": "Heer And Hero",
       "category": "Feature Film",
       "year": 2013,
-      "thumbnailUrl": "/src/assets/heer & hero.webp",
+      "thumbnailUrl": "./assets/heer & hero.webp",
       "videoUrl": "https://www.youtube.com/watch?v=PS4iF9VbCe8",
       "credits": {
         "dop": "Tapan Vyas",
@@ -185,7 +185,7 @@
       "title": "Ocean Of An Old Man",
       "category": "Feature Film",
       "year": 2008,
-      "thumbnailUrl": "/src/assets/ocean of an old man.webp",
+      "thumbnailUrl": "./assets/ocean of an old man.webp",
       "videoUrl": "https://www.youtube.com/watch?v=VCyrXVehZkQ",
       "credits": {
         "dop": "Tapan Vyas",
@@ -200,7 +200,7 @@
       "title": "Burrraahh",
       "category": "Feature Film",
       "year": 2012,
-      "thumbnailUrl": "/src/assets/Burrraahh.webp",
+      "thumbnailUrl": "./assets/Burrraahh.webp",
       "videoUrl": "https://www.youtube.com/watch?v=e9zOCvjvPE4",
       "credits": {
         "dop": "Tapan Vyas",
@@ -215,7 +215,7 @@
       "title": "Vaat Vaat Ma Adla Badli",
       "category": "Web Series",
       "year": 2022,
-      "thumbnailUrl": "/src/assets/Vaat vaat ma adla badli.webp",
+      "thumbnailUrl": "./assets/Vaat vaat ma adla badli.webp",
       "videoUrl": "https://www.youtube.com/watch?v=n4VlTvZcGdE",
       "credits": {
         "dop": "Tapan Vyas",
@@ -230,7 +230,7 @@
       "title": "Medal",
       "category": "Feature Film",
       "year": 2023,
-      "thumbnailUrl": "/src/assets/medal.webp",
+      "thumbnailUrl": "./assets/medal.webp",
       "videoUrl": "https://www.youtube.com/watch?v=3QPPs2F3y7s",
       "credits": {
         "dop": "Tapan Vyas",
@@ -245,7 +245,7 @@
       "title": "Matsyavedh",
       "category": "Web Series",
       "year": 2022,
-      "thumbnailUrl": "/src/assets/matsyavedh web series .webp",
+      "thumbnailUrl": "./assets/matsyavedh web series .webp",
       "videoUrl": "https://www.youtube.com/watch?v=u6UEdSATkEk",
       "credits": {
         "dop": "Tapan Vyas",
@@ -260,7 +260,7 @@
       "title": "Love Ni Bhavai",
       "category": "Feature Film",
       "year": 2017,
-      "thumbnailUrl": "/src/assets/love ni bhavai.webp",
+      "thumbnailUrl": "./assets/love ni bhavai.webp",
       "videoUrl": "https://www.youtube.com/watch?v=OlsM8Nwb6nA",
       "credits": {
         "dop": "Tapan Vyas",
@@ -275,7 +275,7 @@
       "title": "Aum Mangalam Singlem",
       "category": "Feature Film",
       "year": 2022,
-      "thumbnailUrl": "/src/assets/aum manglam singlam.webp",
+      "thumbnailUrl": "./assets/aum manglam singlam.webp",
       "videoUrl": "https://www.youtube.com/watch?v=vtR0Uxxox04",
       "credits": {
         "dop": "Tapan Vyas",
@@ -290,7 +290,7 @@
       "title": "Lagan Laagii Re",
       "category": "Feature Film",
       "year": 2025,
-      "thumbnailUrl": "/src/assets/lagan laagi re.webp",
+      "thumbnailUrl": "./assets/lagan laagi re.webp",
       "videoUrl": "https://www.youtube.com/watch?v=Nmmfm_J2Q98",
       "credits": {
         "dop": "Tapan Vyas",
@@ -305,7 +305,7 @@
       "title": "Thai Jashe!",
       "category": "Feature Film",
       "year": 2016,
-      "thumbnailUrl": "/src/assets/thai jashe.webp",
+      "thumbnailUrl": "./assets/thai jashe.webp",
       "videoUrl": "https://www.youtube.com/watch?v=aev_Nu7vqhI",
       "credits": {
         "dop": "Tapan Vyas",
@@ -320,7 +320,7 @@
       "title": "Vitthal Teedi",
       "category": "Web Series",
       "year": 2021,
-      "thumbnailUrl": "/src/assets/vitthal teedi web series.webp",
+      "thumbnailUrl": "./assets/vitthal teedi web series.webp",
       "videoUrl": "https://www.youtube.com/watch?v=3m-fYrJIjqg",
       "credits": {
         "dop": "Tapan Vyas",
@@ -335,7 +335,7 @@
       "title": "Lakiro",
       "category": "Feature Film",
       "year": 2023,
-      "thumbnailUrl": "/src/assets/Lakiro.webp",
+      "thumbnailUrl": "./assets/Lakiro.webp",
       "videoUrl": "https://www.youtube.com/watch?v=y3qYDPDN5M8",
       "credits": {
         "dop": "Tapan Vyas",
@@ -350,7 +350,7 @@
       "title": "Ittaa Kittaa",
       "category": "Feature Film",
       "year": 2024,
-      "thumbnailUrl": "/src/assets/itta kitta 1.webp",
+      "thumbnailUrl": "./assets/itta kitta 1.webp",
       "videoUrl": "https://www.youtube.com/watch?v=SndmYECnuys",
       "credits": {
         "dop": "Tapan Vyas",
@@ -365,7 +365,7 @@
       "title": "Mijaaj",
       "category": "Feature Film",
       "year": 2018,
-      "thumbnailUrl": "/src/assets/Mijaaj.webp",
+      "thumbnailUrl": "./assets/Mijaaj.webp",
       "videoUrl": "https://youtu.be/EFO3bKyqL98",
       "credits": {
         "director": "Tapan Vyas",
@@ -380,7 +380,7 @@
       "title": "O Taareee",
       "category": "Feature Film",
       "year": 2017,
-      "thumbnailUrl": "/src/assets/o taareee.webp",
+      "thumbnailUrl": "./assets/o taareee.webp",
       "videoUrl": "https://youtu.be/Va6HJYgvuJY",
       "credits": {
         "director": "Tapan Vyas",
@@ -395,7 +395,7 @@
       "title": "Paaghadi",
       "category": "Feature Film",
       "year": 2018,
-      "thumbnailUrl": "/src/assets/Paaghadi .webp",
+      "thumbnailUrl": "./assets/Paaghadi .webp",
       "videoUrl": "https://youtu.be/wuHSD8YVw1A",
       "credits": {
         "director": "Tapan Vyas",
@@ -410,7 +410,7 @@
       "title": "Vaat Vaat Ma 3",
       "category": "Web Series",
       "year": 2023,
-      "thumbnailUrl": "/src/assets/vaat vaat ma 3.webp",
+      "thumbnailUrl": "./assets/vaat vaat ma 3.webp",
       "videoUrl": "https://youtu.be/n4VlTvZcGdE",
       "credits": {
         "dop": "Tapan Vyas",
@@ -428,7 +428,7 @@
       "subtitle": "Feature Film",
       "year": 2017,
       "client": "Cinematographer",
-      "thumbnailUrl": "/src/assets/love ni bhavai.webp",
+      "thumbnailUrl": "./assets/love ni bhavai.webp",
       "videoUrl": "https://www.youtube.com/watch?v=OlsM8Nwb6nA",
       "accentColor": "var(--saffron)"
     },
@@ -438,7 +438,7 @@
       "subtitle": "Feature Film",
       "year": 2025,
       "client": "Cinematographer",
-      "thumbnailUrl": "/src/assets/lagan laagi re.webp",
+      "thumbnailUrl": "./assets/lagan laagi re.webp",
       "videoUrl": "https://www.youtube.com/watch?v=Nmmfm_J2Q98",
       "accentColor": "var(--crimson)"
     },
@@ -448,7 +448,7 @@
       "subtitle": "Feature Film",
       "year": 2016,
       "client": "Cinematographer",
-      "thumbnailUrl": "/src/assets/thai jashe.webp",
+      "thumbnailUrl": "./assets/thai jashe.webp",
       "videoUrl": "https://www.youtube.com/watch?v=aev_Nu7vqhI",
       "accentColor": "var(--teal-light)"
     },
@@ -458,7 +458,7 @@
       "subtitle": "Web Series",
       "year": 2021,
       "client": "Cinematographer",
-      "thumbnailUrl": "/src/assets/vitthal teedi web series.webp",
+      "thumbnailUrl": "./assets/vitthal teedi web series.webp",
       "videoUrl": "https://www.youtube.com/watch?v=3m-fYrJIjqg",
       "accentColor": "var(--gold)"
     },
@@ -468,7 +468,7 @@
       "subtitle": "Feature Film",
       "year": 2018,
       "client": "Director & Cinematographer",
-      "thumbnailUrl": "/src/assets/Mijaaj.webp",
+      "thumbnailUrl": "./assets/Mijaaj.webp",
       "videoUrl": "https://youtu.be/EFO3bKyqL98",
       "accentColor": "var(--saffron)"
     },
@@ -478,7 +478,7 @@
       "subtitle": "Feature Film",
       "year": 2017,
       "client": "Director & Cinematographer",
-      "thumbnailUrl": "/src/assets/o taareee.webp",
+      "thumbnailUrl": "./assets/o taareee.webp",
       "videoUrl": "https://youtu.be/Va6HJYgvuJY",
       "accentColor": "var(--crimson)"
     }

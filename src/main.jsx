@@ -7,7 +7,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from './App.jsx';
 
 // Global styles are imported inside App.jsx so that Vite's
 // CSS code-splitting works correctly with lazy routes.
