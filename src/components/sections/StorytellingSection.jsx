@@ -18,35 +18,35 @@ gsap.registerPlugin(ScrollTrigger);
 
 const PANELS = [
   {
-    id:          'p1',
+    id: 'p1',
 
-    english:     'Every frame\ntells a story.',
-    sub:         'The image before the cut is just as important as the image after it. Silence, held.',
-    accent:      'var(--saffron)',
-    thumbnailUrl: './assets/every_frame_story.png',
+    english: 'Every frame\ntells a story.',
+    sub: 'The image before the cut is just as important as the image after it. Silence, held.',
+    accent: 'var(--saffron)',
+    thumbnailUrl: './assets/every_frame_story.webp',
   },
   {
-    id:          'p2',
+    id: 'p2',
 
-    english:     'Emotion through\nlighting.',
-    sub:         'A single shaft of afternoon light through a Rajasthani jharokha says more than dialogue.',
-    accent:      'var(--crimson)',
-    thumbnailUrl: './assets/emotion_lighting.png',
+    english: 'Emotion through\nlighting.',
+    sub: 'A single shaft of afternoon light through a Rajasthani jharokha says more than dialogue.',
+    accent: 'var(--crimson)',
+    thumbnailUrl: './assets/emotion_lighting.webp',
   },
   {
-    id:          'p3',
+    id: 'p3',
 
-    english:     'Movement through\ncinema.',
-    sub:         'The camera is not an observer — it is a participant. Every move has intention.',
-    accent:      'var(--teal-light)',
-    thumbnailUrl: './assets/movement_cinema.png',
+    english: 'Movement through\ncinema.',
+    sub: 'The camera is not an observer — it is a participant. Every move has intention.',
+    accent: 'var(--teal-light)',
+    thumbnailUrl: './assets/movement_cinema.webp',
   },
 ];
 
 export default function StorytellingSection() {
-  const sectionRef   = useRef(null);
-  const trackRef     = useRef(null);
-  const panelRefs    = useRef([]);
+  const sectionRef = useRef(null);
+  const trackRef = useRef(null);
+  const panelRefs = useRef([]);
 
   useEffect(() => {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -59,11 +59,11 @@ export default function StorytellingSection() {
       // Pin the section and scrub panels horizontally
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger:  sectionRef.current,
-          start:    'top top',
-          end:      () => `+=${window.innerWidth * (PANELS.length - 1)}`,
-          scrub:    1,
-          pin:      true,
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: () => `+=${window.innerHeight * 1}`,
+          scrub: 1,
+          pin: true,
           anticipatePin: 1,
         },
       });
@@ -76,7 +76,7 @@ export default function StorytellingSection() {
 
       // Fade + slide text in per panel
       panels.forEach((panel, i) => {
-        const textEl  = panel.querySelector('.panel-text');
+        const textEl = panel.querySelector('.panel-text');
         const mediaEl = panel.querySelector('.panel-media');
 
         if (i > 0 && textEl) {
@@ -214,6 +214,7 @@ export default function StorytellingSection() {
                 aspectRatio="16/9"
                 accentColor={panel.accent}
                 showPlay={false}
+                imgStyle={{ objectFit: panel.id === 'p1' ? 'cover' : 'contain' }}
                 style={{ height: '100%', borderRadius: '2px' }}
               />
             </div>
@@ -232,7 +233,7 @@ export default function StorytellingSection() {
           color: 'var(--white-dim)', opacity: 0.65,
         }}>Scroll down</span>
         <svg width="9" height="22" viewBox="0 0 9 22" fill="none">
-          <path d="M4.5 0v20M1 16l3.5 4 3.5-4" stroke="var(--saffron)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M4.5 0v20M1 16l3.5 4 3.5-4" stroke="var(--saffron)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
 

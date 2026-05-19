@@ -423,34 +423,24 @@
   ],
   "projects": [
     {
-      "slug": "love-ni-bhavai",
-      "title": "Love Ni Bhavai",
+      "slug": "ittaa-kittaa",
+      "title": "Ittaa Kittaa",
       "subtitle": "Feature Film",
-      "year": 2017,
+      "year": 2024,
       "client": "Cinematographer",
-      "thumbnailUrl": "./assets/love ni bhavai.webp",
-      "videoUrl": "https://www.youtube.com/watch?v=OlsM8Nwb6nA",
+      "thumbnailUrl": "./assets/itta kitta 1.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=SndmYECnuys",
       "accentColor": "var(--saffron)"
     },
     {
-      "slug": "lagan-laagii-re",
-      "title": "Lagan Laagii Re",
+      "slug": "lakiro",
+      "title": "Lakiro",
       "subtitle": "Feature Film",
-      "year": 2025,
+      "year": 2023,
       "client": "Cinematographer",
-      "thumbnailUrl": "./assets/lagan laagi re.webp",
-      "videoUrl": "https://www.youtube.com/watch?v=Nmmfm_J2Q98",
+      "thumbnailUrl": "./assets/Lakiro.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=y3qYDPDN5M8",
       "accentColor": "var(--crimson)"
-    },
-    {
-      "slug": "thai-jashe",
-      "title": "Thai Jashe!",
-      "subtitle": "Feature Film",
-      "year": 2016,
-      "client": "Cinematographer",
-      "thumbnailUrl": "./assets/thai jashe.webp",
-      "videoUrl": "https://www.youtube.com/watch?v=aev_Nu7vqhI",
-      "accentColor": "var(--teal-light)"
     },
     {
       "slug": "vitthal-teedi",
@@ -460,27 +450,57 @@
       "client": "Cinematographer",
       "thumbnailUrl": "./assets/vitthal teedi web series.webp",
       "videoUrl": "https://www.youtube.com/watch?v=3m-fYrJIjqg",
+      "accentColor": "var(--teal-light)"
+    },
+    {
+      "slug": "thai-jashe",
+      "title": "Thai Jashe!",
+      "subtitle": "Feature Film",
+      "year": 2016,
+      "client": "Cinematographer",
+      "thumbnailUrl": "./assets/thai jashe.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=aev_Nu7vqhI",
       "accentColor": "var(--gold)"
     },
     {
-      "slug": "mijaaj",
-      "title": "Mijaaj",
+      "slug": "lagan-laagii-re",
+      "title": "Lagan Laagii Re",
       "subtitle": "Feature Film",
-      "year": 2018,
-      "client": "Director & Cinematographer",
-      "thumbnailUrl": "./assets/Mijaaj.webp",
-      "videoUrl": "https://youtu.be/EFO3bKyqL98",
+      "year": 2025,
+      "client": "Cinematographer",
+      "thumbnailUrl": "./assets/lagan laagi re.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=Nmmfm_J2Q98",
       "accentColor": "var(--saffron)"
     },
     {
-      "slug": "o-taareee",
-      "title": "O Taareee",
+      "slug": "aum-mangalam-singlem",
+      "title": "Aum Mangalam Singlem",
+      "subtitle": "Feature Film",
+      "year": 2022,
+      "client": "Cinematographer",
+      "thumbnailUrl": "./assets/aum manglam singlam.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=vtR0Uxxox04",
+      "accentColor": "var(--crimson)"
+    },
+    {
+      "slug": "love-ni-bhavai",
+      "title": "Love Ni Bhavai",
       "subtitle": "Feature Film",
       "year": 2017,
-      "client": "Director & Cinematographer",
-      "thumbnailUrl": "./assets/o taareee.webp",
-      "videoUrl": "https://youtu.be/Va6HJYgvuJY",
-      "accentColor": "var(--crimson)"
+      "client": "Cinematographer",
+      "thumbnailUrl": "./assets/love ni bhavai.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=OlsM8Nwb6nA",
+      "accentColor": "var(--teal-light)"
+    },
+    {
+      "slug": "matsyavedh",
+      "title": "Matsyavedh",
+      "subtitle": "Web Series",
+      "year": 2022,
+      "client": "Cinematographer",
+      "thumbnailUrl": "./assets/matsyavedh web series .webp",
+      "videoUrl": "https://www.youtube.com/watch?v=u6UEdSATkEk",
+      "accentColor": "var(--gold)"
     }
   ],
   "services": [

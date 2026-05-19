@@ -112,8 +112,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* ── Reel grid with AnimatePresence ── */}
-                <motion.div
-                    layout
+                <div
                     style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(3, 1fr)',
@@ -121,25 +120,24 @@ export default function Portfolio() {
                     }}
                     className="portfolio-grid"
                 >
-                    <AnimatePresence mode="popLayout">
+                    <AnimatePresence mode="wait">
                         {filtered.map((reel, i) => (
                             <motion.div
-                                key={reel.slug}
-                                layout
-                                initial={{ opacity: 0, scale: 0.96 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.96 }}
+                                key={reel.slug || reel.title}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
                                 transition={{
-                                    duration: 0.4,
+                                    duration: 0.3,
                                     delay: i * 0.04,
-                                    ease: [0.22, 1, 0.36, 1],
+                                    ease: "easeOut",
                                 }}
                             >
                                 <ReelCard reel={reel} index={i} />
                             </motion.div>
                         ))}
                     </AnimatePresence>
-                </motion.div>
+                </div>
 
                 {/* Empty state */}
                 {filtered.length === 0 && (

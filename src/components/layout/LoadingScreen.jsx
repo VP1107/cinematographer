@@ -201,8 +201,8 @@ export default function LoadingScreen() {
   const [closeFrac, setCloseFrac] = useState(1); // Start CLOSED as requested
   const [isClosing, setIsClosing] = useState(false);
   const [clapSlam,  setClapSlam]  = useState(false);
-  const [holeR,     setHoleR]     = useState(0);
   const rafRef = useRef(null);
+  const maskRef = useRef(null);
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -250,7 +250,13 @@ export default function LoadingScreen() {
     function frame(now) {
       const t     = Math.min((now - start) / dur, 1);
       const eased = t < 1 ? 1 - Math.pow(2, -10 * t) : 1;
-      setHoleR(eased * maxR);
+      const currentR = eased * maxR;
+
+      if (maskRef.current) {
+        maskRef.current.style.maskImage = `radial-gradient(circle at 50% 50%, transparent 0%, transparent ${currentR}px, var(--black) ${currentR + 2}px)`;
+        maskRef.current.style.WebkitMaskImage = `radial-gradient(circle at 50% 50%, transparent 0%, transparent ${currentR}px, var(--black) ${currentR + 2}px)`;
+      }
+
       if (t < 1) {
         rafRef.current = requestAnimationFrame(frame);
       } else {
@@ -266,15 +272,11 @@ export default function LoadingScreen() {
 
   useEffect(() => () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); }, []);
 
-  const maskStyle = phase === 'reveal' ? {
-    maskImage:       `radial-gradient(circle at 50% 50%, transparent 0%, transparent ${holeR}px, var(--black) ${holeR + 2}px)`,
-    WebkitMaskImage: `radial-gradient(circle at 50% 50%, transparent 0%, transparent ${holeR}px, var(--black) ${holeR + 2}px)`,
-  } : {};
-
   return (
     <AnimatePresence>
       {visible && (
         <motion.div
+          ref={maskRef}
           key="ls"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.35 } }}
@@ -284,7 +286,6 @@ export default function LoadingScreen() {
             display: 'flex', flexDirection: 'column',
             alignItems: 'center', justifyContent: 'center',
             gap: '2rem', overflow: 'hidden',
-            ...maskStyle,
           }}
         >
           {/* Shutter phase */}

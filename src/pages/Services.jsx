@@ -246,7 +246,7 @@ export default function Services() {
           trigger:   sectionRef.current,
           start:     'top top',
           end:       () => `+=${scrollDist}`,
-          scrub:     0.8,           // smooth but not laggy
+          scrub:     true,           // tied perfectly to Lenis, no extra delay
           pin:       true,
           anticipatePin: 1,
           invalidateOnRefresh: true,

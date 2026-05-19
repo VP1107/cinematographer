@@ -16,19 +16,7 @@ import LazyImage from '../utils/lazyImage';
 import useScrollReveal from '../hooks/useScrollReveal';
 import { useTitle } from '../hooks/useTitle';
 
-// ── Placeholder brand logos (swap for real SVG/img) ──────────
-const BRANDS = [
-  'Sundari Handlooms', 'Indigo Pictures', 'Dhoop Films',
-  'Tandav Arts',       'Noor Creative',   'Red Masala Films',
-  'Patan Records',     'MAMI',            'IFFK',
-];
 
-const AWARDS = [
-  { year: '2023', title: 'Best Cinematography',    org: 'MAMI Film Festival',     project: 'Kahāni'  },
-  { year: '2023', title: 'Official Selection',     org: 'IFFK — Kerala',          project: 'Nritya'  },
-  { year: '2022', title: 'Best Short Film — DOP',  org: 'Chitrabharati Film Fest', project: 'Udān'   },
-  { year: '2022', title: 'Jury Commendation',      org: 'Vikalp — Mumbai',        project: 'Nritya'  },
-];
 
 // ── Portrait with film-grain + haldi overlay ─────────────────
 function Portrait() {
@@ -131,9 +119,7 @@ function BioSection() {
           lineHeight: 1.85,
         }}
       >
-        I grew up watching sunlight move through the jhaalars of Ahmedabad's Pol
-        houses — that slow, certain daily cinema convinced me that every space
-        already contains a film. It just needs someone to notice it.
+        I was shaped by cinema, guided by light, and drawn to the hidden soul that quietly breathes inside every story.
       </p>
 
       <p
@@ -146,12 +132,7 @@ function BioSection() {
           lineHeight: 1.85,
         }}
       >
-        After studying at FTII Pune, I worked as a camera assistant on
-        three Bollywood productions before DPing my first independent short,
-        which screened at MAMI in 2019. Since then, I have shot across
-        Rajasthan, Kerala, the Andamans, and in studios in Mumbai — always
-        trying to bring the same quality of attention that I learned watching
-        that light move across those old stone walls.
+        Trained in cinematography at FTII, Pune, and graduated in Chemical Engineering, I carry both the poetry of images and the precision of science. Over 20+ years, done 35+ feature films and 100+ business films.
       </p>
 
       <p
@@ -164,12 +145,7 @@ function BioSection() {
           lineHeight: 1.85,
         }}
       >
-        Notable collaborations include directors{' '}
-        <em style={{ color: 'var(--white)', fontStyle: 'normal' }}>Arjun Mehta</em>,{' '}
-        <em style={{ color: 'var(--white)', fontStyle: 'normal' }}>Sanya Kapoor</em>, and{' '}
-        <em style={{ color: 'var(--white)', fontStyle: 'normal' }}>Kabir Singh</em>.
-        Clients span sustainable fashion, luxury FMCG, OTT platforms, and
-        independent music labels across India.
+        My craft lies in cinematography, storytelling, scripting, and direction — but my true purpose is to find the heartbeat of a story and turn it into a film that reveals what truly matters.
       </p>
 
       <Link
@@ -196,169 +172,27 @@ function BioSection() {
   );
 }
 
-// ── Brand logos strip ─────────────────────────────────────────
-function BrandsStrip() {
+// ── Introduction Video ──────────────────────────────────────────
+function IntroVideo() {
   return (
     <section
-      style={{
-        padding: 'var(--space-16) 0',
-        borderTop: '1px solid rgba(200,169,110,0.08)',
-        borderBottom: '1px solid rgba(200,169,110,0.08)',
-        overflow: 'hidden',
-      }}
-      aria-label="Clients and collaborators"
+      style={{ padding: 'var(--space-8) 0 var(--space-16)' }}
+      aria-label="Introduction Video"
     >
-      <div className="container" style={{ marginBottom: '1.2rem' }}>
-        <p
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: 'var(--text-xs)',
-            letterSpacing: '0.2em',
-            textTransform: 'uppercase',
-            color: 'var(--saffron)',
-            opacity: 0.6,
-          }}
-        >
-          Clients & Collaborators
-        </p>
-      </div>
-
-      {/* Scrolling ticker */}
-      <div
-        style={{
-          display: 'flex',
-          gap: '3rem',
-          animation: 'scroll-ticker 22s linear infinite',
-          width: 'max-content',
-        }}
-        aria-hidden="true"
-      >
-        {[...BRANDS, ...BRANDS].map((brand, i) => (
-          <div
-            key={i}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '1.5rem',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {/* Rangoli dot separator */}
-            <svg width="6" height="6" viewBox="0 0 6 6" aria-hidden="true">
-              <polygon points="3,0 6,3 3,6 0,3" fill="var(--saffron)" opacity="0.4" />
-            </svg>
-            <span
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'var(--text-lg)',
-                fontWeight: 300,
-                letterSpacing: '0.08em',
-                color: 'var(--white-muted)',
-              }}
-            >
-              {brand}
-            </span>
-          </div>
-        ))}
-      </div>
-
-      <style>{`
-        @keyframes scroll-ticker {
-          from { transform: translateX(0); }
-          to   { transform: translateX(-50%); }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          [style*="scroll-ticker"] { animation: none !important; }
-        }
-      `}</style>
-    </section>
-  );
-}
-
-// ── Awards list ───────────────────────────────────────────────
-function AwardsList() {
-  return (
-    <section
-      style={{ padding: 'var(--space-16) 0' }}
-      aria-label="Awards and recognition"
-    >
-      <div className="container">
+      <div className="container" style={{ padding: '0 clamp(1.5rem, 6vw, 5rem)' }}>
         <SectionHeading
-          eyebrow="Recognition"
-          heading="Awards & Press"
-          accentColor="var(--crimson)"
+          eyebrow="Introduction"
+          heading="A cinematic journey"
+          accentColor="var(--teal-light)"
           style={{ marginBottom: 'var(--space-8)' }}
         />
-
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          {AWARDS.map((award, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-30px' }}
-              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '60px 1fr auto',
-                gap: '1.5rem',
-                alignItems: 'center',
-                padding: '1.2rem 0',
-                borderBottom: '1px solid rgba(200,169,110,0.07)',
-              }}
-            >
-              {/* Year */}
-              <span
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: 'var(--text-base)',
-                  color: 'var(--crimson)',
-                  opacity: 0.7,
-                }}
-              >
-                {award.year}
-              </span>
-
-              {/* Title + org */}
-              <div>
-                <p
-                  style={{
-                    fontFamily: 'var(--font-display)',
-                    fontSize: 'var(--text-md)',
-                    fontWeight: 400,
-                    color: 'var(--white)',
-                    letterSpacing: '0.03em',
-                  }}
-                >
-                  {award.title}
-                </p>
-                <p
-                  style={{
-                    fontFamily: 'var(--font-body)',
-                    fontSize: 'var(--text-xs)',
-                    color: 'var(--white-muted)',
-                    letterSpacing: '0.06em',
-                    marginTop: '0.2rem',
-                  }}
-                >
-                  {award.org}
-                </p>
-              </div>
-
-              {/* Project */}
-              <span
-                style={{
-                  fontFamily: 'var(--font-devanagari)',
-                  fontSize: 'var(--text-sm)',
-                  color: 'var(--saffron)',
-                  opacity: 0.6,
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {award.project}
-              </span>
-            </motion.div>
-          ))}
+        
+        {/* Replace the URL below with your actual video when ready */}
+        <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9', background: 'var(--gray-dark)' }}>
+          {/* Note: You can drop in YouTubeEmbed or VideoPlaceholder here */}
+          <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--white-dim)', fontFamily: 'var(--font-body)', fontSize: '1rem', border: '1px dashed var(--saffron)', borderRadius: '4px' }}>
+            [ Introduction Video Placeholder ]
+          </div>
         </div>
       </div>
     </section>
@@ -397,8 +231,7 @@ export default function About() {
         </div>
       </div>
 
-      <BrandsStrip />
-      <AwardsList />
+      <IntroVideo />
 
       <style>{`
         @media (max-width: 768px) {

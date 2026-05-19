@@ -129,6 +129,64 @@ export default function HeroSection({
 
   return (
     <section className="hero-section" aria-label="Hero">
+      {/* ── Right Media (Video/Image) ── */}
+      <div className="hero-media">
+        <div className="hero-media-inner">
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'var(--black)',
+              zIndex: 0,
+            }}
+          >
+            <img
+              src="/image.webp"
+              alt="Hero Background"
+              fetchPriority="high"
+              style={{
+                position: 'absolute',
+                inset: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                zIndex: 0,
+              }}
+            />
+            {/* Only mount YouTube embed when a real URL is provided */}
+            {videoUrl && (
+              <YouTubeEmbed
+                url={videoUrl}
+                playing
+                loop
+                muted
+                controls={false}
+                onReady={() => setVideoReady(true)}
+                style={{
+                  opacity: videoReady ? 1 : 0,
+                  transition: 'opacity 1s ease',
+                  transform: 'scale(1.05)',
+                }}
+              />
+            )}
+          </div>
+
+          {/* Gradient overlay to soften edge on desktop */}
+          <div
+            aria-hidden="true"
+            className="hero-media-gradient"
+          />
+
+          {/* Corner rangoli ornaments */}
+          <div style={{ position: 'absolute', inset: 0, zIndex: 2, pointerEvents: 'none' }}>
+            <CornerOrnament position="top-left"     />
+            <CornerOrnament position="top-right"    />
+            <CornerOrnament position="bottom-left"  />
+            <CornerOrnament position="bottom-right" />
+          </div>
+        </div>
+      </div>
+
       {/* ── Left Content (Text & Buttons) ── */}
       <div className="hero-content">
         <div className="hero-text-wrapper">
@@ -175,11 +233,11 @@ export default function HeroSection({
               className="btn-primary"
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = 'var(--saffron-dim)';
-                e.currentTarget.style.color = 'var(--white)';
+                e.currentTarget.style.color = '#f7f0e6';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = 'var(--saffron)';
-                e.currentTarget.style.color = 'var(--black)';
+                e.currentTarget.style.color = '#06050a';
               }}
             >
               View Work
@@ -189,62 +247,16 @@ export default function HeroSection({
               className="btn-secondary"
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = 'var(--gold)';
-                e.currentTarget.style.color = 'var(--gold-dim)';
+                e.currentTarget.style.color = 'var(--gold-light)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = 'rgba(200,169,110,0.45)';
-                e.currentTarget.style.color = 'var(--white)';
+                e.currentTarget.style.color = '#f7f0e6';
               }}
             >
               Get in Touch
             </Link>
           </motion.div>
-        </div>
-      </div>
-
-      {/* ── Right Media (Video/Image) ── */}
-      <div className="hero-media">
-        <div className="hero-media-inner">
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              background: 'var(--black)',
-              backgroundImage: 'url("/image.webp")',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              zIndex: 0,
-            }}
-          >
-            {/* Only mount YouTube embed when a real URL is provided */}
-            {videoUrl && (
-              <YouTubeEmbed
-                url={videoUrl}
-                playing
-                loop
-                muted
-                controls={false}
-                onReady={() => setVideoReady(true)}
-                style={{
-                  opacity: videoReady ? 1 : 0,
-                  transition: 'opacity 1s ease',
-                  transform: 'scale(1.05)',
-                }}
-              />
-            )}
-          </div>
-
-          {/* Gradient overlay to soften edge on desktop */}
-          <div
-            aria-hidden="true"
-            className="hero-media-gradient"
-          />
-
-          {/* Corner rangoli ornaments */}
-          <div style={{ position: 'absolute', inset: 0, zIndex: 2, pointerEvents: 'none' }}>
-            <CornerOrnament position="top-right"    />
-            <CornerOrnament position="bottom-right" />
-          </div>
         </div>
       </div>
 
@@ -259,31 +271,34 @@ export default function HeroSection({
           height: 100dvh;
           min-height: 560px;
           display: flex;
-          flex-direction: column-reverse;
+          align-items: center;
+          justify-content: center;
           background: var(--black);
           overflow: hidden;
         }
 
         .hero-content {
-          flex: 1;
+          position: relative;
+          z-index: 3;
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: var(--space-8);
-          position: relative;
-          z-index: 3;
           text-align: center;
+          width: 100%;
+          padding: var(--space-8);
         }
 
         .hero-text-wrapper {
-          max-width: 600px;
-          margin-top: -4rem; /* Lift text slightly on mobile */
+          max-width: 800px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
 
         .hero-media {
-          flex: 1;
-          position: relative;
-          min-height: 45vh;
+          position: absolute;
+          inset: 0;
+          z-index: 1;
         }
 
         .hero-media-inner {
@@ -295,7 +310,7 @@ export default function HeroSection({
         .hero-media-gradient {
           position: absolute;
           inset: 0;
-          background: linear-gradient(to top, var(--black) 0%, transparent 20%);
+          background: rgba(0, 0, 0, 0.5); /* Contrast overlay */
           z-index: 1;
         }
 
@@ -315,17 +330,17 @@ export default function HeroSection({
           letter-spacing: 0.08em;
           text-transform: uppercase;
           line-height: 1;
-          color: var(--white);
+          color: #f7f0e6;
           padding-left: 0.08em;
-          text-shadow: 0 2px 40px rgba(0,0,0,0.1);
+          text-shadow: 0 2px 40px rgba(0,0,0,0.5);
         }
 
         .hero-divider {
           width: 100%;
-          max-width: 320px;
+          max-width: 400px;
           height: 1px;
           background: linear-gradient(90deg, transparent, var(--saffron), var(--crimson), var(--teal), transparent);
-          margin: 1.4rem auto;
+          margin: 1.4rem 0;
           transform-origin: center;
         }
 
@@ -334,8 +349,9 @@ export default function HeroSection({
           font-size: var(--text-lg);
           font-weight: 300;
           letter-spacing: 0.06em;
-          color: var(--white-dim);
+          color: #f7f0e6;
           margin-bottom: 0.4rem;
+          text-shadow: 0 1px 15px rgba(0,0,0,0.8);
         }
 
         .hero-tagline-hindi {
@@ -359,7 +375,7 @@ export default function HeroSection({
           font-size: var(--text-sm);
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: var(--black);
+          color: #06050a;
           background: var(--saffron);
           border: 1px solid var(--saffron);
           padding: 0.65rem 1.8rem;
@@ -372,43 +388,16 @@ export default function HeroSection({
           font-size: var(--text-sm);
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: var(--white);
-          background: transparent;
-          border: 1px solid rgba(200,169,110,0.45);
+          color: #f7f0e6;
+          background: rgba(0, 0, 0, 0.4);
+          border: 1px solid rgba(200,169,110,0.6);
           padding: 0.65rem 1.8rem;
           text-decoration: none;
-          transition: border-color 220ms ease, color 220ms ease;
+          transition: border-color 220ms ease, color 220ms ease, background 220ms ease;
         }
 
-        /* Desktop Layout */
-        @media (min-width: 768px) {
-          .hero-section {
-            flex-direction: row;
-          }
-
-          .hero-content {
-            padding-left: max(var(--space-8), calc((100vw - 1280px) / 2 + var(--space-8)));
-            padding-right: var(--space-12);
-            text-align: left;
-            justify-content: flex-start;
-          }
-
-          .hero-text-wrapper {
-             margin-top: 0;
-          }
-
-          .hero-media-gradient {
-            background: linear-gradient(to right, var(--black) 0%, transparent 20%);
-          }
-
-          .hero-divider {
-            margin: 1.4rem 0;
-            background: linear-gradient(90deg, var(--saffron), var(--crimson), var(--teal), transparent);
-          }
-
-          .hero-buttons {
-            justify-content: flex-start;
-          }
+        .btn-secondary:hover {
+          background: rgba(0, 0, 0, 0.8);
         }
       `}</style>
     </section>

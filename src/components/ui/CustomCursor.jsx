@@ -17,8 +17,7 @@ export default function CustomCursor() {
 
   useEffect(() => {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const isTouch       = window.matchMedia('(hover: none)').matches;
-    if (reducedMotion || isTouch) return;
+    // We remove the early return so the cursor is visible even if animations are off in Windows.
 
     setVisible(true);
 
@@ -76,10 +75,9 @@ export default function CustomCursor() {
           position: 'fixed',
           top: 0,
           left: 0,
-          zIndex: 'var(--z-cursor)',
+          zIndex: 999999,
           pointerEvents: 'none',
           willChange: 'transform',
-          mixBlendMode: 'multiply',
         }}
       >
         {/* Outer dashed ring */}
@@ -103,22 +101,22 @@ export default function CustomCursor() {
 
         {/* Cardinal tick marks — N S W E */}
         <line x1="16" y1="2"  x2="16" y2="6"
-          stroke={hovered ? 'var(--saffron)' : 'var(--white-dim)'}
+          stroke={hovered ? 'var(--saffron)' : 'var(--saffron)'}
           strokeWidth="1" strokeLinecap="round"
           style={{ transition: 'stroke 200ms ease' }}
         />
         <line x1="16" y1="26" x2="16" y2="30"
-          stroke={hovered ? 'var(--saffron)' : 'var(--white-dim)'}
+          stroke={hovered ? 'var(--saffron)' : 'var(--saffron)'}
           strokeWidth="1" strokeLinecap="round"
           style={{ transition: 'stroke 200ms ease' }}
         />
         <line x1="2"  y1="16" x2="6"  y2="16"
-          stroke={hovered ? 'var(--saffron)' : 'var(--white-dim)'}
+          stroke={hovered ? 'var(--saffron)' : 'var(--saffron)'}
           strokeWidth="1" strokeLinecap="round"
           style={{ transition: 'stroke 200ms ease' }}
         />
         <line x1="26" y1="16" x2="30" y2="16"
-          stroke={hovered ? 'var(--saffron)' : 'var(--white-dim)'}
+          stroke={hovered ? 'var(--saffron)' : 'var(--saffron)'}
           strokeWidth="1" strokeLinecap="round"
           style={{ transition: 'stroke 200ms ease' }}
         />
@@ -127,7 +125,7 @@ export default function CustomCursor() {
         <circle
           cx="16" cy="16"
           r={hovered ? '2.5' : '1.5'}
-          fill={hovered ? 'var(--saffron)' : 'var(--white)'}
+          fill={hovered ? 'var(--crimson)' : 'var(--saffron)'}
           style={{ transition: 'r 200ms ease, fill 200ms ease' }}
         />
 

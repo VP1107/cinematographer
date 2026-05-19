@@ -125,6 +125,7 @@ export default function VideoPlaceholder({
   accentColor = 'var(--saffron)',
   className = '',
   style: styleProp = {},
+  imgStyle = {},
 }) {
   const [hovered, setHovered] = useState(false);
 
@@ -146,7 +147,7 @@ export default function VideoPlaceholder({
         position: 'relative',
         width: '100%',
         aspectRatio,
-        background: 'var(--gray-dark)',
+        background: 'var(--black)',
         overflow: 'hidden',
         cursor: onPlay ? 'none' : 'default',
         ...styleProp,
@@ -159,6 +160,7 @@ export default function VideoPlaceholder({
           alt={title || 'Video thumbnail'}
           aspectRatio={aspectRatio}
           style={{ position: 'absolute', inset: 0 }}
+          imgStyle={imgStyle}
         />
       )}
 
