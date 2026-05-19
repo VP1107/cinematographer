@@ -11,7 +11,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import SectionHeading  from '../components/ui/SectionHeading';
+import SectionHeading from '../components/ui/SectionHeading';
 import LazyImage from '../utils/lazyImage';
 import useScrollReveal from '../hooks/useScrollReveal';
 import { useTitle } from '../hooks/useTitle';
@@ -96,7 +96,7 @@ function Portrait() {
 
 // ── Bio text ──────────────────────────────────────────────────
 function BioSection() {
-  const paraRef1 = useScrollReveal({ delay: 0   });
+  const paraRef1 = useScrollReveal({ delay: 0 });
   const paraRef2 = useScrollReveal({ delay: 100 });
   const paraRef3 = useScrollReveal({ delay: 200 });
 
@@ -172,33 +172,6 @@ function BioSection() {
   );
 }
 
-// ── Introduction Video ──────────────────────────────────────────
-function IntroVideo() {
-  return (
-    <section
-      style={{ padding: 'var(--space-8) 0 var(--space-16)' }}
-      aria-label="Introduction Video"
-    >
-      <div className="container" style={{ padding: '0 clamp(1.5rem, 6vw, 5rem)' }}>
-        <SectionHeading
-          eyebrow="Introduction"
-          heading="A cinematic journey"
-          accentColor="var(--teal-light)"
-          style={{ marginBottom: 'var(--space-8)' }}
-        />
-        
-        {/* Replace the URL below with your actual video when ready */}
-        <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9', background: 'var(--gray-dark)' }}>
-          {/* Note: You can drop in YouTubeEmbed or VideoPlaceholder here */}
-          <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--white-dim)', fontFamily: 'var(--font-body)', fontSize: '1rem', border: '1px dashed var(--saffron)', borderRadius: '4px' }}>
-            [ Introduction Video Placeholder ]
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 // ── Page ─────────────────────────────────────────────────────
 export default function About() {
   useTitle('About');
@@ -215,7 +188,7 @@ export default function About() {
       {/* ── Two-col hero ── */}
       <div
         className="container"
-        style={{ padding: 'var(--space-16) clamp(1.5rem, 6vw, 5rem)' }}
+        style={{ padding: 'var(--space-8) clamp(1.5rem, 6vw, 5rem) var(--space-16)' }}
       >
         <div
           style={{
@@ -230,8 +203,6 @@ export default function About() {
           <BioSection />
         </div>
       </div>
-
-      <IntroVideo />
 
       <style>{`
         @media (max-width: 768px) {

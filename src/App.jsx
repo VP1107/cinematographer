@@ -13,7 +13,6 @@ import Footer          from './components/layout/Footer';
 import PageTransition  from './components/layout/PageTransition';
 import LoadingScreen   from './components/layout/LoadingScreen';
 import CustomCursor    from './components/ui/CustomCursor';
-import MusicPlayer     from './components/ui/MusicPlayer';
 import SmoothScrollProvider from './components/layout/SmoothScrollProvider';
 import ScrollToTop      from './components/layout/ScrollToTop';
 import { ThemeProvider } from './hooks/useTheme';
@@ -212,9 +211,6 @@ export default function App() {
         <SmoothScrollProvider>
           {/* Custom cursor — rendered outside page flow */}
           <CustomCursor />
-
-          {/* Global Music Player */}
-          <MusicPlayer />
 
           {/* Initial loading screen */}
           <LoadingScreen />

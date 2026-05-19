@@ -13,6 +13,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import VideoPlaceholder from '../ui/VideoPlaceholder';
+import LazyImage from '../../utils/lazyImage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,19 +28,17 @@ const PANELS = [
   },
   {
     id: 'p2',
-
     english: 'Emotion through\nlighting.',
     sub: 'A single shaft of afternoon light through a Rajasthani jharokha says more than dialogue.',
     accent: 'var(--crimson)',
-    thumbnailUrl: './assets/emotion_lighting.webp',
+    images: ['./assets/emotion_lighting.webp', './assets/movement_cinema.webp'],
   },
   {
     id: 'p3',
-
     english: 'Movement through\ncinema.',
     sub: 'The camera is not an observer — it is a participant. Every move has intention.',
     accent: 'var(--teal-light)',
-    thumbnailUrl: './assets/movement_cinema.webp',
+    isVideo: true,
   },
 ];
 
@@ -61,7 +60,7 @@ export default function StorytellingSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: () => `+=${window.innerHeight * 1}`,
+          end: () => `+=${window.innerHeight * 2.5}`,
           scrub: 1,
           pin: true,
           anticipatePin: 1,
@@ -70,7 +69,7 @@ export default function StorytellingSection() {
 
       // Slide track leftward
       tl.to(trackRef.current, {
-        x: () => -(window.innerWidth * (PANELS.length - 1)),
+        x: () => -(trackRef.current.scrollWidth - window.innerWidth),
         ease: 'none',
       });
 
@@ -118,7 +117,7 @@ export default function StorytellingSection() {
         style={{
           display: 'flex',
           height: '100%',
-          width: `${PANELS.length * 100}vw`,
+          width: 'max-content',
           willChange: 'transform',
         }}
       >
@@ -127,7 +126,7 @@ export default function StorytellingSection() {
             key={panel.id}
             ref={(el) => (panelRefs.current[i] = el)}
             style={{
-              width: '100vw',
+              width: panel.id === 'p2' ? '85vw' : '100vw',
               height: '100%',
               display: 'grid',
               gridTemplateColumns: '1fr 1fr',
@@ -204,19 +203,43 @@ export default function StorytellingSection() {
 
             </div>
 
-            {/* Right: video placeholder */}
+            {/* Right: video or images */}
             <div
               className="panel-media"
               style={{ height: 'clamp(240px, 50vh, 520px)' }}
             >
-              <VideoPlaceholder
-                thumbnailUrl={panel.thumbnailUrl}
-                aspectRatio="16/9"
-                accentColor={panel.accent}
-                showPlay={false}
-                imgStyle={{ objectFit: panel.id === 'p1' ? 'cover' : 'contain' }}
-                style={{ height: '100%', borderRadius: '2px' }}
-              />
+              {panel.isVideo ? (
+                <div style={{ position: 'relative', width: '100%', height: '100%', background: 'var(--gray-dark)' }}>
+                  <iframe 
+                    src="https://player.vimeo.com/video/1193650792?context=Vimeo%5CController%5CApi%5CResources%5CVideoController.&h=5de6bdb106&s=13d152f15880ed6aa35bd22989283e93b3b9deaa_1779311419&title=0&byline=0&portrait=0&dnt=1" 
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                    frameBorder="0" 
+                    allow="autoplay; fullscreen" 
+                  ></iframe>
+                </div>
+              ) : panel.images ? (
+                <div style={{ display: 'flex', gap: '1rem', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+                  <img
+                    src={panel.images[0]}
+                    alt="Cinematography"
+                    style={{ flex: 1, width: '100%', height: '100%', minWidth: 0, objectFit: 'contain', borderRadius: '4px', display: 'block' }}
+                  />
+                  <img
+                    src={panel.images[1]}
+                    alt="Emotion through lighting"
+                    style={{ flex: 1, width: '100%', height: '100%', minWidth: 0, objectFit: 'contain', borderRadius: '4px', display: 'block' }}
+                  />
+                </div>
+              ) : (
+                <VideoPlaceholder
+                  thumbnailUrl={panel.thumbnailUrl}
+                  aspectRatio="16/9"
+                  accentColor={panel.accent}
+                  showPlay={false}
+                  imgStyle={{ objectFit: 'cover' }}
+                  style={{ height: '100%', borderRadius: '2px' }}
+                />
+              )}
             </div>
           </div>
         ))}
