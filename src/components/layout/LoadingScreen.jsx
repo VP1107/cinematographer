@@ -257,6 +257,7 @@ export default function LoadingScreen() {
         setTimeout(() => {
           setVisible(false);
           sessionStorage.setItem('ls_seen', '1');
+          window.dispatchEvent(new Event('loader-complete'));
         }, 150);
       }
     }

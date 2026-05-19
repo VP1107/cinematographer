@@ -1,13 +1,9 @@
-// src/components/layout/SmoothScrollProvider.jsx
-// ============================================================
-//  SmoothScrollProvider — wraps Lenis 1.3.x smooth scroll
-//  Uses the `lenis` package (devDep) — not @studio-freight/lenis
-//  Integrates with GSAP ticker for ScrollTrigger compatibility
-// ============================================================
-
 import React, { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const LenisContext = React.createContext(null);
 
@@ -25,20 +21,41 @@ export default function SmoothScrollProvider({ children }) {
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
+      wheelMultiplier: 0.95,
+      touchMultiplier: 1.5,
     });
 
     lenisRef.current = lenis;
 
+    // Check if the preloader will be visible
+    const lsSeen = sessionStorage.getItem('ls_seen');
+    if (!lsSeen) {
+      // Pause Lenis until the loader-complete event fires
+      lenis.stop();
+    }
+
+    const handleLoaderComplete = () => {
+      lenis.start();
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
+    };
+
+    window.addEventListener('loader-complete', handleLoaderComplete);
+
+    // Hook into GSAP ScrollTrigger
+    lenis.on('scroll', ScrollTrigger.update);
+
     // Hook into GSAP ticker so ScrollTrigger stays in sync
-    gsap.ticker.add((time) => {
+    const updateRaf = (time) => {
       lenis.raf(time * 1000);
-    });
+    };
+    gsap.ticker.add(updateRaf);
     gsap.ticker.lagSmoothing(0);
 
     return () => {
-      gsap.ticker.remove(lenis.raf);
+      window.removeEventListener('loader-complete', handleLoaderComplete);
+      gsap.ticker.remove(updateRaf);
       lenis.destroy();
       lenisRef.current = null;
     };

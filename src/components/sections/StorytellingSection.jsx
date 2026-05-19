@@ -23,6 +23,7 @@ const PANELS = [
     english:     'Every frame\ntells a story.',
     sub:         'The image before the cut is just as important as the image after it. Silence, held.',
     accent:      'var(--saffron)',
+    thumbnailUrl: './assets/every_frame_story.png',
   },
   {
     id:          'p2',
@@ -30,6 +31,7 @@ const PANELS = [
     english:     'Emotion through\nlighting.',
     sub:         'A single shaft of afternoon light through a Rajasthani jharokha says more than dialogue.',
     accent:      'var(--crimson)',
+    thumbnailUrl: './assets/emotion_lighting.png',
   },
   {
     id:          'p3',
@@ -37,6 +39,7 @@ const PANELS = [
     english:     'Movement through\ncinema.',
     sub:         'The camera is not an observer — it is a participant. Every move has intention.',
     accent:      'var(--teal-light)',
+    thumbnailUrl: './assets/movement_cinema.png',
   },
 ];
 
@@ -207,6 +210,7 @@ export default function StorytellingSection() {
               style={{ height: 'clamp(240px, 50vh, 520px)' }}
             >
               <VideoPlaceholder
+                thumbnailUrl={panel.thumbnailUrl}
                 aspectRatio="16/9"
                 accentColor={panel.accent}
                 showPlay={false}
