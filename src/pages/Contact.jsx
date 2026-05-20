@@ -33,16 +33,20 @@ const ICON_MAP = {
 };
 
 // ── Form field ────────────────────────────────────────────────
-function Field({ label, name, type = 'text', multiline = false, required = false, value, onChange }) {
+function Field({ label, name, type = 'text', multiline = false, required = false, value, onChange, error }) {
   const [focused, setFocused] = useState(false);
+
+  const borderColor = error
+    ? 'var(--crimson)'
+    : focused
+    ? 'var(--saffron)'
+    : 'rgba(200,169,110,0.2)';
 
   const baseStyle = {
     width: '100%',
     background: 'transparent',
     border: 'none',
-    borderBottom: focused
-      ? '1px solid var(--saffron)'
-      : '1px solid rgba(200,169,110,0.2)',
+    borderBottom: `1px solid ${borderColor}`,
     padding: '0.75rem 0',
     fontFamily: 'var(--font-body)',
     fontSize: 'var(--text-base)',
@@ -73,7 +77,7 @@ function Field({ label, name, type = 'text', multiline = false, required = false
             fontSize: 'var(--text-xs)',
             letterSpacing: '0.16em',
             textTransform: 'uppercase',
-            color: focused ? 'var(--saffron-light)' : 'var(--white-muted)',
+            color: error ? 'var(--crimson)' : focused ? 'var(--saffron-light)' : 'var(--white-muted)',
             transition: 'color 220ms ease',
           }}
         >
@@ -89,26 +93,44 @@ function Field({ label, name, type = 'text', multiline = false, required = false
         <textarea
           id={name}
           name={name}
-          required={required}
           rows={5}
           value={value}
           onChange={onChange}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           style={{ ...baseStyle, lineHeight: 1.7 }}
+          aria-invalid={!!error}
+          aria-describedby={error ? `${name}-error` : undefined}
         />
       ) : (
         <input
           id={name}
           name={name}
           type={type}
-          required={required}
           value={value}
           onChange={onChange}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           style={baseStyle}
+          aria-invalid={!!error}
+          aria-describedby={error ? `${name}-error` : undefined}
         />
+      )}
+
+      {error && (
+        <p
+          id={`${name}-error`}
+          role="alert"
+          style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: 'var(--text-xs)',
+            color: 'var(--crimson)',
+            marginTop: '0.35rem',
+            letterSpacing: '0.04em',
+          }}
+        >
+          {error}
+        </p>
       )}
     </div>
   );
@@ -118,19 +140,54 @@ function Field({ label, name, type = 'text', multiline = false, required = false
 export default function Contact() {
   useTitle('Contact');
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
+  const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const leftRef = useScrollReveal({ delay: 0 });
   const rightRef = useScrollReveal({ delay: 100 });
 
   const handleChange = (e) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+    // Clear error for this field as user types
+    if (errors[name]) {
+      setErrors((prev) => ({ ...prev, [name]: '' }));
+    }
+  };
+
+  // ── Validate form fields ──
+  const validate = () => {
+    const newErrors = {};
+    if (!form.name.trim()) {
+      newErrors.name = 'Please enter your name.';
+    }
+    if (!form.email.trim()) {
+      newErrors.email = 'Please enter your email address.';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
+      newErrors.email = 'Please enter a valid email address.';
+    }
+    if (!form.message.trim()) {
+      newErrors.message = 'Please enter a message.';
+    }
+    return newErrors;
   };
 
   // ── Form submit — swap action URL for Formspree/Netlify ──
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate before sending
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      // Focus the first errored field
+      const firstErrorField = Object.keys(validationErrors)[0];
+      document.getElementById(firstErrorField)?.focus();
+      return;
+    }
+
     setSending(true);
+    setErrors({});
 
     // Retrieve Google Apps Script URL from environment variables or hardcoded string
     const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycbybXwC3mz1dJVFDqmjAyc6tsGojrFZXyW5mYLygP3Vmq3jK7rdJnyIysJx3TflC-xoUew/exec';
@@ -343,36 +400,35 @@ export default function Contact() {
             <form onSubmit={handleSubmit} noValidate>
               <Field
                 label="Name"
-
                 name="name"
                 required
                 value={form.name}
                 onChange={handleChange}
+                error={errors.name}
               />
               <Field
                 label="Email"
-
                 name="email"
                 type="email"
                 required
                 value={form.email}
                 onChange={handleChange}
+                error={errors.email}
               />
               <Field
                 label="Subject"
-
                 name="subject"
                 value={form.subject}
                 onChange={handleChange}
               />
               <Field
                 label="Message"
-
                 name="message"
                 multiline
                 required
                 value={form.message}
                 onChange={handleChange}
+                error={errors.message}
               />
 
               {/* Submit */}
