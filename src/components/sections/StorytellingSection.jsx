@@ -22,7 +22,7 @@ const PANELS = [
     id: 'p1',
 
     english: 'Every frame\ntells a story.',
-    sub: 'The foundation of engineering brings precision; FTII Pune training instills cinematic soul. Every frame is a deliberately structured narrative.',
+    sub: 'The foundation of engineering brings precision; Film and Television Institute of India, Pune training instills cinematic soul. Every frame is a deliberately structured narrative.',
     accent: 'var(--saffron)',
     imageUrl: './assets/every_frame_story.webp',
   },

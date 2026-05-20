@@ -1,6 +1,96 @@
 {
   "reels": [
     {
+      "slug": "love-ni-bhavai",
+      "title": "Love Ni Bhavai",
+      "category": "Feature Film",
+      "year": 2017,
+      "thumbnailUrl": "./assets/love ni bhavai.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=OlsM8Nwb6nA",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Saandeep Patel",
+        "cast": "Malhar Thakar, Pratik Gandhi, Aarohi Patel",
+        "production": "Akshar Communications"
+      },
+      "featured": false
+    },
+    {
+      "slug": "thai-jashe",
+      "title": "Thai Jashe!",
+      "category": "Feature Film",
+      "year": 2016,
+      "thumbnailUrl": "./assets/thai jashe.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=aev_Nu7vqhI",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Nirav Barot",
+        "cast": "Malhar Thakar, Monal Gajjar, Manoj Joshi",
+        "production": "A V Productions"
+      },
+      "featured": false
+    },
+    {
+      "slug": "aum-mangalam-singlem",
+      "title": "Aum Mangalam Singlem",
+      "category": "Feature Film",
+      "year": 2022,
+      "thumbnailUrl": "./assets/aum manglam singlam.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=vtR0Uxxox04",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Saandeep Patel",
+        "cast": "Malhar Thakar, Aarohi Patel",
+        "production": "Akshar Communications"
+      },
+      "featured": false
+    },
+    {
+      "slug": "lakiro",
+      "title": "Lakiro",
+      "category": "Feature Film",
+      "year": 2023,
+      "thumbnailUrl": "./assets/Lakiro.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=y3qYDPDN5M8",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Dr. Darshan Ashwin Trivedi",
+        "cast": "Raunaq Kamdar, Deeksha Joshi",
+        "production": "Warner Music India"
+      },
+      "featured": false
+    },
+    {
+      "slug": "lagan-laagii-re",
+      "title": "Lagan Laagii Re",
+      "category": "Feature Film",
+      "year": 2025,
+      "thumbnailUrl": "./assets/lagan laagi re.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=Nmmfm_J2Q98",
+      "credits": {
+        "dop": "Tapan Vyas",
+        "director": "Saandeep Patel",
+        "cast": "Malhar Thakar, Aarohi Patel",
+        "production": "Zen Music"
+      },
+      "featured": false
+    },
+    {
+      "slug": "mijaaj",
+      "title": "Mijaaj",
+      "category": "Feature Film",
+      "year": 2018,
+      "thumbnailUrl": "./assets/Mijaaj.webp",
+      "videoUrl": "https://youtu.be/EFO3bKyqL98",
+      "credits": {
+        "director": "Tapan Vyas",
+        "dop": "Tapan Vyas",
+        "cast": "Malhar Thakar, Esha Kansara",
+        "production": "Mijaaj Films"
+      },
+      "featured": false
+    },
+    {
       "slug": "mauje-dariya",
       "title": "Mauje Dariya",
       "category": "Feature Film",
@@ -256,66 +346,6 @@
       "featured": false
     },
     {
-      "slug": "love-ni-bhavai",
-      "title": "Love Ni Bhavai",
-      "category": "Feature Film",
-      "year": 2017,
-      "thumbnailUrl": "./assets/love ni bhavai.webp",
-      "videoUrl": "https://www.youtube.com/watch?v=OlsM8Nwb6nA",
-      "credits": {
-        "dop": "Tapan Vyas",
-        "director": "Saandeep Patel",
-        "cast": "Malhar Thakar, Pratik Gandhi, Aarohi Patel",
-        "production": "Akshar Communications"
-      },
-      "featured": false
-    },
-    {
-      "slug": "aum-mangalam-singlem",
-      "title": "Aum Mangalam Singlem",
-      "category": "Feature Film",
-      "year": 2022,
-      "thumbnailUrl": "./assets/aum manglam singlam.webp",
-      "videoUrl": "https://www.youtube.com/watch?v=vtR0Uxxox04",
-      "credits": {
-        "dop": "Tapan Vyas",
-        "director": "Saandeep Patel",
-        "cast": "Malhar Thakar, Aarohi Patel",
-        "production": "Akshar Communications"
-      },
-      "featured": false
-    },
-    {
-      "slug": "lagan-laagii-re",
-      "title": "Lagan Laagii Re",
-      "category": "Feature Film",
-      "year": 2025,
-      "thumbnailUrl": "./assets/lagan laagi re.webp",
-      "videoUrl": "https://www.youtube.com/watch?v=Nmmfm_J2Q98",
-      "credits": {
-        "dop": "Tapan Vyas",
-        "director": "Saandeep Patel",
-        "cast": "Malhar Thakar, Aarohi Patel",
-        "production": "Zen Music"
-      },
-      "featured": false
-    },
-    {
-      "slug": "thai-jashe",
-      "title": "Thai Jashe!",
-      "category": "Feature Film",
-      "year": 2016,
-      "thumbnailUrl": "./assets/thai jashe.webp",
-      "videoUrl": "https://www.youtube.com/watch?v=aev_Nu7vqhI",
-      "credits": {
-        "dop": "Tapan Vyas",
-        "director": "Nirav Barot",
-        "cast": "Malhar Thakar, Monal Gajjar, Manoj Joshi",
-        "production": "A V Productions"
-      },
-      "featured": false
-    },
-    {
       "slug": "vitthal-teedi",
       "title": "Vitthal Teedi",
       "category": "Web Series",
@@ -331,21 +361,6 @@
       "featured": false
     },
     {
-      "slug": "lakiro",
-      "title": "Lakiro",
-      "category": "Feature Film",
-      "year": 2023,
-      "thumbnailUrl": "./assets/Lakiro.webp",
-      "videoUrl": "https://www.youtube.com/watch?v=y3qYDPDN5M8",
-      "credits": {
-        "dop": "Tapan Vyas",
-        "director": "Dr. Darshan Ashwin Trivedi",
-        "cast": "Raunaq Kamdar, Deeksha Joshi",
-        "production": "Warner Music India"
-      },
-      "featured": false
-    },
-    {
       "slug": "ittaa-kittaa",
       "title": "Ittaa Kittaa",
       "category": "Feature Film",
@@ -357,21 +372,6 @@
         "director": "Abhinn-Kshama",
         "cast": "Raunaq Kamdar, Manasi Parekh",
         "production": "Abhinn-Kshama Films"
-      },
-      "featured": false
-    },
-    {
-      "slug": "mijaaj",
-      "title": "Mijaaj",
-      "category": "Feature Film",
-      "year": 2018,
-      "thumbnailUrl": "./assets/Mijaaj.webp",
-      "videoUrl": "https://youtu.be/EFO3bKyqL98",
-      "credits": {
-        "director": "Tapan Vyas",
-        "dop": "Tapan Vyas",
-        "cast": "Malhar Thakar, Esha Kansara",
-        "production": "Mijaaj Films"
       },
       "featured": false
     },
@@ -524,7 +524,7 @@
       "id": "music-videos",
       "name": "Music Videos",
       "shortDesc": "Visuals that amplify the emotion of the track — not just illustrate it.",
-      "longDesc": "Extensive work across Bollywood, Indie Hindi, Tamil, and fusion genres. Comfortable directing and DPing simultaneously for budget-conscious productions, or leading larger crews for label projects. Strong aesthetic instinct for colour, movement, and the precise moment to cut.",
+      "longDesc": "Extensive work across Bollywood, Indie Hindi, and fusion genres. Comfortable directing and DPing simultaneously for budget-conscious productions, or leading larger crews for label projects. Strong aesthetic instinct for colour, movement, and the precise moment to cut.",
       "icon": "music",
       "accent": "teal"
     },

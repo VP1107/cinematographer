@@ -132,7 +132,7 @@ function BioSection() {
           lineHeight: 1.85,
         }}
       >
-        Trained in cinematography at FTII, Pune, and graduated in Chemical Engineering, I carry both the poetry of images and the precision of science. Over 20+ years, done 35+ feature films and 100+ business films.
+        Trained in cinematography at Film and Television Institute of India, Pune, and graduated in Chemical Engineering, I carry both the poetry of images and the precision of science. Over 20+ years, done 35+ feature films and 100+ business films.
       </p>
 
       <p
@@ -223,7 +223,7 @@ function ShowreelSection() {
                 lineHeight: 1.8,
               }}
             >
-              An FTII Pune alumnus, Tapan Vyas brings analytical rigor and artistic instinct to every frame. With a foundation built in precision and trained under the finest cinematic minds, he has redefined the visual landscape of Gujarati cinema through acclaimed films like <em>O Taareee!</em>, <em>Love Ni Bhavai</em>, <em>Mijaaj</em>, <em>Paaghadi</em>, and <em>Lakiro</em>. His work isn't just about capturing light—it's about sculpting emotion and movement to elevate the story.
+              A Film and Television Institute of India, Pune alumnus, Tapan Vyas brings analytical rigor and artistic instinct to every frame. With a foundation built in precision and trained under the finest cinematic minds, he has redefined the visual landscape of Gujarati cinema through acclaimed films like <em>O Taareee!</em>, <em>Love Ni Bhavai</em>, <em>Mijaaj</em>, <em>Paaghadi</em>, and <em>Lakiro</em>. His work isn't just about capturing light—it's about sculpting emotion and movement to elevate the story.
             </p>
           </div>
 
