@@ -58,7 +58,11 @@
     </noscript>
 
     <!-- ── Performance Optimizations ── -->
-    <link rel="preload" as="image" href="/image.webp" />    <!-- ── Inline critical CSS — prevent FOUC on first paint ── -->
+    <link rel="preload" as="image" href="/image.webp" />
+    <link rel="dns-prefetch" href="https://www.youtube.com" />
+    <link rel="dns-prefetch" href="https://i.ytimg.com" />
+    <link rel="dns-prefetch" href="https://player.vimeo.com" />
+    <!-- ── Inline critical CSS — prevent FOUC on first paint ── -->
     <style>
       /* Ensure body background is set immediately — no white flash */
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

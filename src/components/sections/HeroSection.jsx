@@ -217,6 +217,8 @@ export default function HeroSection({
               src="/image.webp"
               alt="Hero Background"
               fetchPriority="high"
+              loading="eager"
+              decoding="sync"
               style={{
                 position: 'absolute',
                 inset: 0,

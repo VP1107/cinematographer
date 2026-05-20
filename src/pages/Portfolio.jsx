@@ -120,7 +120,7 @@ export default function Portfolio() {
                     }}
                     className="portfolio-grid"
                 >
-                    <AnimatePresence mode="wait">
+                    <AnimatePresence>
                         {filtered.map((reel, i) => (
                             <motion.div
                                 key={reel.slug || reel.title}

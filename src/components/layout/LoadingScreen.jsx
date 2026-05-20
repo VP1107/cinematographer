@@ -8,9 +8,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const NAME     = 'TAPAN VYAS';
 const N_BLADES = 9;
-const T_CLOSE  = 180;
-const T_BLACK  = 250;
-const T_OPEN   = 1000;
+const T_CLOSE  = 80;
+const T_BLACK  = 100;
+const T_OPEN   = 300;
 
 // ── 9-Blade Realistic Aperture ─────────────────────────────
 function ApertureIris({ closeFrac, isClosing }) {
@@ -215,7 +215,7 @@ export default function LoadingScreen() {
       setIsClosing(false);
       setCloseFrac(0);
 
-      // 2. Snap Close after 600ms of being open
+      // 2. Snap Close after 200ms of being open
       setTimeout(() => {
         setIsClosing(true);
         setCloseFrac(1);
@@ -228,24 +228,24 @@ export default function LoadingScreen() {
           // Phase 2: Clapperboard after blades fully open
           setTimeout(() => {
             setPhase('clapper');
-            setTimeout(() => setClapSlam(true), 80);
+            setTimeout(() => setClapSlam(true), 40);
 
             // Phase 3: Iris reveal
             setTimeout(() => {
               setPhase('reveal');
               doReveal();
-            }, 1400);
+            }, 450);
           }, T_OPEN);
         }, T_CLOSE + T_BLACK);
-      }, 600);
-    }, 400);
+      }, 200);
+    }, 100);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function doReveal() {
     const maxR  = Math.ceil(Math.sqrt(window.innerWidth ** 2 + window.innerHeight ** 2)) + 50;
     const start = performance.now();
-    const dur   = 850;
+    const dur   = 500;
 
     function frame(now) {
       const t     = Math.min((now - start) / dur, 1);
