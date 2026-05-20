@@ -270,8 +270,7 @@ export default function HeroSection({
         .hero-section {
           position: relative;
           width: 100%;
-          height: 100dvh;
-          min-height: 560px;
+          min-height: 100dvh;
           display: grid;
           grid-template-columns: 1fr 1fr;
           background: var(--black);
@@ -404,15 +403,19 @@ export default function HeroSection({
         @media (max-width: 768px) {
           .hero-section {
             grid-template-columns: 1fr;
-            grid-template-rows: 50vh 50vh;
+            grid-template-rows: auto 50vh;
+            height: auto;
+            overflow: visible;
           }
           .hero-content {
             align-items: flex-start;
-            padding-top: 3rem;
+            padding-top: 6rem;
+            padding-bottom: 4rem;
             order: 2;
           }
           .hero-media {
             order: 1;
+            min-height: 50vh;
           }
           .hero-media-gradient {
             background: linear-gradient(0deg, var(--black) 0%, transparent 40%);

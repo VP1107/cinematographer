@@ -104,7 +104,7 @@ function MobileMenu({ isOpen, onClose }) {
             position: 'fixed',
             inset: 0,
             zIndex: 'var(--z-modal)',
-            background: 'rgba(6, 5, 10, 0.97)',
+            background: 'var(--nav-bg-scrolled)',
             backdropFilter: 'blur(20px)',
             display: 'flex',
             flexDirection: 'column',
@@ -133,7 +133,7 @@ function MobileMenu({ isOpen, onClose }) {
               position: 'absolute',
               top: '1.5rem',
               right: '1.5rem',
-              color: 'var(--white-dim)',
+              color: 'var(--white)',
               padding: '0.5rem',
               transition: 'color 200ms ease',
             }}

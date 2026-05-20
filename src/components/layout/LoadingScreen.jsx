@@ -32,8 +32,8 @@ function ApertureIris({ closeFrac, isClosing }) {
     : `${T_OPEN}ms cubic-bezier(0.1, 0.9, 0.2, 1)`;
 
   return (
-    <svg width={S} height={S} viewBox={`0 0 ${S} ${S}`}
-      style={{ overflow: 'visible', flexShrink: 0 }} aria-hidden="true">
+    <svg width="100%" height="100%" viewBox={`0 0 ${S} ${S}`}
+      style={{ overflow: 'visible', flexShrink: 0, maxWidth: S, maxHeight: S }} aria-hidden="true">
       <defs>
         <linearGradient id="blade-grad" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%"   stopColor="#2a2a2a" />
@@ -114,13 +114,13 @@ function ApertureIris({ closeFrac, isClosing }) {
 // ── Larger Premium Clapperboard ──────────────────────────────
 function Clapperboard({ slam }) {
   return (
-    <div style={{ width: 480, fontFamily: 'monospace', userSelect: 'none' }}>
+    <div style={{ width: '100%', maxWidth: 480, fontFamily: 'monospace', userSelect: 'none', margin: '0 auto' }}>
       <motion.div
         initial={{ rotate: -58 }}
         animate={slam ? { rotate: 0 } : {}}
         transition={{ type: 'spring', stiffness: 680, damping: 14, delay: 0.05 }}
         style={{
-          width: 480, height: 72,
+          width: '100%', height: 72,
           transformOrigin: '0% 50%',
           overflow: 'hidden',
           border: '2.5px solid rgba(255,255,255,0.2)',

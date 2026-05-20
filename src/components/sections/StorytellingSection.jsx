@@ -31,14 +31,14 @@ const PANELS = [
     english: 'Emotion through\nlighting.',
     sub: 'Light doesn\'t just illuminate—it speaks. Whether it\'s the golden warmth in Love Ni Bhavai or the stark contrasts of Mijaaj, lighting shapes the psychological landscape of the scene.',
     accent: 'var(--crimson)',
-    imageUrl: './assets/tapanvyas panel2.jpeg',
+    imageUrl: './assets/tpanvyas panel 3.jpeg',
   },
   {
     id: 'p3',
     english: 'Movement through\ncinema.',
     sub: 'The camera is not an observer — it is a participant. Transitioning smoothly between raw realism and stylized elegance, every move has intention.',
     accent: 'var(--teal-light)',
-    imageUrl: './assets/tpanvyas panel 3.jpeg',
+    imageUrl: './assets/tapanvyas panel2.jpeg',
   },
 ];
 
@@ -60,39 +60,55 @@ export default function StorytellingSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: () => `+=${window.innerHeight * 3}`,
+          end: () => `+=${window.innerHeight * 1}`,
           scrub: 1,
           pin: true,
           anticipatePin: 1,
         },
       });
 
-      // Slide track leftward
+      // Use a fixed duration for track sliding so we can sync text animations
       tl.to(trackRef.current, {
-        x: () => -(trackRef.current.scrollWidth - window.innerWidth),
+        xPercent: -100 * (panels.length - 1) / panels.length,
         ease: 'none',
-      });
+        duration: 1,
+      }, 0);
 
       // Fade + slide text in per panel
       panels.forEach((panel, i) => {
         const textEl = panel.querySelector('.panel-text');
         const mediaEl = panel.querySelector('.panel-media');
+        
+        // i=0 is centered at 0, i=1 at 0.5, i=2 at 1.0
+        const centerTime = i / (panels.length - 1);
 
-        if (i > 0 && textEl) {
-          tl.fromTo(
-            textEl,
-            { opacity: 0, x: 60 },
-            { opacity: 1, x: 0, duration: 0.4, ease: 'power2.out' },
-            i - 1,
-          );
-        }
-        if (mediaEl) {
-          tl.fromTo(
-            mediaEl,
-            { opacity: 0, scale: 0.94 },
-            { opacity: 1, scale: 1, duration: 0.5, ease: 'power2.out' },
-            i > 0 ? i - 0.8 : 0,
-          );
+        if (i > 0) {
+          if (textEl) {
+            tl.fromTo(
+              textEl,
+              { opacity: 0, x: 40 },
+              { opacity: 1, x: 0, duration: 0.3, ease: 'power2.out' },
+              centerTime - 0.2 // Starts slightly before center
+            );
+          }
+          if (mediaEl) {
+            tl.fromTo(
+              mediaEl,
+              { opacity: 0, scale: 0.94 },
+              { opacity: 1, scale: 1, duration: 0.3, ease: 'power2.out' },
+              centerTime - 0.2
+            );
+          }
+        } else {
+          // Panel 0 (already visible, just slightly animate media)
+          if (mediaEl) {
+            tl.fromTo(
+              mediaEl,
+              { opacity: 0, scale: 0.94 },
+              { opacity: 1, scale: 1, duration: 0.2, ease: 'power2.out' },
+              0
+            );
+          }
         }
       });
     }, sectionRef);
@@ -244,10 +260,18 @@ export default function StorytellingSection() {
             grid-template-columns: 1fr !important;
           }
         }
-        @media (max-width: 680px) {
+        @media (max-width: 768px) {
           .story-panel {
             grid-template-columns: 1fr !important;
-            overflow-y: auto;
+            grid-template-rows: auto 1fr !important;
+            align-items: start !important;
+            padding-top: 6rem !important;
+            gap: 1.5rem !important;
+          }
+          .panel-media {
+            height: auto !important;
+            min-height: 250px !important;
+            max-height: 50vh !important;
           }
         }
       `}</style>
