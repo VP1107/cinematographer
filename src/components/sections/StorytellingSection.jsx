@@ -22,23 +22,23 @@ const PANELS = [
     id: 'p1',
 
     english: 'Every frame\ntells a story.',
-    sub: 'The image before the cut is just as important as the image after it. Silence, held.',
+    sub: 'The foundation of engineering brings precision; FTII Pune training instills cinematic soul. Every frame is a deliberately structured narrative.',
     accent: 'var(--saffron)',
-    thumbnailUrl: './assets/every_frame_story.webp',
+    imageUrl: './assets/every_frame_story.webp',
   },
   {
     id: 'p2',
     english: 'Emotion through\nlighting.',
-    sub: 'A single shaft of afternoon light through a Rajasthani jharokha says more than dialogue.',
+    sub: 'Light doesn\'t just illuminate—it speaks. Whether it\'s the golden warmth in Love Ni Bhavai or the stark contrasts of Mijaaj, lighting shapes the psychological landscape of the scene.',
     accent: 'var(--crimson)',
-    images: ['./assets/emotion_lighting.webp', './assets/movement_cinema.webp'],
+    imageUrl: './assets/tapanvyas panel2.jpeg',
   },
   {
     id: 'p3',
     english: 'Movement through\ncinema.',
-    sub: 'The camera is not an observer — it is a participant. Every move has intention.',
+    sub: 'The camera is not an observer — it is a participant. Transitioning smoothly between raw realism and stylized elegance, every move has intention.',
     accent: 'var(--teal-light)',
-    isVideo: true,
+    imageUrl: './assets/tpanvyas panel 3.jpeg',
   },
 ];
 
@@ -60,7 +60,7 @@ export default function StorytellingSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: () => `+=${window.innerHeight * 2.5}`,
+          end: () => `+=${window.innerHeight * 3}`,
           scrub: 1,
           pin: true,
           anticipatePin: 1,
@@ -126,7 +126,7 @@ export default function StorytellingSection() {
             key={panel.id}
             ref={(el) => (panelRefs.current[i] = el)}
             style={{
-              width: panel.id === 'p2' ? '85vw' : '100vw',
+              width: '100vw',
               height: '100%',
               display: 'grid',
               gridTemplateColumns: '1fr 1fr',
@@ -192,7 +192,7 @@ export default function StorytellingSection() {
                   fontFamily: 'var(--font-body)',
                   fontSize: 'clamp(0.9rem, 1.4vw, 1rem)',
                   fontWeight: 300,
-                  color: 'var(--white-dim)',
+                  color: 'var(--white)',
                   lineHeight: 1.7,
                   maxWidth: '42ch',
                 }}
@@ -206,39 +206,16 @@ export default function StorytellingSection() {
             {/* Right: video or images */}
             <div
               className="panel-media"
-              style={{ height: 'clamp(240px, 50vh, 520px)' }}
+              style={{ height: '70vh', minHeight: '400px', width: '100%' }}
             >
-              {panel.isVideo ? (
-                <div style={{ position: 'relative', width: '100%', height: '100%', background: 'var(--gray-dark)' }}>
-                  <iframe 
-                    src="https://player.vimeo.com/video/1193650792?context=Vimeo%5CController%5CApi%5CResources%5CVideoController.&h=5de6bdb106&s=13d152f15880ed6aa35bd22989283e93b3b9deaa_1779311419&title=0&byline=0&portrait=0&dnt=1" 
-                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                    frameBorder="0" 
-                    allow="autoplay; fullscreen" 
-                  ></iframe>
-                </div>
-              ) : panel.images ? (
-                <div style={{ display: 'flex', gap: '1rem', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+              {panel.imageUrl && (
+                <div style={{ display: 'flex', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
                   <img
-                    src={panel.images[0]}
-                    alt="Cinematography"
-                    style={{ flex: 1, width: '100%', height: '100%', minWidth: 0, objectFit: 'contain', borderRadius: '4px', display: 'block' }}
-                  />
-                  <img
-                    src={panel.images[1]}
-                    alt="Emotion through lighting"
-                    style={{ flex: 1, width: '100%', height: '100%', minWidth: 0, objectFit: 'contain', borderRadius: '4px', display: 'block' }}
+                    src={panel.imageUrl}
+                    alt={panel.english.replace('\n', ' ')}
+                    style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '4px' }}
                   />
                 </div>
-              ) : (
-                <VideoPlaceholder
-                  thumbnailUrl={panel.thumbnailUrl}
-                  aspectRatio="16/9"
-                  accentColor={panel.accent}
-                  showPlay={false}
-                  imgStyle={{ objectFit: 'cover' }}
-                  style={{ height: '100%', borderRadius: '2px' }}
-                />
               )}
             </div>
           </div>

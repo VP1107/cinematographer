@@ -129,6 +129,79 @@ export default function HeroSection({
 
   return (
     <section className="hero-section" aria-label="Hero">
+      {/* ── Left Content (Text & Buttons) ── */}
+      <div className="hero-content">
+        <div className="hero-text-wrapper">
+          {/* Name */}
+          <div style={{ overflow: 'hidden' }}>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="hero-title"
+            >
+              {name}
+            </motion.h1>
+          </div>
+
+          {/* Saffron → crimson → teal gradient rule */}
+          <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ scaleX: 1, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="hero-divider"
+            aria-hidden="true"
+          />
+
+          {/* Tagline */}
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="hero-tagline"
+          >
+            {tagline}
+          </motion.p>
+
+          {/* CTA buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="hero-buttons"
+          >
+            <Link
+              to="/portfolio"
+              className="btn-primary"
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'var(--saffron-dim)';
+                e.currentTarget.style.color = 'var(--white)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'var(--saffron)';
+                e.currentTarget.style.color = 'var(--black)';
+              }}
+            >
+              View Work
+            </Link>
+            <Link
+              to="/contact"
+              className="btn-secondary"
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'var(--black)';
+                e.currentTarget.style.color = 'var(--white)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = 'var(--white)';
+              }}
+            >
+              Get in Touch
+            </Link>
+          </motion.div>
+        </div>
+      </div>
+
       {/* ── Right Media (Video/Image) ── */}
       <div className="hero-media">
         <div className="hero-media-inner">
@@ -187,78 +260,7 @@ export default function HeroSection({
         </div>
       </div>
 
-      {/* ── Left Content (Text & Buttons) ── */}
-      <div className="hero-content">
-        <div className="hero-text-wrapper">
-          {/* Name */}
-          <div style={{ overflow: 'hidden' }}>
-            <motion.h1
-              initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="hero-title"
-            >
-              {name}
-            </motion.h1>
-          </div>
 
-          {/* Saffron → crimson → teal gradient rule */}
-          <motion.div
-            initial={{ scaleX: 0, opacity: 0 }}
-            animate={{ scaleX: 1, opacity: 1 }}
-            transition={{ delay: 1.1, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="hero-divider"
-            aria-hidden="true"
-          />
-
-          {/* Tagline */}
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="hero-tagline"
-          >
-            {tagline}
-          </motion.p>
-
-          {/* CTA buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.9, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="hero-buttons"
-          >
-            <Link
-              to="/portfolio"
-              className="btn-primary"
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'var(--saffron-dim)';
-                e.currentTarget.style.color = '#f7f0e6';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'var(--saffron)';
-                e.currentTarget.style.color = '#06050a';
-              }}
-            >
-              View Work
-            </Link>
-            <Link
-              to="/contact"
-              className="btn-secondary"
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = 'var(--gold)';
-                e.currentTarget.style.color = 'var(--gold-light)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(200,169,110,0.45)';
-                e.currentTarget.style.color = '#f7f0e6';
-              }}
-            >
-              Get in Touch
-            </Link>
-          </motion.div>
-        </div>
-      </div>
 
       {/* ── Scroll indicator ── */}
       <ScrollIndicator />
@@ -270,9 +272,8 @@ export default function HeroSection({
           width: 100%;
           height: 100dvh;
           min-height: 560px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
           background: var(--black);
           overflow: hidden;
         }
@@ -282,22 +283,23 @@ export default function HeroSection({
           z-index: 3;
           display: flex;
           align-items: center;
-          justify-content: center;
-          text-align: center;
+          justify-content: flex-start;
+          text-align: left;
           width: 100%;
-          padding: var(--space-8);
+          padding: clamp(2rem, 5vw, 6rem);
         }
 
         .hero-text-wrapper {
-          max-width: 800px;
+          max-width: 600px;
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: flex-start;
         }
 
         .hero-media {
-          position: absolute;
-          inset: 0;
+          position: relative;
+          width: 100%;
+          height: 100%;
           z-index: 1;
         }
 
@@ -310,7 +312,7 @@ export default function HeroSection({
         .hero-media-gradient {
           position: absolute;
           inset: 0;
-          background: rgba(0, 0, 0, 0.5); /* Contrast overlay */
+          background: linear-gradient(90deg, var(--black) 0%, transparent 40%);
           z-index: 1;
         }
 
@@ -330,9 +332,8 @@ export default function HeroSection({
           letter-spacing: 0.08em;
           text-transform: uppercase;
           line-height: 1;
-          color: #f7f0e6;
+          color: var(--white);
           padding-left: 0.08em;
-          text-shadow: 0 2px 40px rgba(0,0,0,0.5);
         }
 
         .hero-divider {
@@ -349,9 +350,8 @@ export default function HeroSection({
           font-size: var(--text-lg);
           font-weight: 300;
           letter-spacing: 0.06em;
-          color: #f7f0e6;
+          color: var(--white);
           margin-bottom: 0.4rem;
-          text-shadow: 0 1px 15px rgba(0,0,0,0.8);
         }
 
         .hero-tagline-hindi {
@@ -366,7 +366,7 @@ export default function HeroSection({
           margin-top: 2.5rem;
           display: flex;
           gap: 1rem;
-          justify-content: center;
+          justify-content: flex-start;
           flex-wrap: wrap;
         }
 
@@ -375,7 +375,7 @@ export default function HeroSection({
           font-size: var(--text-sm);
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: #06050a;
+          color: var(--black);
           background: var(--saffron);
           border: 1px solid var(--saffron);
           padding: 0.65rem 1.8rem;
@@ -388,16 +388,35 @@ export default function HeroSection({
           font-size: var(--text-sm);
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: #f7f0e6;
-          background: rgba(0, 0, 0, 0.4);
-          border: 1px solid rgba(200,169,110,0.6);
+          color: var(--white);
+          background: transparent;
+          border: 1px solid var(--saffron);
           padding: 0.65rem 1.8rem;
           text-decoration: none;
           transition: border-color 220ms ease, color 220ms ease, background 220ms ease;
         }
 
         .btn-secondary:hover {
-          background: rgba(0, 0, 0, 0.8);
+          background: var(--black);
+          color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+          .hero-section {
+            grid-template-columns: 1fr;
+            grid-template-rows: 50vh 50vh;
+          }
+          .hero-content {
+            align-items: flex-start;
+            padding-top: 3rem;
+            order: 2;
+          }
+          .hero-media {
+            order: 1;
+          }
+          .hero-media-gradient {
+            background: linear-gradient(0deg, var(--black) 0%, transparent 40%);
+          }
         }
       `}</style>
     </section>

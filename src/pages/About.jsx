@@ -172,6 +172,106 @@ function BioSection() {
   );
 }
 
+// ── Showreel Section ──────────────────────────────────────────
+function ShowreelSection() {
+  const ref = useScrollReveal({ delay: 0 });
+  return (
+    <section
+      style={{
+        paddingTop: 'var(--space-16)',
+        width: '100%',
+      }}
+      aria-label="Tapan Vyas Journey"
+    >
+      <div ref={ref}>
+        <SectionHeading
+          eyebrow="The Journey"
+          heading="Cinematic Identity"
+          accentColor="var(--saffron)"
+          style={{ marginBottom: 'var(--space-12)' }}
+        />
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '3rem',
+            alignItems: 'center',
+          }}
+          className="showreel-grid"
+        >
+          {/* Text Left */}
+          <div style={{ paddingRight: '1rem' }}>
+            <p
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'var(--text-2xl)',
+                fontWeight: 300,
+                letterSpacing: '0.03em',
+                lineHeight: 1.4,
+                color: 'var(--white)',
+                marginBottom: '1.2rem',
+              }}
+            >
+              From Chemical Engineering to crafting visual symphonies.
+            </p>
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 'var(--text-base)',
+                fontWeight: 300,
+                color: 'var(--white)',
+                lineHeight: 1.8,
+              }}
+            >
+              An FTII Pune alumnus, Tapan Vyas brings analytical rigor and artistic instinct to every frame. With a foundation built in precision and trained under the finest cinematic minds, he has redefined the visual landscape of Gujarati cinema through acclaimed films like <em>O Taareee!</em>, <em>Love Ni Bhavai</em>, <em>Mijaaj</em>, <em>Paaghadi</em>, and <em>Lakiro</em>. His work isn't just about capturing light—it's about sculpting emotion and movement to elevate the story.
+            </p>
+          </div>
+
+          {/* Video Right */}
+          <div>
+            <div
+              style={{
+                position: 'relative',
+                paddingBottom: '56.25%', /* 16:9 */
+                height: 0,
+                overflow: 'hidden',
+                borderRadius: '4px',
+              }}
+            >
+              <iframe
+                src="https://player.vimeo.com/video/1193650792?title=0&byline=0&portrait=0&dnt=1"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .showreel-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+          }
+          .showreel-grid > div:first-child {
+            padding-right: 0 !important;
+            margin-bottom: 1rem;
+          }
+        }
+      `}</style>
+    </section>
+  );
+}
+
 // ── Page ─────────────────────────────────────────────────────
 export default function About() {
   useTitle('About');
@@ -202,6 +302,9 @@ export default function About() {
           <Portrait />
           <BioSection />
         </div>
+
+        {/* ── Showreel Section ── */}
+        <ShowreelSection />
       </div>
 
       <style>{`

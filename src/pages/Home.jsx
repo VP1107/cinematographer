@@ -20,61 +20,6 @@ const StorytellingSection = lazy(() =>
   import('../components/sections/StorytellingSection')
 );
 
-// ── Intro Section ─────────────────────────────────────────────
-function IntroSection() {
-  const ref = useScrollReveal({ delay: 0 });
-  return (
-    <section
-      style={{
-        padding: 'var(--space-24) 0',
-        background: 'var(--black)',
-      }}
-      aria-label="Introduction"
-    >
-      <div
-        className="container"
-        style={{
-          maxWidth: '680px',
-          marginInline: 'auto',
-          textAlign: 'center',
-        }}
-      >
-        <div ref={ref}>
-          <p
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'var(--text-2xl)',
-              fontWeight: 300,
-              letterSpacing: '0.03em',
-              lineHeight: 1.4,
-              color: 'var(--white)',
-              marginBottom: '1.2rem',
-            }}
-          >
-            Cinematographer based in Mumbai &amp; Ahmedabad —
-            telling Indian stories with precision and feeling.
-          </p>
-
-          <p
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: 'var(--text-base)',
-              fontWeight: 300,
-              color: 'var(--white-dim)',
-              lineHeight: 1.8,
-              marginInline: 'auto',
-            }}
-          >
-            From the ghats of Varanasi to the rooftops of Ahmedabad,
-            from Bollywood stages to quiet festival short films —
-            every frame is built on light, movement, and the quiet
-            dignity of the moment.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 // ── Selected Projects Section ─────────────────────────────────
 function SelectedProjectCard({ project, index }) {
@@ -281,7 +226,7 @@ function CTASection() {
             marginInline: 'auto',
           }}
         >
-          Let's create something cinematic together.
+          Bring your story to the screen with award-winning vision.
         </h2>
 
         <Link
@@ -326,7 +271,6 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <IntroSection />
       <Suspense fallback={
         <div style={{ height: '100dvh', background: 'var(--black)' }} />
       }>
