@@ -2,6 +2,12 @@
 
 A professional portfolio website for cinematographer Tapan Vyas, showcasing his feature films, ad films, and short films. Built with a modern tech stack to provide a smooth, engaging, and premium user experience.
 
+## Live Demo
+
+🔗 **[tapanvyas.in](https://tapanvyas.in)**
+
+<!-- screenshot: add a hero screenshot of the homepage here -->
+
 ## Features
 
 - **Dynamic Animations**: Smooth scroll and scroll-triggered animations powered by Lenis and GSAP.
@@ -45,6 +51,7 @@ In the project directory, you can run:
 - `npm run build`: Builds the app for production to the `dist` folder.
 - `npm run preview`: Locally preview the production build.
 - `npm run lint`: Runs ESLint to catch code issues.
+- `npm test`: Runs the component test suite with Vitest.
 - `npm run deploy`: Deploys the application to GitHub Pages (uses the `gh-pages` branch).
 
 ## Project & Folder Architecture
@@ -123,6 +130,14 @@ cinematographer/
 - **Animations**: Driven by `framer-motion` for page transitions/interactions and `gsap` (with `ScrollTrigger`) for complex scroll-linked animations. These logic blocks often reside in custom hooks inside `src/hooks`.
 - **Data Layer**: Content is largely static and sourced from files in `src/data`. Adding a new portfolio item simply requires modifying `portfolio.json`.
 - **Performance**: Heavy media elements utilize `lazyImage.jsx` and `VideoPlaceholder.jsx` to ensure fast initial loads.
+
+## Testing
+
+Component tests live alongside their source files (`*.test.jsx`) and run with [Vitest](https://vitest.dev/) and [React Testing Library](https://testing-library.com/react).
+
+```bash
+npm test
+```
 
 ## License
 
